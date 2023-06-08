@@ -10,17 +10,17 @@ import Signup from "./components/Auth/Signup/Signup";
 // import Welcomepage from "./components/pages/welcomepage/welcomepage";
 // import Refillorders from "./components/pages/refillorders/refillorders";
 // import Protected from "./ProtectedRoute";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 const Router = () => {
   return (
     <>
       <Routes>
         <Route
-          exact
-          path="/"
-          element={
-              <Signin />
-          }
+          // exact
+          // path="/"
+          // element={
+          //     <Signin />
+          // }
         />
         <Route exact path="/signin" element={<Signin />} />
         <Route exact path="/signup" element={<Signup />} />

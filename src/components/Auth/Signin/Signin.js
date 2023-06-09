@@ -42,7 +42,7 @@ const Signin = () => {
               <Row>
                 <Col>
                   <div>
-                    <input type="submit" />
+                    <input type="submit" className="signin_btn" />
                   </div>
                 </Col>
               </Row>

@@ -10,9 +10,8 @@
   justify-content: space-between;
   padding: 6px 24px;
   align-items: center;
-  background: transparent
-  linear-gradient(180deg, #ff0007 0%, #f0090d 50%, #850000 100%) 0% 0%
-  no-repeat padding-box;
+  background-color: whitesmoke;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .logo_div {
   display: flex;
@@ -21,30 +20,31 @@
   align-items: center;
   gap: 20px;
 }
-.title{
-  color: #FFFFFF;
+.title {
+  color: #101928;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
   font-size: 22px;
-  font-weight:500;
-  font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
+  line-height: 0px;
 }
-.nav_links{
+.nav_links {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  color: #FFFFFF;
+  color: #101928;
   font-size: 13px;
   font-weight: 500;
   /* margin-top: 3px; */
   text-decoration: none;
 }
-.nav_links:hover{
+.nav_links:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 500;
   /* margin-top: 3px; */
@@ -143,12 +143,11 @@
   border: 1px solid #c5c5c5;
   border-color: rgba(197, 197, 197, 1);
   background-color: rgba(255, 255, 255, 1);
-  font-family: Space Grotesk;
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 0px;
   text-transform: capitalize;
 }
 .button_2 {
@@ -159,20 +158,18 @@
   border: none;
   background-color: rgba(80, 151, 243, 1);
   color: rgba(255, 255, 255, 1);
-  font-family: Space Grotesk;
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 0px;
   text-transform: capitalize;
 }
 
 .dis-mob2 {
   display: none;
 }
-@media only screen and (max-width: 1025px) and (min-width: 768px){
-
+@media only screen and (max-width: 1025px) and (min-width: 768px) {
   .header-section {
     width: 100%;
     height: auto;
@@ -181,8 +178,8 @@
     padding: 6px 10px !important;
     align-items: center;
     background: transparent
-    linear-gradient(180deg, #ff0007 0%, #f0090d 50%, #850000 100%) 0% 0%
-    no-repeat padding-box;
+      linear-gradient(180deg, #ff0007 0%, #f0090d 50%, #850000 100%) 0% 0%
+      no-repeat padding-box;
   }
   .logo_div {
     display: flex;
@@ -191,12 +188,12 @@
     align-items: center;
     gap: 8px !important;
   }
-  .nav_links{
+  .nav_links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 8px !important;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 12px !important;
     font-weight: 500;
     /* margin-top: 3px; */
@@ -211,17 +208,17 @@
   .dis-mob2 {
     display: block;
   }
-  .bg_color{
+  .bg_color {
     background: transparent
-    linear-gradient(180deg, #ff0007 0%, #f0090d 50%, #850000 100%) 0% 0%
-    no-repeat padding-box;
+      linear-gradient(180deg, #ff0007 0%, #f0090d 50%, #850000 100%) 0% 0%
+      no-repeat padding-box;
   }
   .mob_logo {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-  .nav_padding{
+  .nav_padding {
     margin: 0px 30px;
   }
   /* .navbar-brand {
@@ -233,13 +230,13 @@
     align-items: center;
     margin-top: 1rem;
   }
-  .nav_links_mob{
+  .nav_links_mob {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 13px;
     font-weight: 500;
     /* margin-top: 3px; */

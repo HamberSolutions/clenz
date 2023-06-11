@@ -1,0 +1,22 @@
+.frame{
+width: 100%;
+height: 100vh;
+
+.header_wraper{
+width: 100%;
+height: 150px;
+background-color: #101928;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main_body{
+	width: 100%;
+	height: 46vh;
+	background-color: whitesmoke;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-image: url("../../../assets/images/bodyshaped_bg.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0% 100%;
+}
+}

@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 // import { About } from "./Pages/Aboutus/About";
 // import { Services } from "./Pages/Services/Services";
 // import { Contactus } from "./Pages/Contactus/Contactus";
+import Booknow from "./pages/Bookpage/Book";
 import Signin from "./components/Auth/Signin/Signin";
 import Signup from "./components/Auth/Signup/Signup";
 
@@ -43,6 +44,7 @@ function App() {
         <Route path="/aboutus" element={<About />} />
         <Route path="/services" element={<Services/>} />
         <Route path="/contactus" element={<Contactus/>} />     */}
+        <Route path="/book-now" element={<Booknow/>} />
 
         <Route path="/admin-profile" element={<Adminprofile />} />
         {/* <Route path="/user-profile" element={<Userprofile />} /> */}

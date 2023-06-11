@@ -1,0 +1,24 @@
+.book_now_top{
+    height: 150px;
+    background-color: #101928;
+   
+
+    .select_heading{
+        color: whitesmoke;
+        margin-top: 40px;
+        
+    }
+}
+
+.book_now_section{
+    width: 100%;
+    height: auto;
+    
+
+    .card_col{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

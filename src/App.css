@@ -7,6 +7,24 @@
   pointer-events: none;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background:  #101928;
+}
+
+.guest-analysis-wrapper::-webkit-scrollbar-track,
+.ant-table-body::-webkit-scrollbar-track {
+  background: grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2ec4b6;
+  border-radius: 6px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

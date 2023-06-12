@@ -4,7 +4,7 @@ import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
 import Subfooter from '../../Common/Subfooter/Subfooter';
 import Photo1 from "../../../assets/images/photo-1.jpg";
-import Photo4 from "../../../assets/images/photo-4.jpg";
+import Photo5 from "../../../assets/images/photo-5.jpg";
 
 const Home = () => {
 	return (
@@ -24,7 +24,7 @@ const Home = () => {
 					</div> */}
 					<div className='photos_div'>
 						{/* <div className='left_div'><img className='pic_box_1' src={Photo1}></img></div> */}
-						<div className='left_div'><img className='pic_box_1' src={Photo4}></img></div>
+						<div className='left_div'><img className='pic_box_1' src={Photo5}></img></div>
 						{/* <div className='right_div'>
 							<img className='pic_box_2' src={Photo1}></img>
 							<img className='pic_box_3' src={Photo1}></img>

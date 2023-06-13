@@ -1,149 +1,116 @@
-.home_section {
+
+
+.home_first-sec{
   width: 100%;
-  height: 100vh;
+  height: auto;
 
-  .header_wraper {
+  .home_main_img{
     width: 100%;
-    height: auto;
+    height: 400px;
+  }
+}
 
-    .sub_header {
-      width: 100%;
-      height: 86px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 97px 0px 97px;
-      background-color: #101928;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.home_second_section{
+  width: 100%;
+  height: auto;
+  padding: 100px 0px;
 
-      .packages {
-        width: 200px;
-        height: 45px;
-        background: #2ec4b6;
-        border-radius: 12px;
-        border: none;
-        font-family: "Nunito Sans", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-transform: capitalize;
-        color: #101928;
-      }
+  .spa-message{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
 
-      .book_now {
-        width: 200px;
-        height: 45px;
-        background: #2ec4b6;
-        border-radius: 12px;
-        border: none;
-        font-family: "Nunito Sans", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-transform: capitalize;
-        color: #101928;
-      }
-    }
+  }
+  .third_row{
+    padding: 30px 0px;
+  }
+  .pic_1{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .home_icons{
+   
+   margin-top: 30px;
+   height: 60px !important;
+  }
+  .book_heading{
+    margin: 15px 0px;
+
+  }
+  
+}
+.home_third_section{
+  width: 100%;
+  height: 200px;
+  background-color: #101928;
+
+  .incredible_heading{
+    color: aliceblue;
+    padding: 80px 0px;
+  }
+}
+.home_fourth_section{
+  width: 100%;
+  height: auto;
+  padding: 100px 0px;
+
+  .left_col{
+    background-image: url(../../../assets/images/photo-1.jpg);
+    background-size: cover;
+    height:300px;
+    border-radius: 20px;
   }
 
-  .main_body {
-    width: 100%;
-    height: auto;
-    // background-color: whitesmoke;
-    padding: 0px 32px 0px 32px;
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-image: url("../../../assets/images/bodyshaped_bg.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0% 100%;
+  .therapy_heading{
+    padding: 90px 0px;
+    color: aliceblue;
+  }
 
-    .page_header {
-      width: 100%;
-      height: auto;
-      padding: 29px 0px 0px 0px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2px;
-      flex-direction: column;
+  .pormt_heading{
+    padding-top: 10%;
+  
+  }
 
-      .header_text {
-        padding: 0px 0px 0px 12px;
-        font-family: "Nunito Sans", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 20px;
-        display: flex;
-        align-items: center;
-        text-transform: capitalize;
-        color: #101928;
-      }
+  .discount_text{
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 600;
+  }
 
-      .header_divider {
-        width: 100%;
-        height: 0px;
-        mix-blend-mode: normal;
-        border: 1px solid #101928;
-      }
-    }
+  
+}
+.home_fifth_section{
+  width: 100%;
+  height: 850px;
+  background-color: #101928;
+  margin: 50px 0px;
 
-    .photos_div {
-      width: 100%;
-      height: auto;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  gap: 2%;
-	  padding: 32px;
-    // background-image: url("../../../assets/images/box_bg.jpeg");
-    // background-repeat: no-repeat;
-    // background-size: 100%;
-    // background-position: 100% 100%;
-    // border-radius: 20px;
-    // margin: 29px 0px 29px 0px;
+  .packages_heading{
+    color: aliceblue;
+    padding: 100px 0px;
+    
+  }
 
-      .left_div {
-        width: 100%;
-        height: auto;
-        .pic_box_1 {
-          width: 100%;
-          height: 715px;
-          border-radius: 20px;
-          // border: 2px solid #384450;
-        }
-      }
-      .right_div {
-        width: 32%;
-        height: auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 14px;
-		flex-direction: column;
+ 
 
-        .pic_box_2 {
-          width: 100%;
-          height: 250px;
-          border-radius: 20px;
-          border: 2px solid #384450;
-        }
+  .card_buttons{
+    background-color: #101928;
+    font-size: 18px;
+    font-weight: 600;
+   
+  }
 
-        .pic_box_3 {
-          width: 100%;
-          height: 250px;
-          border-radius: 20px;
-          border: 2px solid #384450;
-        }
-      }
-    }
+  .view_div{
+    padding-top: 40px;
+    text-align-last: right;
+  }
+
+  .view{
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 16px;
+
   }
 }

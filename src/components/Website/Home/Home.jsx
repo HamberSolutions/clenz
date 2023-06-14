@@ -21,28 +21,10 @@ const Home = () => {
   return (
     <>
       <Header />
-      {/* <div className="home_section">
-        <div className="header_wraper">
-          
-        </div>
-        <div className="main_body">
-          <div className="photos_div">
-            <div className="left_div">
-              <img className="pic_box_1" src={Photo5}></img>
-            </div>
-          </div>
-          <div className="photos_div">
-            <div className="left_div">
-              <img className="pic_box_1" src={Photo1}></img>
-            </div>
-          </div>
-        </div>
-        
-      </div> */}
       <section className="home_first-sec">
         <Container fluid>
           <Row>
-            <Col>
+            <Col style={{padding:"0px"}}>
               <img className="home_main_img" src={Photo5}></img>
             </Col>
           </Row>

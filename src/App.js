@@ -7,9 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 /* Public Routes*/
 import Home from "./pages/Homepage/Homepage";
-// import { About } from "./Pages/Aboutus/About";
-import  Servicespage  from "./pages/Servicespage/Servicespage";
-// import { Contactus } from "./Pages/Contactus/Contactus";
+import Aboutpage from "./pages/Aboutpage/Aboutpage";
+import Servicespage  from "./pages/Servicespage/Servicespage";
+import Contactpage from "./pages/Contactpage/Contactpage";
 import Booknow from "./pages/Bookpage/Book";
 import Signin from "./components/Auth/Signin/Signin";
 import Signup from "./components/Auth/Signup/Signup";
@@ -42,8 +42,8 @@ function App() {
         <Route path="/register" element={<Signup />} />
         <Route path="/services" element={<Servicespage/>} />
         <Route path="/" element={<Home />} />
-        {/* <Route path="/aboutus" element={<About />} />
-        <Route path="/contactus" element={<Contactus/>} />     */}
+        <Route path="/aboutus" element={<Aboutpage />} />
+        <Route path="/contactus" element={<Contactpage/>} />    
         <Route path="/book-now" element={<Booknow/>} />
 
         <Route path="/admin-profile" element={<Adminprofile />} />

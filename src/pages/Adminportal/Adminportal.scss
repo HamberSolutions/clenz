@@ -1,0 +1,22 @@
+.main-wrapper {
+	height: 100vh;
+	background: #101928;
+  
+  .right-panel-wrapper {
+	z-index: 1;
+	background-color: aliceblue;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	height: 100vh;
+	padding: 20px 20px 20px 40px;
+	overflow: auto;
+  }
+}
+  
+  @media screen and (max-width: 900px) {
+	.right-panel-wrapper {
+	  border-top-left-radius: 0px;
+	  border-bottom-left-radius: 00px;
+	  padding: 0px 20px 0px 20px;
+	}
+  }

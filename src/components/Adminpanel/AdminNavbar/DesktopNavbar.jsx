@@ -56,7 +56,7 @@ const DesktopNavbar = (props) => {
         <div>
           <div className="navbar-header">
             {/* <img src={logoicon} alt="" /> */}
-            <h1>Makan Manager</h1>
+            <h1>Clenz Spa & Salon</h1>
           </div>
           <div className="nav-links">
             {props.navList.map((item) => (

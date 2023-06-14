@@ -15,7 +15,7 @@ import Signin from "./components/Auth/Signin/Signin";
 import Signup from "./components/Auth/Signup/Signup";
 
 /* Admin Routes*/
-import{ Adminprofile } from "./pages/Adminportal/Adminprofile";
+import{ Adminprofile } from "./pages/Adminportal/Adminportal";
  
 /* User Side Routes*/  
 // import Userprofile from "./Pages/Userportal/Userprofile";

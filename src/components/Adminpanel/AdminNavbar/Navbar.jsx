@@ -16,7 +16,7 @@ const Navbar = () => {
     {
       icon: FaClipboardCheck,
       text: "New Orders",
-      route: "/orders",
+      route: "/new-orders",
     },
     {
       icon: FaClipboardList,

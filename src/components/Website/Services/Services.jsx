@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./Services.scss";
 import Header from "../../Common/Header/Header";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import service1 from "../../../assets/images/Service-1.jpg";
 
 const Services = () => {
+  const [sharedData, setSharedData] = useState("");
+
+  const handleClick = (data) => {
+    setSharedData(data);
+  };
   return (
     <>
       <Header />
@@ -24,24 +30,46 @@ const Services = () => {
               <h1 className="services_heading">Services We Offer</h1>
             </Col>
           </Row>
-          
 
           <Row>
             <Col lg={7} md={7} sm={12}>
-            <Row>
-            <Col>
-              <h2 className="All_headings">Featured</h2>
-            </Col>
-          </Row>
+              <Row>
+                <Col>
+                  <h2 className="All_headings">Featured</h2>
+                </Col>
+              </Row>
               <div className="back_div">
                 <Row>
-                  <Col>
-                    <h4 className="headings">Relaxation Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
+                  <Col lg={2} md={2} sm={2}>
+                    <Button
+                      onClick={() =>
+                        handleClick(
+                          <div>
+                            <Col>
+                              <h4 className="headings">Relaxation Massage</h4>
+                              <p className="time_headings">
+                                60 minutes session
+                              </p>
+                            </Col>
+                            <Col>
+                              <h6 className="price">AED 249</h6>
+                            </Col>
+                          </div>
+                        )
+                      }
+                      className="select_div"
+                    ></Button>
                   </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
+
+                  <div>
+                    <Col lg={8} md={8} sm={8}>
+                      <h4 className="headings">Relaxation Massage</h4>
+                      <p className="time_headings">60 minutes session</p>
+                    </Col>
+                    <Col lg={2} md={2} sm={2}>
+                      <h6 className="price">AED 249</h6>
+                    </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
@@ -86,7 +114,9 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col>
-                    <h4 className="headings">MADEROTHERAPHY ANTI CELLULITE(wooden treatment)</h4>
+                    <h4 className="headings">
+                      MADEROTHERAPHY ANTI CELLULITE(wooden treatment)
+                    </h4>
                     <p className="time_headings"> 60 minutes session</p>
                   </Col>
                   <Col>
@@ -113,12 +143,12 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col>
-                    <h4 className="headings">
-                      Luxurious Services </h4>
-                      <p className="time_headings"> 2hr 30mins session</p>
-                      
-                    
-                    <h6 className="add_on">60Min Choice of Massage + 5 Add on Services</h6>
+                    <h4 className="headings">Luxurious Services </h4>
+                    <p className="time_headings"> 2hr 30mins session</p>
+
+                    <h6 className="add_on">
+                      60Min Choice of Massage + 5 Add on Services
+                    </h6>
                     <h5 className="center_heading">Massage Choice:</h5>
                     <p className="add_on">
                       RELAXATION
@@ -152,11 +182,11 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col>
-                    <h4 className="headings">
-                      Refreshing Packages 
-                    </h4>
+                    <h4 className="headings">Refreshing Packages</h4>
                     <p className="time_headings">120 minutes session</p>
-                    <h6 className="add_on">60Min Choice of Massage + 3 Add on Services</h6>
+                    <h6 className="add_on">
+                      60Min Choice of Massage + 3 Add on Services
+                    </h6>
                     <h5 className="center_heading">Massage Choice:</h5>
                     <p className="add_on">
                       RELAXATION <br />
@@ -183,7 +213,6 @@ const Services = () => {
                 <div className="line_div"></div>
               </div>
               <Row>
-                
                 <Col>
                   <h2 className="All_headings">Leisure Pacakges</h2>
                 </Col>
@@ -191,9 +220,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col>
-                    <h4 className="headings">
-                      Group Of Faith Special
-                    </h4>
+                    <h4 className="headings">Group Of Faith Special</h4>
                     <p className="time_headings"> 3hr 45min . 2 services</p>
                     <h6 className="add_on">Services for 3</h6>
                     <p className="add_on">
@@ -214,9 +241,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col>
-                    <h4 className="headings">
-                      The Star Of Clanz Spa 
-                    </h4>
+                    <h4 className="headings">The Star Of Clanz Spa</h4>
                     <p className="time_headings"> 120 minutes session</p>
                     <p className="add_on">
                       Clanz Special
@@ -234,9 +259,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col>
-                    <h4 className="headings">
-                      Solemn Prayer Massage 
-                    </h4>
+                    <h4 className="headings">Solemn Prayer Massage</h4>
                     <p className="time_headings"> 105 minutes session</p>
                     <h6 className="add_on">Service For 1</h6>
                     <p className="add_on">
@@ -332,7 +355,9 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col>
-                    <h4 className="headings">Maderotherapy Slimming(wood treatment)</h4>
+                    <h4 className="headings">
+                      Maderotherapy Slimming(wood treatment)
+                    </h4>
                     <p className="time_headings">90 minutes session</p>
                   </Col>
                   <Col>
@@ -380,7 +405,9 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col>
-                    <h4 className="headings">Mediotherapy Anti Cellulite (wooden treatment)</h4>
+                    <h4 className="headings">
+                      Mediotherapy Anti Cellulite (wooden treatment)
+                    </h4>
                     <p className="time_headings">60 minutes session</p>
                   </Col>
                   <Col>
@@ -686,7 +713,7 @@ const Services = () => {
               <Row>
                 <Col>
                   <h2 className="All_headings">Clenz Signature (VIP)</h2>
-                  <p >
+                  <p>
                     It is a combination of hot stone, traditional ventosa and
                     massage.
                   </p>
@@ -721,19 +748,24 @@ const Services = () => {
               </div>
             </Col>
             <Col lg={5} md={5} sm={12} className="right_col">
-
               <div className="ticket_back_div">
                 <Row>
                   <Col>
-                    <h6 className="clenz_heading">Clenz Spa & Saloon | Home Services</h6>
-                    <p className="locations">Electra Park Salam Street AUH | Abu Dhabi</p>
+                    <h6 className="clenz_heading">
+                      Clenz Spa & Saloon | Home Services
+                    </h6>
+                    <p className="locations">
+                      Electra Park Salam Street AUH | Abu Dhabi
+                    </p>
                   </Col>
                 </Row>
                 <div className="price_line_div"></div>
                 <div className="package_div">
-                <Row>
-                  <Col></Col>
-                </Row>
+                  <Row>
+                    <Col>
+                      <h4 className="show_data">Shared Data: {sharedData}</h4>
+                    </Col>
+                  </Row>
                 </div>
                 <div className="price_line_div"></div>
                 <Row>

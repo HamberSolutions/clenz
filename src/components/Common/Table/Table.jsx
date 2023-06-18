@@ -1,216 +1,89 @@
 import React from "react";
+import { Table } from "react-bootstrap"
 
-const Table = () => {
-  const arraydata = [
-    {
-        id:1,
-        heading:'Time Remaining',
-      
-    },
-    {
-        id:2,
-        heading:'Approvals',
-       
+const OrdersTable = () => {
+    const TableHeading = [
+        {
+            Id: "1",
+            name: "Wallet"
+        },
+        {
+            Id: "2",
+            name: "Proposal’s Created"
+        },
+        {
+            Id: "3",
+            name: "Proposal’s Passed"
+        },
+        {
+            Id: "4",
+            name: "Votes Cast"
+        },
+        {
+            Id: "5",
+            name: "Total Author Bonus"
+        },
+        {
+            Id: "6",
+            name: "Wallet"
+        },
+    ]
+    const TableData = [
+        {
+            Id: "1",
+            name: "G7olP8"
+        },
+        {
+            Id: "2",
+            name: "14"
+        },
+        {
+            Id: "3",
+            name: "Proposal’s Passed"
+        },
+        {
+            Id: "4",
+            name: "08"
+        },
+        {
+            Id: "5",
+            name: "58"
+        },
+        {
+            Id: "6",
+            name: "$256.00"
+        },
+    ]
+    return (
+        <>
+            <div className="table_section">
+                <div className="table_div">
+                    <Table responsive >
 
-    },
-    {
-        id:3,
-        heading:'Denies',
-  
+                        <thead className='tb_header_bg'>
+                            <tr>
 
-    },
-    {
-        id:4,
-        heading:'Approval %',
-       
+                                {TableHeading.map((data, index) => (
+                                    <th className='obs_table_headder' key={index}>{data.name}</th>
+                                ))}
+                            </tr>
+                        </thead>
 
-    },
-    {
-        id:5,
-        heading:'Participation',
+                        <tbody>
 
-    },
-    {
-        id:6,
-        heading:'Chain',
 
-    },
-    {
-        id:7,
-        heading:'Market',
+                            <tr>
 
-    },
-    {
-        id:8,
-        heading:'Author',
-
-    },
-]
-
-const arraydatacellone = [
-    {
-        id:1,
-        cellone:'09:08:00',
-    },
-    {
-        id:2,
-        cellone:'758',
-        
-
-    },
-    {
-        id:3,
-        cellone:'12',
-
-    },
-    {
-        id:4,
-        cellone:'80%',
-
-    },
-    {
-        id:5,
-        
-        cellone:'35%',
-    },
-    {
-        id:6,
-        cellone:'ETH',
-
-    },
-    {
-        id:7,
-        cellone:'Token',
-
-    },
-    {
-        id:8,
-        cellone:'0xfee5',
-
-    },
-]
-const arraydatacelltwo = [
-    {
-        id:1,
-        celltwo:'03:16:00',
-    },
-    {
-        id:2,
-        celltwo:'4673',
-        
-
-    },
-    {
-        id:3,
-        celltwo:'56',
-
-    },
-    {
-        id:4,
-        celltwo:'46%',
-
-    },
-    {
-        id:5,
-        
-        celltwo:'67%',
-    },
-    {
-        id:6,
-        celltwo:'SOL',
-
-    },
-    {
-        id:7,
-        celltwo:'NFT',
-
-    },
-    {
-        id:8,
-        celltwo:'0xfee5',
-
-    },
-]
-const arraydatacellthree = [
-    {
-        id:1,
-        cellthree:'05:15:00',
-    },
-    {
-        id:2,
-        cellthree:'72',
-        
-
-    },
-    {
-        id:3,
-        cellthree:'37',
-
-    },
-    {
-        id:4,
-        cellthree:'84%',
-
-    },
-    {
-        id:5,
-        
-        cellthree:'34%',
-    },
-    {
-        id:6,
-        cellthree:'ETH',
-
-    },
-    {
-        id:7,
-        cellthree:'NFT',
-
-    },
-    {
-        id:8,
-        cellthree:'0xfee5',
-
-    },
-]
-  return (
-    <>
-      <div className="table_section">
-      <div className="table_div">
-        <Table responsive   >
-        <thead className="th_bg_color">
-          <tr>
-            <th  className="left_border"># Proposal</th>
-            {arraydata.map((data, index) => (
-              <th>{data.heading}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            {arraydatacellone.map((data, index) => (
-              <td>{data.cellone}</td>
-            ))}
-          </tr>
-          <tr>
-            <td>2</td>
-            {arraydatacelltwo.map((data, index) => (
-              <td>{data.celltwo}</td>
-            ))}
-          </tr>
-          <tr>
-            <td>3</td>
-            {arraydatacellthree.map((data, index) => (
-              <td>{data.cellthree}</td>
-            ))}
-          </tr>
-        </tbody>
-      </Table>
-        </div>
-      </div>
-    </>
-  );
+                                {TableData.map((data, index) => (
+                                    <td className='obs_table_content' key={index}>{data.name}</td>
+                                ))}
+                            </tr>
+                        </tbody>
+                    </Table>
+                </div>
+            </div>
+        </>
+    );
 };
 
-export default Table;
+export default OrdersTable;

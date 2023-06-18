@@ -1,8 +1,15 @@
 import React from 'react'
+import Table from "../../Common/Table/Table";
 
 const Neworder = () => {
   return (
-	<div>Neworder</div>
+    <>
+      <div>
+        <div>Neworder</div>
+        <Table />
+      </div>
+    </>
+
   )
 }
 

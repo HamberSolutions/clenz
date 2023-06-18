@@ -5,7 +5,7 @@ import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
 import Subfooter from "../../Common/Subfooter/Subfooter";
 import Photo3 from "../../../assets/images/photo-3.jpg";
-import Photo5 from "../../../assets/images/photo-5.jpg";
+import Photo5 from "../../../assets/images/photo-5.png";
 import Photo4 from "../../../assets/images/photo-4.jpg";
 import Photo6 from "../../../assets/images/photo-7.jpg";
 import Photo7 from "../../../assets/images/photo7.jpg";

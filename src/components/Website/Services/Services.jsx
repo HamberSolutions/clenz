@@ -61,15 +61,15 @@ const Services = () => {
                     ></Button>
                   </Col>
 
-                  <div>
-                    <Col lg={8} md={8} sm={8}>
-                      <h4 className="headings">Relaxation Massage</h4>
-                      <p className="time_headings">60 minutes session</p>
-                    </Col>
-                    <Col lg={2} md={2} sm={2}>
-                      <h6 className="price">AED 249</h6>
-                    </Col>
-                  </div>
+
+                  <Col lg={8} md={8} sm={8}>
+                    <h4 className="headings">Relaxation Massage</h4>
+                    <p className="time_headings">60 minutes session</p>
+                  </Col>
+                  <Col lg={2} md={2} sm={2}>
+                    <h6 className="price">AED 249</h6>
+                  </Col>
+
                 </Row>
                 <div className="line_div"></div>
                 <Row>

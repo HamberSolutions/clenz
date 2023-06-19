@@ -23,18 +23,16 @@ const Signin = () => {
               </Row>
               <Row>
                 <Col>
-                  <div>
+                  <div className="field_div">
                     <label className="field_name">Enter Email</label>
-                    <br />
                     <input className="input_field" type="text" placeholder="Enter Email" />
                   </div>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <div>
+                  <div className="field_div">
                     <label className="field_name">Enter Password</label>
-                    <br />
                     <input className="input_field" type="text" placeholder="Enter Password" />
                   </div>
                 </Col>

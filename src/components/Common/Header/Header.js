@@ -24,10 +24,10 @@ const Header = ({ showF }) => {
         </div>
         <div className="nav_links">
           <Link className="nav_links" to="/"><div>Home</div></Link>
-          <div><NavLink className="nav_links" to="/aboutus">About-Us</NavLink></div>
-          <div><NavLink className="nav_links" to="/contactus">Contact-Us</NavLink></div>
+          <div><NavLink className="nav_links" to="/about-us">About-Us</NavLink></div>
+          <div><NavLink className="nav_links" to="/contact-us">Contact-Us</NavLink></div>
           <div><NavLink className="nav_links" to="/services">Services</NavLink></div>
-          <div><NavLink className="nav_links" to="/realestate">RealEstate</NavLink></div>
+          <div><NavLink className="nav_links" to="/faq">FAQ</NavLink></div>
         </div>
         <div className="buttons_div d-flex">
           {showF ?
@@ -81,11 +81,10 @@ const Header = ({ showF }) => {
                   </div>
                   <div className="nav_links_mob">
                     <Link className="nav_links_mob" to="/"><div>Home</div></Link>
-                    <div><NavLink className="nav_links_mob" to="/aboutus">About-Us</NavLink></div>
-                    <div><NavLink className="nav_links_mob" to="/contactus">Contact-Us</NavLink></div>
-                    <div><NavLink className="nav_links_mob" to="/ourteam">Ourteam</NavLink></div>
+                    <div><NavLink className="nav_links_mob" to="/about-us">About-Us</NavLink></div>
+                    <div><NavLink className="nav_links_mob" to="/contact-us">Contact-Us</NavLink></div>
                     <div><NavLink className="nav_links_mob" to="/services">Services</NavLink></div>
-                    <div><NavLink className="nav_links_mob" to="/realestate">RealEstate</NavLink></div>
+                    <div><NavLink className="nav_links_mob" to="/faq">FAQ</NavLink></div>
                   </div>
 
                 </Nav.Link>

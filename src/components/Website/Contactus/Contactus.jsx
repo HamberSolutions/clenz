@@ -32,23 +32,23 @@ const Contactus = () => {
               Contact Us<br/>
               </h1>
               <div className='contact_box'>
-                <h5>Email us:</h5>
+                
                 <p className="contact_text">
-              info@clenzspa.com
+                Email us: clenzbeautymassage@gmail.com
               </p>
               </div>
               
               <div className='contact_box'>
-                <h5>Call us:</h5>
-                <p className="contact_text">
-                0303 4942227
+                
+                <p className="contact_text1">
+                Call us: + 971 50 877 4398
               </p>
               </div>
 
               <div className='contact_box'>
-                <h5>Location:</h5>
-                <p className="contact_text">
-                Dubai Tower, West Dubai, UAE
+               
+                <p className="contact_text2">
+                Location: Electra Park Salam Street AUH, ABU DHABI
               </p>
               </div>
             </Col>

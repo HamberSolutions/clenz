@@ -4,6 +4,8 @@ import "./Services.scss";
 import Header from "../../Common/Header/Header";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import service1 from "../../../assets/images/Service-1.jpg";
+import Footer from "../../Common/Footer/Footer";
+import Subfooter from "../../Common/Subfooter/Subfooter";
 
 const Services = () => {
   const [sharedData, setSharedData] = useState([]);
@@ -1446,6 +1448,8 @@ const Services = () => {
           </Row>
         </Container>
       </section>
+      <Footer />
+      <Subfooter />
     </>
   );
 };

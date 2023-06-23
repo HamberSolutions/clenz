@@ -20,6 +20,13 @@
   align-items: center;
   gap: 20px;
 }
+
+.logo{
+  width: 100px;
+  /* height: 1000px; */
+/* background-color: #FFFFFF; */
+}
+
 .title {
   color:  whitesmoke;
   font-family: "Nunito Sans", sans-serif;
@@ -177,9 +184,7 @@
     justify-content: space-between;
     padding: 6px 10px !important;
     align-items: center;
-    background: transparent
-      linear-gradient(180deg, #ff0007 0%, #f0090d 50%, #850000 100%) 0% 0%
-      no-repeat padding-box;
+    background: #101928;
   }
   .logo_div {
     display: flex;
@@ -209,9 +214,7 @@
     display: block;
   }
   .bg_color {
-    background: transparent
-      linear-gradient(180deg, #ff0007 0%, #f0090d 50%, #850000 100%) 0% 0%
-      no-repeat padding-box;
+    background: #101928 !important;
   }
   .mob_logo {
     display: flex;

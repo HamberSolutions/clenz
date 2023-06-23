@@ -1,0 +1,351 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.faq_img {
+  width: 479px;
+  height: 275px;
+}
+.hh {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+.faq_section {
+  /* background-image: url(../../assets/images/FAQbackground.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: #151515;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+.faq_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #707070;
+  opacity: 100%;
+  /* text-shadow: #ffffff 0 0 6px; */
+  font-size: 90px;
+  letter-spacing: 5px;
+  font-family: "Poppins", sans-serif;
+  margin-top: -60px;
+  margin-bottom: 1rem;
+}
+.faq_detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px !important;
+}
+.faq_t {
+  width: 100%;
+  /* display: flex; */
+  text-align: -webkit-center;
+}
+.faq_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 33px 0px;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  filter: brightness(10px);
+}
+.faq_desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.que_row {
+  display: flex;
+  font-size: 28px;
+}
+.accordion {
+  width: 100% !important;
+}
+.accordion-item {
+  width: 83%;
+  background-color: transparent !important;
+  color: white;
+  backdrop-filter: none !important;
+  filter: brightness(10px);
+  border: transparent !important;
+  text-align: left;
+}
+.accordion-body {
+  height: auto;
+  padding: 0rem 1.25rem !important;
+  display: flex;
+  justify-content: center;
+  padding-right: 0px !important;
+  padding-left: 30px !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: white !important;
+  backdrop-filter: none !important;
+  filter: brightness(10px);
+  box-shadow: 0 0 0 0 transparent !important;
+  filter: brightness(10px);
+}
+.accordion-button:focus {
+  z-index: 3;
+  color: white !important;
+  border-color: transparent !important;
+  outline: 0;
+  box-shadow: 0 0 0 0 transparent !important;
+}
+.accordion-button {
+  background-color: transparent !important;
+  color: white !important;
+  backdrop-filter: none !important;
+  filter: brightness(10px);
+  border: none;
+  outline: none !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.acc_section {
+  background-color: none !important
+    ;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  background-image: url("https://www.freeiconspng.com/thumbs/white-arrow-png/white-down-arrow-png-2.png") !important;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+.que_text {
+  margin-left: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.faq_desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  width: 633px;
+}
+.faq_line {
+  color: #ffffff;
+  background-color: #ffffff;
+  filter: brightness(100%);
+  height: 2px !important;
+  width: 100%;
+  margin-top: -4px;
+  margin-left: 14px;
+  font-weight: bold;
+}
+@media only screen and (min-width: 300px) and (max-width: 374px) {
+  .faq_desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+  }
+  .faq_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    filter: brightness(10px);
+  }
+  .accordion-item {
+    width: 280px;
+    background-color: transparent !important;
+    color: white;
+    backdrop-filter: none !important;
+    filter: brightness(10px);
+    border: transparent !important;
+  }
+  .que_text {
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    margin-right: 0rem;
+  }
+  .faq_section {
+    /* background-image: url(../../assets/images/FAQbackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #151515;
+    height: 120vh;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .faq_desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    width: 98%;
+    padding-right: 16px;
+  }
+  .faq_img {
+    height: 229px;
+    width: 100%;
+  }
+  .faq_section {
+    /* background-image: url(../../assets/images/FAQbackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #151515;
+    min-height: 180vh;
+    height: 100%;
+    width: 100%;
+  }
+  .faq_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 93%;
+    background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    filter: brightness(10px);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .que_text {
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-right: 0rem;
+  }
+  .accordion-item {
+    width: 93%;
+    background-color: transparent !important;
+    color: white;
+    backdrop-filter: none !important;
+    filter: brightness(10px);
+    border: transparent !important;
+  }
+  .accordion-button {
+    background-color: transparent !important;
+    color: white !important;
+    backdrop-filter: none !important;
+    filter: brightness(10px);
+    border: none;
+    outline: none !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 20px !important;
+    width: 90% !important;
+  }
+  .faq_line {
+    color: #ffffff;
+    background-color: #ffffff;
+    filter: brightness(100%);
+    height: 2px !important;
+    width: 88%;
+    margin-top: -4px;
+    margin-left: 26px;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .faq_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    filter: brightness(10px);
+  }
+  .que_text {
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin-right: 0rem;
+  }
+  .faq_desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    width: 98%;
+    padding-right: 18px;
+  }
+  .faq_line {
+    color: #ffffff;
+    background-color: #ffffff;
+    filter: brightness(100%);
+    height: 2px !important;
+    width: 97%;
+    margin-top: -4px;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+
+  .accordion-item {
+    width: 80%;
+    background-color: transparent !important;
+    color: white;
+    backdrop-filter: none !important;
+    filter: brightness(10px);
+    border: transparent !important;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .faq_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    filter: brightness(10px);
+  }
+  .que_text {
+    margin-left: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    margin-right: 1rem;
+  }
+  .faq_desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    width: 84%;
+  }
+  .accordion-item {
+    width: 80%;
+    background-color: transparent !important;
+    color: white;
+    backdrop-filter: none !important;
+    filter: brightness(10px);
+    border: transparent !important;
+  }
+}

@@ -1,6 +1,9 @@
 import React from 'react';
 import './Footer.scss';
+
+import Logo from "../../../assets/images/Logo1.png";
 import { Link } from 'react-router-dom';
+import { BsFacebook,BsInstagram,BsWhatsapp  } from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -10,8 +13,8 @@ const Footer = () => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-3">
-                <h5 className="text-uppercase font-weight-bold mb-4">Spa & Salon</h5>
-                <p>Here you can use rows and columns here to organize your footer content.</p>
+              <img className="logo" src={Logo} alt="logo" />
+                <p className='pt-3'>We provide customized treatments, facials, and massages based on your skin type. You can trust us to be your spa in Abu Dhabi.</p>
               </div>
 
               <hr className="w-100 clearfix d-md-none" />
@@ -19,10 +22,11 @@ const Footer = () => {
               <div className="col-md-2 mx-auto">
                 <h5 className="text-uppercase font-weight-bold mb-4">Pages</h5>
                 <ul className="list-unstyled">
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/about-us">About Us</Link></li>
-                  <li><Link to="/contact-us">Contact Us</Link></li>
-                  <li><Link to="/services">Services</Link></li>
+                  <li className='footer_li'><Link className='footer_menu' to="/">Home</Link></li>
+                  <li className='footer_li'><Link className='footer_menu' to="/about-us">About Us</Link></li>
+                  <li className='footer_li'><Link className='footer_menu' to="/contact-us">Contact Us</Link></li>
+                  <li className='footer_li'><Link className='footer_menu' to="/services">Services</Link></li>
+                  <li className='footer_li'><Link className='footer_menu' to="/faq">FAQ</Link></li>
                 </ul>
               </div>
 
@@ -31,23 +35,18 @@ const Footer = () => {
               <div className="col-md-2 mx-auto">
                 <h5 className="text-uppercase font-weight-bold mb-4">Social Media</h5>
                 <ul className="list-unstyled">
-                  <li><a href="#!">Link 1</a></li>
-                  <li><a href="#!">Link 2</a></li>
-                  <li><a href="#!">Link 3</a></li>
-                  <li><a href="#!">Link 4</a></li>
+                  <li className='social_li'><Link to="/" className='social_name'> <BsFacebook className='social_icons' />  Facebook</Link></li>
+                  <li className='social_li'><Link to="/" className='social_name'> <BsInstagram className='social_icons' /> Instagram</Link></li>
+                  <li className='social_li'><Link to="/" className='social_name'> <BsWhatsapp className='social_icons' />  Whatsapp</Link></li>
+                  
                 </ul>
               </div>
 
               <hr className="w-100 clearfix d-md-none" />
 
               <div className="col-md-2 mx-auto">
-                <h5 className="text-uppercase font-weight-bold mb-4">Links</h5>
-                <ul className="list-unstyled">
-                  <li><a href="#!">Link 1</a></li>
-                  <li><a href="#!">Link 2</a></li>
-                  <li><a href="#!">Link 3</a></li>
-                  <li><a href="#!">Link 4</a></li>
-                </ul>
+                
+               <input className='footer_input' type='text' placeholder='Enter Email Address'/>
               </div>
 
              

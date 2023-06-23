@@ -174,7 +174,7 @@ const Home = () => {
 		  <Row>
 		  <Col>
 	  		<div className="view_div">
-	  			<Link t0="/" className="view">See All</Link>
+	  			<Link to="/services" className="view">See All</Link>
 				  </div>
 			</Col>
 		  </Row>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Logo from "../../../Assets/Home-Screen/Group 46111.png";
+import Logo from "../../../assets/images/Logo1.png";
 import "./header.css";
 import {
   Navbar,
@@ -16,10 +16,8 @@ const Header = ({ showF }) => {
     <>
       <div className="header-section dis2">
         <div className="logo_div">
-          <div>
-            {/* <img className="logo" width={60} src={Logo} alt="logo"></img> */}
-          </div>
-          <div className="title">Spa & Salon</div>
+          <img className="logo" src={Logo} alt="logo"></img>
+
 
         </div>
         <div className="nav_links">
@@ -27,7 +25,7 @@ const Header = ({ showF }) => {
           <div><NavLink className="nav_links" to="/about-us">About-Us</NavLink></div>
           <div><NavLink className="nav_links" to="/contact-us">Contact-Us</NavLink></div>
           <div><NavLink className="nav_links" to="/services">Services</NavLink></div>
-          <div><NavLink className="nav_links" to="/faq">FAQ</NavLink></div>
+          <div><NavLink className="nav_links" to="/faq">FAQs</NavLink></div>
         </div>
         <div className="buttons_div d-flex">
           {showF ?
@@ -55,11 +53,11 @@ const Header = ({ showF }) => {
           <Container fluid className="nav_padding">
             <Navbar.Brand href="#home">
               <div className="mob_logo">
-                {/* <img className="logo" width={60} src={Logo} alt="logo"></img> */}
-                <div className="title">Makan Manager</div>
+                <img className="logo" width={60} src={Logo} alt="logo"></img>
+                {/* <div className="title">Makan Manager</div> */}
               </div>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle style={{background:"#FFFFFF"}} aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link href="#home">

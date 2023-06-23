@@ -1034,7 +1034,7 @@ const Services = () => {
                              <Col>
                     <h4 className="headings">4 Hands Massage</h4>
                     <p className="time_headings">60 minutes session</p>
-                    <h6>2 therapist in 1 client</h6>
+                    <p className="time_headings">2 therapist on 1 client</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED 449</h6>
@@ -1045,7 +1045,7 @@ const Services = () => {
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">4 Hands Massage</h4>
                     <p className="time_headings">60 minutes session</p>
-                    <h6>2 therapist in 1 client</h6>
+                    <p className="time_headings">2 therapist on 1 client</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED 449</h6>

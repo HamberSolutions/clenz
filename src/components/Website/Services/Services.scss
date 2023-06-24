@@ -81,7 +81,7 @@ color: aliceblue;
   width: 80% !important;
   margin: auto;
   height: auto;
-  margin-top: 29%;
+  margin-top: 126px;
   
 }
 
@@ -122,6 +122,16 @@ color: aliceblue;
   color: #101928;
   font-size: 18px;
   text-decoration: none;
+}
+
+.right_col{
+  position: relative;
+
+  .ticket_back_div{
+    position: sticky;
+    top: 126px;
+  }
+
 }
 
 }

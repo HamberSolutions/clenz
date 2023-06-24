@@ -1,11 +1,13 @@
 .main_wrapper_signin {
   width: 100%;
   height: 100vh;
-  background-color: aliceblue;
+  background:  linear-gradient(to bottom, #1a233d, #242f4c, #2d3c5b, #37496b, #41577b);
 
   .left_col {
     height: 100vh;
-    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .right_col {
@@ -61,7 +63,83 @@
       width: 250px;
       height: 40px;
       border-radius: 40px;
-      margin-top: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      color: #101928;
+    border: none;
+    background-color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    }
+    .social_buttons {
+      width: 100%;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 29px;
+
+      .google_button {
+        width: 44%;
+        height: 44px;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        padding: 0px 2px;
+        border-radius: 50px;
+        border: 2px solid #101928;
+
+        .google_logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .google_des {
+          font-family: "Nunito Sans", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          color: #585858;
+        }
+      }
+
+      .facebook_button {
+        width: 44%;
+        height: 44px;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        padding: 0px 1.8px;
+        border-radius: 50px;
+        border: 2px solid #101928;
+
+        .facebook_logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .facebook_des {
+          font-family: "Nunito Sans", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          color: #585858;
+        }
+      }
     }
   }
 }

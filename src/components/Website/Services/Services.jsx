@@ -6,6 +6,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import service1 from "../../../assets/images/Service-1.jpg";
 import Footer from "../../Common/Footer/Footer";
 import Subfooter from "../../Common/Subfooter/Subfooter";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [sharedData, setSharedData] = useState([]);
@@ -20,7 +21,7 @@ const Services = () => {
         <Container fluid>
           <Row>
             <Col style={{ padding: "0px" }}>
-              <img className="services_main_img" src={service1} />
+              <img className="services_main_img" src={service1} alt="in" />
             </Col>
           </Row>
         </Container>
@@ -1442,6 +1443,13 @@ const Services = () => {
                     <h5 className="total">Total</h5>
                   </Col>
                   <Col></Col>
+                </Row>
+                <Row>
+                  <Col>
+                        <div>
+                          <Link to="/" className="right_book_btn">Book Now</Link>
+                        </div>
+                  </Col>
                 </Row>
               </div>
             </Col>

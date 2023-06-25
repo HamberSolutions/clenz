@@ -73,17 +73,17 @@ color: aliceblue;
  margin-bottom: 10px;
 }
 
-.ticket_back_div{
-  background-color: #101928;
-  border: 1px solid #101928;
-  border-radius: 20px;
-  padding: 20px;
-  width: 80% !important;
-  margin: auto;
-  height: auto;
-  margin-top: 126px;
+// .ticket_back_div{
+//   background-color: #101928;
+//   border: 1px solid #101928;
+//   border-radius: 20px;
+//   padding: 20px;
+//   width: 80% !important;
+//   margin: auto;
+//   height: auto;
+//   margin-top: 126px;
   
-}
+// }
 
 .clenz_heading{
   color: aliceblue;
@@ -129,8 +129,59 @@ color: aliceblue;
 
   .ticket_back_div{
     position: sticky;
-    top: 126px;
+    top: 12px;
+    overflow-y:scroll;
+    background-color: #101928;
+    border: 1px solid #101928;
+    border-radius: 20px;
+    padding: 20px;
+    width: 433px;
+    margin: auto;
+    height: 680px;
+    margin-top: 126px;
   }
+
+  .MuiPickersLayout-root{
+    border-radius: 20px;
+  }
+  
+  .right_book_btn{
+    width: 250px;
+    height: 40px;
+    border-radius: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #101928;
+  border: none;
+  background-color: whitesmoke;
+  font-size: 20px;
+  cursor: pointer;
+  }
+
+#servicescroll::-webkit-scrollbar {
+  width: 6px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+}
+
+#servicescroll::-webkit-scrollbar-track {
+  background:  #090d15;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#servicescroll::-webkit-scrollbar-track,
+#servicescroll::-webkit-scrollbar-track {
+  background: #090d15;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#servicescroll::-webkit-scrollbar-thumb {
+  background-color: aliceblue;
+  border-radius: 6px;
+}
 
 }
 

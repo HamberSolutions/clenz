@@ -7,6 +7,13 @@ import service1 from "../../../assets/images/Service-1.jpg";
 import Footer from "../../Common/Footer/Footer";
 import Subfooter from "../../Common/Subfooter/Subfooter";
 import { Link } from "react-router-dom";
+import dayjs from 'dayjs';
+import { StaticDateTimePicker } from '@mui/x-date-pickers/StaticDateTimePicker';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+// import { renderTimeViewClock } from '../timeViewRenderers';
+// import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+
 
 const Services = () => {
   const [sharedData, setSharedData] = useState([]);
@@ -64,27 +71,27 @@ const Services = () => {
                     ></Button>
                   </Col>
 
-                  
-                    <Col lg={9} md={9} sm={9}>
-                      <h4 className="headings">Relaxation Massage</h4>
-                      <p className="time_headings">60 minutes session</p>
-                    </Col>
-                    <Col lg={2} md={2} sm={2}>
-                      <h6 className="price">AED 249</h6>
-                    </Col>
-                  
+
+                  <Col lg={9} md={9} sm={9}>
+                    <h4 className="headings">Relaxation Massage</h4>
+                    <p className="time_headings">60 minutes session</p>
+                  </Col>
+                  <Col lg={2} md={2} sm={2}>
+                    <h6 className="price">AED 249</h6>
+                  </Col>
+
                 </Row>
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                   <Button  onClick={() =>
-                        handleClick( <div><Col >
-                          <h4 className="headings">Relaxation Massage</h4>
-                          <p className="time_headings">90 minutes session</p>
-                        </Col>
+                    <Button onClick={() =>
+                      handleClick(<div><Col >
+                        <h4 className="headings">Relaxation Massage</h4>
+                        <p className="time_headings">90 minutes session</p>
+                      </Col>
                         <Col >
                           <h6 className="price">AED 349</h6>
-                        </Col></div>)}  className="select_btn"></Button>
+                        </Col></div>)} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Relaxation Massage</h4>
@@ -97,11 +104,11 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(<div><Col>
-                          <h4 className="headings">Deep Tissue Massage</h4>
-                          <p className="time_headings">60 minutes session</p>
-                        </Col>
+                    <Button onClick={() =>
+                      handleClick(<div><Col>
+                        <h4 className="headings">Deep Tissue Massage</h4>
+                        <p className="time_headings">60 minutes session</p>
+                      </Col>
                         <Col>
                           <h6 className="price">AED 249</h6>
                         </Col></div>)} className="select_btn"></Button>
@@ -116,17 +123,17 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(<div>
-                          <Col>
-                    <h4 className="headings">Deep Tissue Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                        </div>)} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(<div>
+                        <Col>
+                          <h4 className="headings">Deep Tissue Massage</h4>
+                          <p className="time_headings">90 minutes session</p>
+                        </Col>
+                        <Col>
+                          <h6 className="price">AED 349</h6>
+                        </Col>
+                      </div>)} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Deep Tissue Massage</h4>
@@ -138,17 +145,17 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(<div>
-                          <Col>
-                    <h4 className="headings">Couple Massage</h4>
-                    <p className="time_headings"> 60 minutes each session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 449</h6>
-                  </Col>
-                        </div>)} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(<div>
+                        <Col>
+                          <h4 className="headings">Couple Massage</h4>
+                          <p className="time_headings"> 60 minutes each session</p>
+                        </Col>
+                        <Col>
+                          <h6 className="price">AED 449</h6>
+                        </Col>
+                      </div>)} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Couple Massage</h4>
@@ -160,11 +167,23 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">
+                              MADEROTHERAPHY ANTI CELLULITE(wooden treatment)
+                            </h4>
+                            <p className="time_headings"> 60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 299</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">
                       MADEROTHERAPHY ANTI CELLULITE(wooden treatment)
                     </h4>
@@ -173,32 +192,20 @@ const Services = () => {
                   <Col>
                     <h6 className="price">AED 299</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">
-                      MADEROTHERAPHY ANTI CELLULITE(wooden treatment)
-                    </h4>
-                    <p className="time_headings"> 60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 299</h6>
-                  </Col>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(<div>
-                          <Col>
-                    <h4 className="headings">Clenz Signature Massage</h4>
-                    <p className="time_headings"> 120 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 549</h6>
-                  </Col>
-                        </div>)} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(<div>
+                        <Col>
+                          <h4 className="headings">Clenz Signature Massage</h4>
+                          <p className="time_headings"> 120 minutes session</p>
+                        </Col>
+                        <Col>
+                          <h6 className="price">AED 549</h6>
+                        </Col>
+                      </div>)} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Clenz Signature Massage</h4>
@@ -217,17 +224,17 @@ const Services = () => {
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(<div>
-                          <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(<div>
+                        <Col>
                           <h4 className="headings">Luxurious Services </h4>
-                    <p className="time_headings"> 2hr 30mins session</p>
-                          </Col>
-                          <Col>
+                          <p className="time_headings"> 2hr 30mins session</p>
+                        </Col>
+                        <Col>
                           <h6 className="price">AED 449</h6>
-                          </Col>
-                        </div>)} className="select_btn"></Button>
+                        </Col>
+                      </div>)} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Luxurious Services </h4>
@@ -268,19 +275,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Refreshing Packages</h4>
-                    <p className="time_headings">120 minutes session</p>
-                            </Col>
-                            <Col>
+                            <p className="time_headings">120 minutes session</p>
+                          </Col>
+                          <Col>
                             <h6 className="price">AED 349</h6>
-                            </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Refreshing Packages</h4>
@@ -320,19 +327,19 @@ const Services = () => {
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Group Of Faith Special</h4>
-                    <p className="time_headings"> 3hr 45min . 2 services</p>
-                            </Col>
-                            <Col>
+                            <p className="time_headings"> 3hr 45min . 2 services</p>
+                          </Col>
+                          <Col>
                             <h6 className="price">AED 849</h6>
-                            </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Group Of Faith Special</h4>
@@ -355,19 +362,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">The Star Of Clenz Spa</h4>
-                    <p className="time_headings"> 120 minutes session</p>
-                            </Col>
-                            <Col>
+                            <p className="time_headings"> 120 minutes session</p>
+                          </Col>
+                          <Col>
                             <h6 className="price">AED 449</h6>
-                            </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">The Star Of Clenz Spa</h4>
@@ -387,20 +394,20 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Solemn Prayer Massage</h4>
-                    <p className="time_headings"> 105 minutes session</p>
-                    <h6 className="add_on">Service For 1</h6>
-                            </Col>
-                            <Col>
+                            <p className="time_headings"> 105 minutes session</p>
+                            <h6 className="add_on">Service For 1</h6>
+                          </Col>
+                          <Col>
                             <h6 className="price">AED 299</h6>
-                            </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Solemn Prayer Massage</h4>
@@ -423,20 +430,20 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Under The Lanterns Special </h4>
-                    <p className="time_headings">105 minutes session</p>
-                    <h6 className="add_on">Service For 1 Person</h6>
-                            </Col>
-                            <Col>
+                            <p className="time_headings">105 minutes session</p>
+                            <h6 className="add_on">Service For 1 Person</h6>
+                          </Col>
+                          <Col>
                             <h6 className="price">AED 349</h6>
-                            </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Under The Lanterns Special </h4>
@@ -457,20 +464,20 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Crescent Moon Massage</h4>
-                    <p className="time_headings">105 minutes session </p>
-                    <h6 className="add_on">Service for 2 Persons</h6>
-                            </Col>
-                            <Col>
+                            <p className="time_headings">105 minutes session </p>
+                            <h6 className="add_on">Service for 2 Persons</h6>
+                          </Col>
+                          <Col>
                             <h6 className="price">AED 499</h6>
-                            </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Crescent Moon Massage</h4>
@@ -498,43 +505,43 @@ const Services = () => {
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings"> Deep Tissue Massage </h4>
+                            <p className="time_headings">90 Minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
                     <h4 className="headings"> Deep Tissue Massage </h4>
                     <p className="time_headings">90 Minutes session</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings"> Deep Tissue Massage </h4>
-                    <p className="time_headings">90 Minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Relaxation</h4>
-                    <p className="time_headings">60 Minutes session </p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Relaxation</h4>
+                            <p className="time_headings">60 Minutes session </p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Relaxation</h4>
@@ -546,19 +553,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Lymphatic Drainage Massage </h4>
-                    <p className="time_headings">90 minutes session </p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 399</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Lymphatic Drainage Massage </h4>
+                            <p className="time_headings">90 minutes session </p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 399</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Lymphatic Drainage Massage </h4>
@@ -570,11 +577,23 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">
+                              Maderotherapy Slimming(wood treatment)
+                            </h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 399</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">
                       Maderotherapy Slimming(wood treatment)
                     </h4>
@@ -583,32 +602,20 @@ const Services = () => {
                   <Col>
                     <h6 className="price">AED 399</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">
-                      Maderotherapy Slimming(wood treatment)
-                    </h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 399</h6>
-                  </Col>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(<div>
-                           <Col>
-                    <h4 className="headings">Lymphatic Drainage Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 279</h6>
-                  </Col>
-                        </div>)} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(<div>
+                        <Col>
+                          <h4 className="headings">Lymphatic Drainage Massage</h4>
+                          <p className="time_headings">60 minutes session</p>
+                        </Col>
+                        <Col>
+                          <h6 className="price">AED 279</h6>
+                        </Col>
+                      </div>)} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Lymphatic Drainage Massage</h4>
@@ -620,17 +627,17 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">HotStone & Relax </h4>
-                    <p className="time_headings"> 45 minutes session</p>
-                  </Col>
-                  <Col className="price">AED 249</Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">HotStone & Relax </h4>
+                            <p className="time_headings"> 45 minutes session</p>
+                          </Col>
+                          <Col className="price">AED 249</Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">HotStone & Relax </h4>
@@ -640,43 +647,43 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Cupping & Relax</h4>
+                            <p className="time_headings">45 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Cupping & Relax</h4>
                     <p className="time_headings">45 minutes session</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED249</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Cupping & Relax</h4>
-                    <p className="time_headings">45 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED249</h6>
-                  </Col>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Lymphatic Drainage Massage</h4>
-                    <p className="time_headings">45 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 199</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Lymphatic Drainage Massage</h4>
+                            <p className="time_headings">45 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 199</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Lymphatic Drainage Massage</h4>
@@ -688,21 +695,21 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">
-                      Mediotherapy Anti Cellulite (wooden treatment)
-                    </h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 299</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">
+                              Mediotherapy Anti Cellulite (wooden treatment)
+                            </h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 299</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">
@@ -716,19 +723,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                              <Col>
-                    <h4 className="headings">Pre & Post Natal Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Pre & Post Natal Massage</h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Pre & Post Natal Massage</h4>
@@ -740,19 +747,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Pre & Post Natal Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Pre & Post Natal Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Pre & Post Natal Massage</h4>
@@ -764,43 +771,43 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Slimming Massage</h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Slimming Massage</h4>
                     <p className="time_headings">90 minutes session</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Slimming Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Slimming Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Slimming Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Slimming Massage</h4>
@@ -812,70 +819,22 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Reflexology Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Reflexology Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                </Row>
-                <div className="line_div"></div>
-                <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Reflexology Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Reflexology Massage</h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Reflexology Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
-                </Row>
-                <div className="line_div"></div>
-                <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Sports Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Sports Massage</h4>
                     <p className="time_headings">90 minutes session</p>
                   </Col>
                   <Col>
@@ -884,19 +843,67 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Sports Massage</h4>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Reflexology Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
+                    <h4 className="headings">Reflexology Massage</h4>
                     <p className="time_headings">60 minutes session</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                </Row>
+                <div className="line_div"></div>
+                <Row>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Sports Massage</h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
+                    <h4 className="headings">Sports Massage</h4>
+                    <p className="time_headings">90 minutes session</p>
+                  </Col>
+                  <Col>
+                    <h6 className="price">AED 349</h6>
+                  </Col>
+                </Row>
+                <div className="line_div"></div>
+                <Row>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Sports Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Sports Massage</h4>
@@ -908,43 +915,43 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Hot Oil Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Hot Oil Massage</h4>
                     <p className="time_headings">60 minutes session</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Hot Oil Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Traditional Thai Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Traditional Thai Massage</h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Traditional Thai Massage</h4>
@@ -956,43 +963,43 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Traditional Thai Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Traditional Thai Massage</h4>
                     <p className="time_headings">60 minutes session</p>
                   </Col>
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
-                          </div>
-                        )} className="select_btn"></Button>
-                  </Col>
-                  <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Traditional Thai Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Aroma Therapy Massage</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Aroma Therapy Massage</h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Aroma Therapy Massage</h4>
@@ -1004,19 +1011,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Aroma Therapy Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 249</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Aroma Therapy Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 249</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Aroma Therapy Massage</h4>
@@ -1028,20 +1035,20 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">4 Hands Massage</h4>
-                    <p className="time_headings">60 minutes session</p>
-                    <p className="time_headings">2 therapist on 1 client</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 449</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">4 Hands Massage</h4>
+                            <p className="time_headings">60 minutes session</p>
+                            <p className="time_headings">2 therapist on 1 client</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 449</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">4 Hands Massage</h4>
@@ -1061,19 +1068,19 @@ const Services = () => {
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Couple Massage (60 minutes)</h4>
-                    <p className="time_headings">120 minutes . 2 Services </p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 449</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col lg={9} md={9} sm={9}>
+                            <h4 className="headings">Couple Massage (60 minutes)</h4>
+                            <p className="time_headings">120 minutes . 2 Services </p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 449</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Couple Massage (60 minutes)</h4>
@@ -1085,19 +1092,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Couple Massage (90 minutes)</h4>
-                    <p className="time_headings">180 minutes . 2 Services </p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 549</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Couple Massage (90 minutes)</h4>
+                            <p className="time_headings">180 minutes . 2 Services </p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 549</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Couple Massage (90 minutes)</h4>
@@ -1116,19 +1123,19 @@ const Services = () => {
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Cupping & Relax</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Cupping & Relax</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Cupping & Relax</h4>
@@ -1140,19 +1147,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Hotstone & Relax</h4>
-                    <p className="time_headings">60 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Hotstone & Relax</h4>
+                            <p className="time_headings">60 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Hotstone & Relax</h4>
@@ -1164,19 +1171,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Full Body Scrub & Relax</h4>
-                    <p className="time_headings">90 minutes session</p>
-                            </Col>
-                            <Col>
-                    <h6 className="price">AED 349</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 349</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Full Body Scrub & Relax</h4>
@@ -1195,19 +1202,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Cupping & Relax</h4>
-                    <p className="time_headings">90 minutes session</p>
-                            </Col>
-                            <Col>
-                    <h6 className="price">AED 449</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 449</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Cupping & Relax</h4>
@@ -1226,19 +1233,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Hot Stone & Relax</h4>
-                    <p className="time_headings">90 minutes session</p>
-                            </Col>
-                            <Col>
-                    <h6 className="price">AED 499</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 499</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Hot Stone & Relax</h4>
@@ -1262,27 +1269,27 @@ const Services = () => {
               </div>
 
               <Row>
-              
+
                 <Col>
-                
+
                   <h2 className="All_headings">Massage Add On</h2>
                 </Col>
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
-                    <h4 className="headings">Ear Candling</h4>
-                    <p className="time_headings">20 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 49</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Ear Candling</h4>
+                            <p className="time_headings">20 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 49</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Ear Candling</h4>
@@ -1301,19 +1308,19 @@ const Services = () => {
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Body Scrub</h4>
-                    <p className="time_headings">30 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 99</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Body Scrub</h4>
+                            <p className="time_headings">30 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 99</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Body Scrub</h4>
@@ -1325,19 +1332,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Head Massage</h4>
-                    <p className="time_headings">30 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 99</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Head Massage</h4>
+                            <p className="time_headings">30 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 99</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Head Massage</h4>
@@ -1350,7 +1357,7 @@ const Services = () => {
                 <div className="line_div"></div>
               </div>
               <Row>
-                
+
                 <Col>
                   <h2 className="All_headings">Clenz Signature (VIP)</h2>
                   <p>
@@ -1361,19 +1368,19 @@ const Services = () => {
               </Row>
               <div className="back_div">
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                             <Col>
-                    <h4 className="headings">Clenz Signature</h4>
-                    <p className="time_headings">90 minutes session</p>
-                  </Col>
-                  <Col>
-                    <h6 className="price">AED 449</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
+                            <h4 className="headings">Clenz Signature</h4>
+                            <p className="time_headings">90 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 449</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Clenz Signature</h4>
@@ -1385,19 +1392,19 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
-                <Col lg={1} md={1} sm={1} >
-                          <Button onClick={() =>
-                        handleClick(
-                          <div>
-                            <Col>
+                  <Col lg={1} md={1} sm={1} >
+                    <Button onClick={() =>
+                      handleClick(
+                        <div>
+                          <Col>
                             <h4 className="headings">Clenz Signature Massage</h4>
-                    <p className="time_headings">120 minutes session</p>
-                            </Col>
-                            <Col>
-                    <h6 className="price">AED 549</h6>
-                  </Col>
-                          </div>
-                        )} className="select_btn"></Button>
+                            <p className="time_headings">120 minutes session</p>
+                          </Col>
+                          <Col>
+                            <h6 className="price">AED 549</h6>
+                          </Col>
+                        </div>
+                      )} className="select_btn"></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Clenz Signature Massage</h4>
@@ -1416,7 +1423,7 @@ const Services = () => {
               </div>
             </Col>
             <Col lg={5} md={5} sm={12} className="right_col">
-              <div className="ticket_back_div">
+              <div id="servicescroll" className="ticket_back_div">
                 <Row>
                   <Col>
                     <h6 className="clenz_heading">
@@ -1433,7 +1440,7 @@ const Services = () => {
                     <Col>
                       <h4 className="show_data"> {sharedData.map((data, index) => (
                         <div key={index}>{data}</div>
-                      ) )}</h4>
+                      ))}</h4>
                     </Col>
                   </Row>
                 </div>
@@ -1442,13 +1449,19 @@ const Services = () => {
                   <Col>
                     <h5 className="total">Total</h5>
                   </Col>
-                  <Col></Col>
+                  <Col>
+                    <LocalizationProvider className="date_layout" dateAdapter={AdapterDayjs}>
+                      
+                          <StaticDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
+                   
+                    </LocalizationProvider>
+                  </Col>
                 </Row>
                 <Row>
                   <Col>
-                        <div>
-                          <Link to="/" className="right_book_btn">Book Now</Link>
-                        </div>
+                    <div>
+                      <button to="/" className="right_book_btn">Book Now</button>
+                    </div>
                   </Col>
                 </Row>
               </div>

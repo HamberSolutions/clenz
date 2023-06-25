@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./Services.scss";
 import Header from "../../Common/Header/Header";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -13,6 +12,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 // import { renderTimeViewClock } from '../timeViewRenderers';
 // import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { TiTick } from 'react-icons/ti';
 
 
 const Services = () => {
@@ -21,6 +21,13 @@ const Services = () => {
   const handleClick = (data) => {
     setSharedData([...sharedData, data]);
   };
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleIcon = () => {
+    setIsVisible(!isVisible);
+  };
+  
   return (
     <>
       <Header />
@@ -53,6 +60,7 @@ const Services = () => {
                   <Col lg={1} md={1} sm={1}>
                     <Button
                       onClick={() =>
+                        { toggleIcon();
                         handleClick(
                           <div>
                             <Col>
@@ -65,10 +73,12 @@ const Services = () => {
                               <h6 className="price">AED 249</h6>
                             </Col>
                           </div>
-                        )
+                        );
+                        }
                       }
                       className="select_btn"
-                    ></Button>
+                    ><div style={{width:"30px", height:"30px", display:"flex", justifyContent:"center", alignItems:"center", position:"absolute", top:"0px", left:"0px"}}>{isVisible && <TiTick color="black" size={"30px"}/>}</div></Button>
+                    
                   </Col>
 
 

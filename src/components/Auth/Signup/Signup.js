@@ -14,9 +14,9 @@ import logo from "../../../assets/images/Logo1.png";
 
 const Signup = () => {
 
-  const [formData, setFormData] = useState({ username: "", email: "", password: "", });
+  const [formData, setFormData] = useState({ username: "", email: "", phone:"", address:"", password: "", });
   console.log(formData);
-  const { username, email, password, } = formData;
+  const { username, email, phone, address, password, } = formData;
   const [eye, setEye] = useState();
 
   const location = useLocation(); // Use useLocation to access location object
@@ -41,6 +41,8 @@ const Signup = () => {
     const userData = {
       username,
       email,
+      phone,
+      address,
       password,
     };
     console.log("userData", userData);
@@ -105,6 +107,36 @@ const Signup = () => {
               <Row>
                 <Col>
                 <div className="field_div">
+                  <label className='field_name'>Contact Number </label>
+                  <input className='input_field'
+                  required
+                  type='text'
+                  id="phone"
+                  name="phone"
+                  value={phone}
+                  onChange={onChange}
+                  placeholder='Contact Number' />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                <div className="field_div">
+                  <label className='field_name'>Address </label>
+                  <input className='input_field'
+                  required
+                  type='text'
+                  id="address"
+                  name="address"
+                  value={address}
+                  onChange={onChange}
+                  placeholder='Address' />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                <div className="field_div">
                   <label className='field_name'>Enter Password </label>
                   <input className='input_field' 
                   required
@@ -114,22 +146,6 @@ const Signup = () => {
                   value={password}
                   onChange={onChange}
                   placeholder="Password" />
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                <div className="field_div">
-                  <label className='field_name'>Contact Number </label>
-                  <input className='input_field' type='text' placeholder='Contact Number' />
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                <div className="field_div">
-                  <label className='field_name'>Address </label>
-                  <input className='input_field' type='text' placeholder='Address' />
                   </div>
                 </Col>
               </Row>

@@ -1,24 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import authService from "./authService";
-
-const user = JSON.parse(localStorage.getItem("user"));
-
-const initialState = {
-  user: user ? user : null,
-  isError: false,
-  isSuccess: false,
-  isLoading: false,
-  message: "",
-};
+import dashboardService from "./dashboardService";
 
 
-export const register = createAsyncThunk(
-  'auth/register',
-  async (userData, {rejectWithValue}) => {
+
+export const orderbook = createAsyncThunk(
+  'auth/orderbook',
+  async (orderData, {rejectWithValue}) => {
     try {
       // Call API to subscribe user
-      const response = await authService.register(userData);
+      const response = await dashboardService.orderbook(orderData);
       console.log({response})
       return response.data;
     } catch (error) {
@@ -36,12 +27,12 @@ export const register = createAsyncThunk(
     } 
 );
 
-export const login = createAsyncThunk(
-  'auth/login',
-  async (loginData, { rejectWithValue }) => {
+export const getslots = createAsyncThunk(
+  'auth/getslots',
+  async (slotsData, { rejectWithValue }) => {
     try {
       // Call API to install user
-      const response = await authService.login(loginData);
+      const response = await dashboardService.getslots(slotsData);
       return response.data;
     } catch (error) {
       console.log({error});
@@ -57,72 +48,53 @@ export const login = createAsyncThunk(
   }
 );
 
-  export const logout = createAsyncThunk(
-    'auth/logout',
-    async (_, { rejectWithValue }) => {
-      try {
-        // Call API to install user
-        const response = await authService.logout();
-        window.location.reload();
-        console.log({response})
-        return response.data;
-      } catch (error) {
-        console.error(error);
-        return rejectWithValue(error.response.data);
-      }
-    }
-  );
 
-
-export const authSlice = createSlice({
-  name: "auth",
-  initialState,
-  reducers: {
-    reset: (state) => {
-      state.isLoading = false;
-      state.isError = false;
-      state.isSuccess = false;
-      state.message = "";
-    },
+export const dashboardSlice = createSlice({
+  name: "dashboard",
+  initialState: {
+    getSlots:[],
+    isLoading: false,
+    isError: null,
+	message: "",
   },
+  reducers:{
+    setGetSlots: (state, action) => {
+      state.getSlots = action.payload
+	}
+  }, 
   extraReducers: (builder) => {
     builder
-      .addCase(register.pending, (state) => {
+      .addCase(orderbook.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(register.fulfilled, (state, action) => {
+      .addCase(orderbook.fulfilled, (state, action) => {
         console.log({action})
         state.isLoading = false;
         state.isSuccess = true;
         state.user = action.meta.arg;
       })
-      .addCase(register.rejected, (state, action) => {
+      .addCase(orderbook.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.meta.arg;
         state.user = null
       })
-      .addCase(login.pending, (state) => {
+      .addCase(getslots.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(login.fulfilled, (state, action) => {
+      .addCase(getslots.fulfilled, (state, action) => {
         console.log({action})
         state.isLoading = false;
         state.isSuccess = true;
         state.user = action.payload;
       })
-      .addCase(login.rejected, (state, action) => {
+      .addCase(getslots.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
         state.user = null
       })
-      .addCase(logout.fulfilled, (state) => {
-        state.user = null;
-      });
   },
 });
 
-export const { reset } = authSlice.actions
-
-export default authSlice.reducer;
+export default dashboardSlice.reducer;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useLocation, useNavigate, Link, NavLink, } from "react-router-dom";
-// import logoicon from "../../../Assets/Auth-Screen/logoicon.png";
 import { BiLogOut } from "react-icons/bi";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi"; // Added dropdown icons
 import { AiOutlineHome, AiOutlineUser, AiOutlineBank, AiOutlineSetting } from "react-icons/ai";

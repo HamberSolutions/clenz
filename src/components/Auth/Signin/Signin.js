@@ -50,10 +50,7 @@ const Signin = () => {
 
     const roleroute = {
       admin:'/admin-profile',
-      user: '/user-profile',
-      real_estate:'/estatealldata',
-      services:'/services-profile',
-      stores:'/stores-profile',
+      user: '/services',
     };
     
     authService.login(loginData).then((response) => {
@@ -88,7 +85,7 @@ const Signin = () => {
 
   return (
     <>
-    <form>
+    <form onSubmit={handleSubmit}>
       <section>
         <Container fluid className="main_wrapper_signin">
           <Row>
@@ -136,7 +133,7 @@ const Signin = () => {
               <Row>
                 <Col>
                   <div>
-                    <button type="submit" className="signin_btn">Sign In</button>
+                    <button className="signin_btn" type="submit" >Sign In</button>
                   </div>
                 </Col>
               </Row>

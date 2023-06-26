@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Services.scss";
 import Header from "../../Common/Header/Header";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -10,13 +10,60 @@ import dayjs from 'dayjs';
 import { StaticDateTimePicker } from '@mui/x-date-pickers/StaticDateTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { renderTimeViewClock } from '../timeViewRenderers';
-// import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { TiTick } from 'react-icons/ti';
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { orderbook } from "../../../features/dashboard/dashboardSlice";
+
+const dateFormat = "YYYY-MM-DD";
 
 
 const Services = () => {
+  const [date, setDate] = useState("");
+  console.log(date);
+  const location = useLocation(); // Use useLocation to access location object
+  const navigate = useNavigate();
+  // const from = location.state?.from?.pathname || "/login";
+  const dispatch = useDispatch();
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  useEffect(() => {
+    selectedDateTimeData("", dayjs(selectedDate?.$d).format("YYYY-MM-DD"));
+  }, [selectedDate]);
+
+  
+  const currentDateTimeData = async(formattedDate) => {
+    const date = formattedDate; // Separate date (formatted)
+    setDate(date);
+    // Extract time from selectedDate
+    const hours = selectedDate?.toDate().getHours();
+    const minutes = selectedDate?.toDate().getMinutes();
+    const time = `${hours}:${minutes}`; // Separate time
+
+    // Log separate date and time
+    console.log("Date:", date);
+    console.log("Time:", time);
+   
+  }
+
+ const selectedDateTimeData = async (formattedDate) => {
+  const date = formattedDate; // Separate date (formatted)
+
+  // Extract time from selectedDate
+  const hours = selectedDate?.toDate().getHours();
+  const minutes = selectedDate?.toDate().getMinutes();
+  const time = `${hours}:${minutes}`; // Separate time
+
+  setDate(date); // Update the date state with the new value
+
+  // Log separate date and time
+  console.log("Date:", date);
+  console.log("Time:", time);
+};
+
+
   const [sharedData, setSharedData] = useState([]);
+  
 
   const handleClick = (data) => {
     setSharedData([...sharedData, data]);
@@ -27,7 +74,20 @@ const Services = () => {
   const toggleIcon = () => {
     setIsVisible(!isVisible);
   };
-  
+
+  const orderData = {
+    userId: "649723d5600c9f09eb01d074",
+    service: ["klkl", "qwqwq"],
+    date: date,
+    time: selectedDateTimeData.time,
+    price: 1400,
+    slotNumber: "5"
+  };
+  console.log("Order Data:", orderData);
+  const handleBookNow = (orderData) => {
+    dispatch(orderbook(orderData));
+  };
+
   return (
     <>
       <Header />
@@ -1462,7 +1522,7 @@ const Services = () => {
                   <Col>
                     <LocalizationProvider className="date_layout" dateAdapter={AdapterDayjs}>
                       
-                          <StaticDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
+                          <StaticDateTimePicker defaultValue={dayjs('2022-04-17T15:30')} format={dateFormat} value={selectedDate?selectedDate:dayjs()}  onChange={value => setSelectedDate(value)} />
                    
                     </LocalizationProvider>
                   </Col>
@@ -1470,7 +1530,7 @@ const Services = () => {
                 <Row>
                   <Col>
                     <div>
-                      <button to="/" className="right_book_btn">Book Now</button>
+                      <button className="right_book_btn" onClick={handleBookNow}>Book Now</button>
                     </div>
                   </Col>
                 </Row>

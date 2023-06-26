@@ -2,9 +2,9 @@ import axios from "axios";
 import { USERS_BASE_URL } from "../../components/Constants/Config/config.dev";
 import { toast } from "react-toastify";
 
-const API_URL_1 = `${USERS_BASE_URL}/v1/user/application`;
+const API_URL_1 = `${USERS_BASE_URL}/user/register`;
 
-const API_URL_2 = `${USERS_BASE_URL}/v1/user/application/login`;
+const API_URL_2 = `${USERS_BASE_URL}/user/login`;
 
 const register = async (userData) => {
   try {

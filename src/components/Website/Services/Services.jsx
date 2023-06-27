@@ -17,8 +17,71 @@ import { orderbook } from "../../../features/dashboard/dashboardSlice";
 
 const dateFormat = "YYYY-MM-DD";
 
+const packages = [
+  { id: 1, name: 'Package 1', value: 10 },
+  { id: 2, name: 'Package 2', value: 20 },
+  { id: 3, name: 'Package 3', value: 30 },
+  { id: 4, name: 'Package 4', value: 40 },
+  { id: 5, name: 'Package 5', value: 50 },
+  { id: 6, name: 'Package 6', value: 60 },
+  { id: 7, name: 'Package 7', value: 70 },
+  { id: 8, name: 'Package 8', value: 80 },
+  { id: 9, name: 'Package 9', value: 90 },
+  { id: 10, name: 'Package 10', value: 100 },
+  // Add more packages as needed
+];
 
 const Services = () => {
+
+// *** start ***
+
+
+
+const [selectedPackages, setSelectedPackages] = useState([]);
+const [totalValue, setTotalValue] = useState(0);
+
+const handleClick = (packageData) => {
+  if (selectedPackages.some(packageItem => packageItem.id === packageData.id)) {
+    // Unselect the package if it's already selected
+    const updatedPackages = selectedPackages.filter(packageItem => packageItem.id !== packageData.id);
+    setSelectedPackages(updatedPackages);
+    recalculateTotalValue(updatedPackages);
+  } else if (selectedPackages.length < 6) {
+    // Select the package if it's not selected and the limit is not reached
+    const updatedPackages = [...selectedPackages, packageData];
+    setSelectedPackages(updatedPackages);
+    recalculateTotalValue(updatedPackages);
+  }
+};
+
+const recalculateTotalValue = (packages) => {
+  const total = packages.reduce((acc, packageItem) => acc + packageItem.value, 0);
+  setTotalValue(total);
+};
+
+const renderPackages = () => {
+  return packages.map(packageData => {
+    const isSelected = selectedPackages.some(packageItem => packageItem.id === packageData.id);
+    return (
+      <div
+        key={packageData.id}
+        onClick={() => handleClick(packageData)}
+        className={isSelected ? 'selected' : ''}
+      >
+        {packageData.name}
+      </div>
+    );
+  });
+};
+
+// end
+
+
+
+
+
+
+
   const [date, setDate] = useState("");
   console.log(date);
   const location = useLocation(); // Use useLocation to access location object
@@ -65,9 +128,9 @@ const Services = () => {
   const [sharedData, setSharedData] = useState([]);
   
 
-  const handleClick = (data) => {
-    setSharedData([...sharedData, data]);
-  };
+  // const handleClick = (data) => {
+  //   setSharedData([...sharedData, data]);
+  // };
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -110,6 +173,9 @@ const Services = () => {
 
           <Row>
             <Col lg={7} md={7} sm={12}>
+            {renderPackages()}
+            </Col>
+            {/* <Col lg={7} md={7} sm={12}>
               <Row>
                 <Col>
                   <h2 className="All_headings">Featured</h2>
@@ -1491,7 +1557,7 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
               </div>
-            </Col>
+            </Col> */}
             <Col lg={5} md={5} sm={12} className="right_col">
               <div id="servicescroll" className="ticket_back_div">
                 <Row>
@@ -1508,16 +1574,19 @@ const Services = () => {
                 <div className="package_div">
                   <Row>
                     <Col>
-                      <h4 className="show_data"> {sharedData.map((data, index) => (
+                      <h6 className="show_data">
+                         {/* {sharedData.map((data, index) => (
                         <div key={index}>{data}</div>
-                      ))}</h4>
+                      ))} */}
+                      Selected Packages: {selectedPackages.map(packageItem => packageItem.name).join(', ')}
+                      </h6>
                     </Col>
                   </Row>
                 </div>
                 <div className="price_line_div"></div>
                 <Row>
                   <Col>
-                    <h5 className="total">Total</h5>
+                    <h5 className="total">Total : {totalValue}</h5>
                   </Col>
                   <Col>
                     <LocalizationProvider className="date_layout" dateAdapter={AdapterDayjs}>

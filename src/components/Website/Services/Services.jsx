@@ -6,11 +6,20 @@ import service1 from "../../../assets/images/Service-1.jpg";
 import Footer from "../../Common/Footer/Footer";
 import Subfooter from "../../Common/Subfooter/Subfooter";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import dayjs from 'dayjs';
 import { StaticDateTimePicker } from '@mui/x-date-pickers/StaticDateTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { TiTick } from 'react-icons/ti';
+=======
+import moment from "moment";
+import { StaticDateTimePicker } from "@mui/x-date-pickers/StaticDateTimePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import dayjs from 'dayjs';
+import { TiTick } from "react-icons/ti";
+>>>>>>> e32f3332d625859dde3deedf0953d2c4bdb45491
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { orderbook } from "../../../features/dashboard/dashboardSlice";
@@ -94,6 +103,7 @@ const renderPackages = () => {
     selectedDateTimeData("", dayjs(selectedDate?.$d).format("YYYY-MM-DD"));
   }, [selectedDate]);
 
+<<<<<<< HEAD
   
   const currentDateTimeData = async(formattedDate) => {
     const date = formattedDate; // Separate date (formatted)
@@ -131,6 +141,16 @@ const renderPackages = () => {
   // const handleClick = (data) => {
   //   setSharedData([...sharedData, data]);
   // };
+=======
+  const [sharedData, setSharedData] = useState([]);
+  const [currentPrice, setCurrentPrice]= useState(0)
+
+  const handleClick = (data, price) => {
+    setSharedData([data]);
+    setCurrentPrice(price)
+  };
+>>>>>>> e32f3332d625859dde3deedf0953d2c4bdb45491
+
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -138,6 +158,7 @@ const renderPackages = () => {
     setIsVisible(!isVisible);
   };
 
+<<<<<<< HEAD
   const orderData = {
     userId: "649723d5600c9f09eb01d074",
     service: ["klkl", "qwqwq"],
@@ -151,6 +172,23 @@ const renderPackages = () => {
     dispatch(orderbook(orderData));
   };
 
+=======
+  const handleBookNow = async (e) => {
+    e.preventDefault();
+
+    const orderData = {
+      userId: localStorage.getItem("userId"),
+      service: sharedData,
+      date: date,
+      time: time,
+      price: currentPrice,
+    };
+    console.log("orderData", orderData);
+
+    await dispatch(orderbook(orderData)).unwrap();
+  };    
+  console.log(currentPrice)
+>>>>>>> e32f3332d625859dde3deedf0953d2c4bdb45491
   return (
     <>
       <Header />
@@ -185,10 +223,122 @@ const renderPackages = () => {
                 <Row>
                   <Col lg={1} md={1} sm={1}>
                     <Button
+<<<<<<< HEAD
                       onClick={() =>
                         { toggleIcon();
+=======
+                      onClick={() => {
+                        toggleIcon();
                         handleClick(
                           <div>
+                            {!isVisible && (
+                              <>
+                                <Col>
+                                  <h4 className="headings">
+                                    Relaxation Massage
+                                  </h4>
+                                  <p className="time_headings">
+                                    60 minutes session
+                                  </p>
+                                </Col>
+                                <Col>
+                                  <h6 className="price">AED 249</h6>
+                                </Col>
+                              </>
+                            )}
+                          </div>
+                        );
+                      }}
+                      className="select_btn"
+                    >
+                      <div
+                        style={{
+                          width: "30px",
+                          height: "30px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          position: "absolute",
+                          top: "0px",
+                          left: "0px",
+                        }}
+                      >
+                        {isVisible && <TiTick color="black" size={"30px"} />}
+                      </div>
+                    </Button>
+                  </Col>
+
+                  <Col lg={9} md={9} sm={9}>
+                    <h4 className="headings">Relaxation Massage</h4>
+                    <p className="time_headings">60 minutes session</p>
+                  </Col>
+                  <Col lg={2} md={2} sm={2}>
+                    <h6 className="price">AED 249</h6>
+                  </Col>
+                </Row>
+                <div className="line_div"></div>
+                <Row>
+                  <Col lg={1} md={1} sm={1}>
+                    <Button
+                      onClick={() => {
+                        toggleIcon();
+                        handleClick(
+                          <div>
+                            {!isVisible && (
+                              <>
+                                <Col>
+                                  <h4 className="headings">
+                                    Relaxation Massage
+                                  </h4>
+                                  <p className="time_headings">
+                                    90 minutes session
+                                  </p>
+                                </Col>
+                                <Col>
+                                  <h6 className="price">AED 349</h6>
+                                </Col>
+                              </>
+                            )}
+                          </div>
+                        );
+                      }}
+                      className="select_btn"
+                    >
+                      <div
+                        style={{
+                          width: "30px",
+                          height: "30px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          position: "absolute",
+                          top: "0px",
+                          left: "0px",
+                        }}
+                      >
+                        {isVisible && <TiTick color="black" size={"30px"} />}
+                      </div>
+                    </Button>
+                  </Col>
+                  <Col lg={9} md={9} sm={9}>
+                    <h4 className="headings">Relaxation Massage</h4>
+                    <p className="time_headings">90 minutes session</p>
+                  </Col>
+                  <Col lg={2} md={2} sm={2}>
+                    <h6 className="price">AED 349</h6>
+                  </Col>
+                </Row>
+                <div className="line_div"></div>
+                <Row>
+                  <Col lg={1} md={1} sm={1}>
+                    <Button
+                      onClick={() => {
+                        toggleIcon();
+>>>>>>> e32f3332d625859dde3deedf0953d2c4bdb45491
+                        handleClick(
+                          <div>
+                            {!isVisible && (
+                              <>
                             <Col>
                               <h4 className="headings">Relaxation Massage</h4>
                               <p className="time_headings">
@@ -198,7 +348,10 @@ const renderPackages = () => {
                             <Col>
                               <h6 className="price">AED 249</h6>
                             </Col>
+                            </>
+                            )}
                           </div>
+<<<<<<< HEAD
                         );
                         }
                       }
@@ -248,6 +401,25 @@ const renderPackages = () => {
                         <Col>
                           <h6 className="price">AED 249</h6>
                         </Col></div>)} className="select_btn"></Button>
+=======
+                        )
+                      }}
+                      className="select_btn"
+                    >  <div
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      position: "absolute",
+                      top: "0px",
+                      left: "0px",
+                    }}
+                  >
+                    {isVisible && <TiTick color="black" size={"30px"} />}
+                  </div></Button>
+>>>>>>> e32f3332d625859dde3deedf0953d2c4bdb45491
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Deep Tissue Massage</h4>
@@ -303,6 +475,7 @@ const renderPackages = () => {
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+<<<<<<< HEAD
                   <Col lg={1} md={1} sm={1} >
                     <Button onClick={() =>
                       handleClick(
@@ -318,6 +491,33 @@ const renderPackages = () => {
                           </Col>
                         </div>
                       )} className="select_btn"></Button>
+=======
+                  <Col lg={1} md={1} sm={1}>
+                    <Button
+                      onClick={() =>{
+
+                        handleClick(
+                          <div>
+                            <Col>
+                              <h4 className="headings">
+                                MADEROTHERAPHY ANTI CELLULITE(wooden treatment)
+                              </h4>
+                              <p className="time_headings">
+                                {" "}
+                                60 minutes session
+                              </p>
+                            </Col>
+                            <Col>
+                              <h6 className="price">AED 299</h6>
+                            </Col>
+                          </div>
+                        );
+                        setCurrentPrice(299);
+                      }
+                      }
+                      className="select_btn"
+                    ></Button>
+>>>>>>> e32f3332d625859dde3deedf0953d2c4bdb45491
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">
@@ -1586,7 +1786,11 @@ const renderPackages = () => {
                 <div className="price_line_div"></div>
                 <Row>
                   <Col>
+<<<<<<< HEAD
                     <h5 className="total">Total : {totalValue}</h5>
+=======
+                    <h5 className="total">Total: AED {currentPrice}</h5> 
+>>>>>>> e32f3332d625859dde3deedf0953d2c4bdb45491
                   </Col>
                   <Col>
                     <LocalizationProvider className="date_layout" dateAdapter={AdapterDayjs}>

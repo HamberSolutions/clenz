@@ -10,6 +10,7 @@ import moment from "moment";
 import { StaticDateTimePicker } from "@mui/x-date-pickers/StaticDateTimePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import dayjs from 'dayjs';
 import { TiTick } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -30,10 +31,13 @@ const Services = () => {
   }, [selectedDate]);
 
   const [sharedData, setSharedData] = useState([]);
+  const [currentPrice, setCurrentPrice]= useState(0)
 
-  const handleClick = (data) => {
+  const handleClick = (data, price) => {
     setSharedData([data]);
+    setCurrentPrice(price)
   };
+
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -49,13 +53,13 @@ const Services = () => {
       service: sharedData,
       date: date,
       time: time,
-      price: 1400,
+      price: currentPrice,
     };
     console.log("orderData", orderData);
 
     await dispatch(orderbook(orderData)).unwrap();
-  };
-
+  };    
+  console.log(currentPrice)
   return (
     <>
       <Header />
@@ -192,9 +196,12 @@ const Services = () => {
                 <Row>
                   <Col lg={1} md={1} sm={1}>
                     <Button
-                      onClick={() =>
+                      onClick={() => {
+                        toggleIcon();
                         handleClick(
                           <div>
+                            {!isVisible && (
+                              <>
                             <Col>
                               <h4 className="headings">Deep Tissue Massage</h4>
                               <p className="time_headings">
@@ -204,11 +211,26 @@ const Services = () => {
                             <Col>
                               <h6 className="price">AED 249</h6>
                             </Col>
+                            </>
+                            )}
                           </div>
                         )
-                      }
+                      }}
                       className="select_btn"
-                    ></Button>
+                    >  <div
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      position: "absolute",
+                      top: "0px",
+                      left: "0px",
+                    }}
+                  >
+                    {isVisible && <TiTick color="black" size={"30px"} />}
+                  </div></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Deep Tissue Massage</h4>
@@ -283,7 +305,8 @@ const Services = () => {
                 <Row>
                   <Col lg={1} md={1} sm={1}>
                     <Button
-                      onClick={() =>
+                      onClick={() =>{
+
                         handleClick(
                           <div>
                             <Col>
@@ -299,7 +322,9 @@ const Services = () => {
                               <h6 className="price">AED 299</h6>
                             </Col>
                           </div>
-                        )
+                        );
+                        setCurrentPrice(299);
+                      }
                       }
                       className="select_btn"
                     ></Button>
@@ -1881,7 +1906,7 @@ const Services = () => {
                 <div className="price_line_div"></div>
                 <Row>
                   <Col>
-                    <h5 className="total">Total</h5>
+                    <h5 className="total">Total: AED {currentPrice}</h5> 
                   </Col>
                   <Col>
                     <LocalizationProvider

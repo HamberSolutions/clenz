@@ -48,15 +48,12 @@ function App() {
         <Route path="/contact-us" element={<Contactpage/>} />    
         <Route path="/book-now" element={<Booknow/>} />
         <Route path="/new-orders" element={<Order/>} />
-        <Route path="/admin-profile" element={<Adminprofile/>} />
 
-        {/* <Route path="/admin-profile" element={<Adminprofile />} /> */}
-        {/* <Route path="/user-profile" element={<Userprofile />} /> */}
         <Route path="unauthorized" element={<Unauthorized />} />
 
         {/* we want to protect these routes */}
         <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
-        {/* <Route path="/admin-profile" element={<Adminprofile />} /> */}
+        <Route path="/admin-profile" element={<Adminprofile />} />
         </Route>
 
         <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>

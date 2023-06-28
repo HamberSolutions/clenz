@@ -52,7 +52,7 @@ const Signin = () => {
       admin:'/admin-profile',
       user: '/services',
     };
-
+    
     authService.login(loginData).then((response) => {
       console.log("responselogin", response)
       const username = response?.data?.username;
@@ -71,9 +71,6 @@ const Signin = () => {
       console.log("accessToken",accessToken);
       localStorage.setItem('accessToken', accessToken);
       // setAccessToken(accessToken);
-      const userId = response?.data?._id;
-      console.log("userId",userId);
-      localStorage.setItem('userId', userId);
       setAuth({ username, password, roles, accessToken });
       navigate(roleroute[roles], { replace: true });
       console.log("rolesafter",roles);

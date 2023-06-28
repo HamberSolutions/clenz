@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
 import "./faq.css";
 import { Accordion } from "react-bootstrap";
 // import FAQimg from "../../assets/images/FAQ.png";
 // import FAQimg from "../../assets/images/FAQ Letters.png";FAQ
-import FAQimg from "../../assets/images/FAQ LettersV3.png";
+// import FAQimg from "../../assets/images/FAQ LettersV3.png";
 const Faq = () => {
   const [imgId, setImgId] = useState(21);
 
@@ -104,9 +104,9 @@ const Faq = () => {
   return (
     <>
       <div className="faq_section">
-        <Header />
+        {/* <Header /> */}
         <h1 className="faq_heading">
-          <img className="faq_img" src={FAQimg} alt="faq_img"></img>
+          {/* <img className="faq_img" src={FAQimg} alt="faq_img"></img> */}
         </h1>
         <div className="faq_detail">
           <div className="faq_card">

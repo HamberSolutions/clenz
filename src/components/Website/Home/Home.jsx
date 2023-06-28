@@ -16,6 +16,7 @@ import icon3 from "../../../assets/images/icon3.png";
 import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+// import Faq from "../../FAQ/Faq";
 
 const Home = () => {
   return (
@@ -134,7 +135,7 @@ const Home = () => {
                   	AED. 249 / 60 minutes session
                   </Card.Text>
 
-                  <Button className="card_buttons" variant="primary">Book Now</Button>
+                  <Link to="/services"><Button className="card_buttons" variant="primary">Book Now</Button></Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -150,7 +151,7 @@ const Home = () => {
                   	AED. 449 / 60 minutes session
                   </Card.Text>
 
-                  <Button className="card_buttons" variant="primary">Book Now</Button>
+                  <Link to="/services"><Button className="card_buttons" variant="primary">Book Now</Button></Link>
                 </Card.Body>
               </Card>
 			</Col>
@@ -166,7 +167,7 @@ const Home = () => {
                   	AED. 449 / 90 minutes session
                   </Card.Text>
 
-                  <Button className="card_buttons" variant="primary">Book Now</Button>
+                 <Link to="/services"> <Button className="card_buttons" variant="primary">Book Now</Button></Link>
                 </Card.Body>
               </Card>
 			</Col>
@@ -180,6 +181,7 @@ const Home = () => {
 		  </Row>
         </Container>
       </section>
+      {/* <Faq /> */}
       <Footer />
       <Subfooter />
     </>

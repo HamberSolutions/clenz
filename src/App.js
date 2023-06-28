@@ -27,6 +27,7 @@ import Unauthorized from "./Routes/Unauthorized";
 import Missing from "./Routes/Missing";
 import Order from "./pages/Adminportal/Order";
 import Adminprofile from "./pages/Adminportal/Adminprofile";
+import Servicestwo from "./components/Website/Servicestwo/Servicestwo";
 
 const ROLES = {
   'Admin': 5150,
@@ -47,13 +48,17 @@ function App() {
         <Route path="/about-us" element={<Aboutpage />} />
         <Route path="/contact-us" element={<Contactpage/>} />    
         <Route path="/book-now" element={<Booknow/>} />
-        <Route path="/new-orders" element={<Order/>} />
+        <Route path="/services-two" element={<Servicestwo/>} />
+        
 
+       
         <Route path="unauthorized" element={<Unauthorized />} />
 
         {/* we want to protect these routes */}
         <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
-        <Route path="/admin-profile" element={<Adminprofile />} />
+       
+        <Route path="/new-orders" element={<Order/>} />
+        <Route path="/admin-profile" element={<Adminprofile/>} />
         </Route>
 
         <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>

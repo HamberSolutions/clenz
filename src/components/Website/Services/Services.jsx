@@ -30,14 +30,42 @@ const Services = () => {
     setTime(moment(selectedDate?.$d).format("hh:mm:ss a"));
   }, [selectedDate]);
 
-  const [sharedData, setSharedData] = useState([]);
-  const [currentPrice, setCurrentPrice]= useState(0)
+
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [currentPrice, setCurrentPrice] = useState(0);
 
   const handleClick = (data, price) => {
-    setSharedData([data]);
-    setCurrentPrice(price)
+    const isSelected = selectedItems.includes(data);
+
+    if (isSelected) {
+      // Item is already selected, remove it and subtract the price
+      const updatedItems = selectedItems.filter(item => item !== data);
+      const newCurrentPrice = currentPrice - price;
+
+      setSelectedItems(updatedItems);
+      setCurrentPrice(newCurrentPrice);
+    } else {
+      // Item is not selected, add it and add the price
+      const updatedItems = [...selectedItems, data];
+      const newCurrentPrice = currentPrice + price;
+
+      setSelectedItems(updatedItems);
+      setCurrentPrice(newCurrentPrice);
+    }
   };
 
+  const [sharedData, setSharedData] = useState([]);
+
+  // const handleshare = (data) => {
+  //   const updatedData = [...sharedData, data];
+  //   setSharedData(updatedData);
+  // };
+
+  // const handleUnshare = (index) => {
+  //   const updatedData = [...sharedData];
+  //   updatedData.splice(index, 1);
+  //   setSharedData(updatedData);
+  // };
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -58,8 +86,9 @@ const Services = () => {
     console.log("orderData", orderData);
 
     await dispatch(orderbook(orderData)).unwrap();
-  };    
+  };
   console.log(currentPrice)
+
   return (
     <>
       <Header />
@@ -88,6 +117,64 @@ const Services = () => {
                 </Col>
               </Row>
               <div className="back_div">
+                
+                <div>
+                  <button onClick={() => handleClick("Relaxation Massage - 60 minutes", 249)}>
+                    <div className="select_btn">
+                      {selectedItems.includes("Relaxation Massage - 60 minutes") && (
+                        <div
+                          style={{
+                            width: "30px",
+                            height: "30px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            position: "absolute",
+                            top: "0px",
+                            left: "0px",
+                          }}
+                        >
+                          <TiTick color="black" size={"30px"} />
+                        </div>
+                      )}
+                    </div>
+                  </button>
+                  <div className="item-details">
+                    <h4 className="headings">Relaxation Massage</h4>
+                    <p className="time_headings">60 minutes session</p>
+                    <h6 className="price">AED 249</h6>
+                  </div>
+                </div>
+
+                {/* Add other items using the same pattern */}
+
+                <div>
+                  <button onClick={() => handleClick("Relaxation Massage - 90 minutes", 349)}>
+                    <div className="select_btn">
+                      {selectedItems.includes("Relaxation Massage - 90 minutes") && (
+                        <div
+                          style={{
+                            width: "30px",
+                            height: "30px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            position: "absolute",
+                            top: "0px",
+                            left: "0px",
+                          }}
+                        >
+                          <TiTick color="black" size={"30px"} />
+                        </div>
+                      )}
+                    </div>
+                  </button>
+                  <div className="item-details">
+                    <h4 className="headings">Relaxation Massage</h4>
+                    <p className="time_headings">90 minutes session</p>
+                    <h6 className="price">AED 349</h6>
+                  </div>
+                </div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
                     <Button
@@ -202,35 +289,35 @@ const Services = () => {
                           <div>
                             {!isVisible && (
                               <>
-                            <Col>
-                              <h4 className="headings">Deep Tissue Massage</h4>
-                              <p className="time_headings">
-                                60 minutes session
-                              </p>
-                            </Col>
-                            <Col>
-                              <h6 className="price">AED 249</h6>
-                            </Col>
-                            </>
+                                <Col>
+                                  <h4 className="headings">Deep Tissue Massage</h4>
+                                  <p className="time_headings">
+                                    60 minutes session
+                                  </p>
+                                </Col>
+                                <Col>
+                                  <h6 className="price">AED 249</h6>
+                                </Col>
+                              </>
                             )}
                           </div>
                         )
                       }}
                       className="select_btn"
                     >  <div
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      position: "absolute",
-                      top: "0px",
-                      left: "0px",
-                    }}
-                  >
-                    {isVisible && <TiTick color="black" size={"30px"} />}
-                  </div></Button>
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        position: "absolute",
+                        top: "0px",
+                        left: "0px",
+                      }}
+                    >
+                        {isVisible && <TiTick color="black" size={"30px"} />}
+                      </div></Button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
                     <h4 className="headings">Deep Tissue Massage</h4>
@@ -305,7 +392,7 @@ const Services = () => {
                 <Row>
                   <Col lg={1} md={1} sm={1}>
                     <Button
-                      onClick={() =>{
+                      onClick={() => {
 
                         handleClick(
                           <div>
@@ -1896,7 +1983,7 @@ const Services = () => {
                     <Col>
                       <h4 className="show_data">
                         {" "}
-                        {sharedData.slice(0, 6).map((data, index) => (
+                        {selectedItems.slice(0, 6).map((data, index) => (
                           <div key={index}>{data}</div>
                         ))}
                       </h4>
@@ -1906,7 +1993,7 @@ const Services = () => {
                 <div className="price_line_div"></div>
                 <Row>
                   <Col>
-                    <h5 className="total">Total: AED {currentPrice}</h5> 
+                    <h5 className="total">Total: AED {currentPrice}</h5>
                   </Col>
                   <Col>
                     <LocalizationProvider

@@ -54,31 +54,12 @@ const Services = () => {
     }
   };
 
-  const [sharedData, setSharedData] = useState([]);
-
-  // const handleshare = (data) => {
-  //   const updatedData = [...sharedData, data];
-  //   setSharedData(updatedData);
-  // };
-
-  // const handleUnshare = (index) => {
-  //   const updatedData = [...sharedData];
-  //   updatedData.splice(index, 1);
-  //   setSharedData(updatedData);
-  // };
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleIcon = () => {
-    setIsVisible(!isVisible);
-  };
-
   const handleBookNow = async (e) => {
     e.preventDefault();
 
     const orderData = {
       userId: localStorage.getItem("userId"),
-      service: sharedData,
+      service: selectedItems,
       date: date,
       time: time,
       price: currentPrice,

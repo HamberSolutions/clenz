@@ -52,6 +52,11 @@ function App() {
         
 
        
+        <Route path="/new-orders" element={<Order/>} />
+        <Route path="/admin-profile" element={<Adminprofile/>} />
+
+       
+        {/* <Route path="/user-profile" element={<Userprofile />} /> */}
         <Route path="unauthorized" element={<Unauthorized />} />
 
         {/* we want to protect these routes */}

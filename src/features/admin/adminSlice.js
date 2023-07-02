@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import dashboardService from "./dashboardService";
+import adminService from "./adminService";
 
 
 
-export const orderbook = createAsyncThunk(
-  'auth/orderbook',
+export const pendingorders = createAsyncThunk(
+  'auth/pendingorders',
   async (orderData, {rejectWithValue}) => {
     try {
       // Call API to subscribe user
-      const response = await dashboardService.orderbook(orderData);
+      const response = await adminService.pendingorders(orderData);
       console.log({response})
       return response.data;
     } catch (error) {
@@ -27,12 +27,54 @@ export const orderbook = createAsyncThunk(
     } 
 );
 
-export const getslots = createAsyncThunk(
-  'auth/getslots',
-  async (slotsData, { rejectWithValue }) => {
+export const completedorders = createAsyncThunk(
+  'auth/completedorders',
+  async (completedordersData, { rejectWithValue }) => {
     try {
       // Call API to install user
-      const response = await dashboardService.getslots(slotsData);
+      const response = await adminService.completedorders(completedordersData);
+      return response.data;
+    } catch (error) {
+      console.log({error});
+      const message =
+              (error.response &&
+                error.response.data &&
+                error.response.data.message) ||
+              error.message ||
+              error.toString();
+              console.log({message});
+      return rejectWithValue(message);
+    }
+  }
+);
+
+export const orderstatus = createAsyncThunk(
+  'auth/orderstatus',
+  async (statusData, { rejectWithValue }) => {
+    try {
+      // Call API to install user
+      const response = await adminService.orderstatus(statusData);
+      return response.data;
+    } catch (error) {
+      console.log({error});
+      const message =
+              (error.response &&
+                error.response.data &&
+                error.response.data.message) ||
+              error.message ||
+              error.toString();
+              console.log({message});
+      return rejectWithValue(message);
+    }
+  }
+);
+
+export const getcount = createAsyncThunk(
+  'auth/getcount',
+  async (countData, { rejectWithValue }) => {
+    try {
+      // Call API to install user
+      const response = await adminService.getcount(countData);
       return response.data;
     } catch (error) {
       console.log({error});
@@ -49,8 +91,8 @@ export const getslots = createAsyncThunk(
 );
 
 
-export const dashboardSlice = createSlice({
-  name: "dashboard",
+export const adminSlice = createSlice({
+  name: "admin",
   initialState: {
     getSlots:[],
     isLoading: false,
@@ -64,31 +106,61 @@ export const dashboardSlice = createSlice({
   }, 
   extraReducers: (builder) => {
     builder
-      .addCase(orderbook.pending, (state) => {
+      .addCase(pendingorders.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(orderbook.fulfilled, (state, action) => {
+      .addCase(pendingorders.fulfilled, (state, action) => {
         console.log({action})
         state.isLoading = false;
         state.isSuccess = true;
         state.user = action.meta.arg;
       })
-      .addCase(orderbook.rejected, (state, action) => {
+      .addCase(pendingorders.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.meta.arg;
         state.user = null
       })
-      .addCase(getslots.pending, (state) => {
+      .addCase(completedorders.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getslots.fulfilled, (state, action) => {
+      .addCase(completedorders.fulfilled, (state, action) => {
         console.log({action})
         state.isLoading = false;
         state.isSuccess = true;
         state.user = action.payload;
       })
-      .addCase(getslots.rejected, (state, action) => {
+      .addCase(completedorders.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        state.user = null
+      })
+      .addCase(orderstatus.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(completedorders.fulfilled, (state, action) => {
+        console.log({action})
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = action.payload;
+      })
+      .addCase(orderstatus.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        state.user = null
+      })
+      .addCase(getcount.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getcount.fulfilled, (state, action) => {
+        console.log({action})
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = action.payload;
+      })
+      .addCase(getcount.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
@@ -97,4 +169,4 @@ export const dashboardSlice = createSlice({
   },
 });
 
-export default dashboardSlice.reducer;
+export default adminSlice.reducer;

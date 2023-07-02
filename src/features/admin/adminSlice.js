@@ -5,7 +5,7 @@ import adminService from "./adminService";
 
 
 export const pendingorders = createAsyncThunk(
-  'auth/pendingorders',
+  'admin/pendingorders',
   async (orderData, {rejectWithValue}) => {
     try {
       // Call API to subscribe user
@@ -28,7 +28,7 @@ export const pendingorders = createAsyncThunk(
 );
 
 export const completedorders = createAsyncThunk(
-  'auth/completedorders',
+  'admin/completedorders',
   async (completedordersData, { rejectWithValue }) => {
     try {
       // Call API to install user
@@ -49,7 +49,7 @@ export const completedorders = createAsyncThunk(
 );
 
 export const orderstatus = createAsyncThunk(
-  'auth/orderstatus',
+  'admin/orderstatus',
   async (statusData, { rejectWithValue }) => {
     try {
       // Call API to install user
@@ -70,7 +70,7 @@ export const orderstatus = createAsyncThunk(
 );
 
 export const getcount = createAsyncThunk(
-  'auth/getcount',
+  'admin/getcount',
   async (countData, { rejectWithValue }) => {
     try {
       // Call API to install user
@@ -94,15 +94,27 @@ export const getcount = createAsyncThunk(
 export const adminSlice = createSlice({
   name: "admin",
   initialState: {
-    getSlots:[],
+    pendingOrders:[],
+    completedOrders:[],
+    orderStatus: [],
+    getCount:[],
     isLoading: false,
     isError: null,
 	message: "",
   },
   reducers:{
-    setGetSlots: (state, action) => {
-      state.getSlots = action.payload
-	}
+    setpendingOrders: (state, action) => {
+      state.pendingOrders = action.payload;
+    },
+    setcompletedOrders: (state, action) => {
+      state.completedOrders = action.payload;
+    },
+    setOrderStatus: (state, action) => {
+      state.orderStatus = action.payload;
+    },
+    setgetCount: (state, action) => {
+      state.getCount = action.payload;
+    },
   }, 
   extraReducers: (builder) => {
     builder
@@ -168,5 +180,7 @@ export const adminSlice = createSlice({
       })
   },
 });
+
+export const { setpendingOrders, setcompletedOrders, setOrderStatus, setgetCount  } = adminSlice.actions;
 
 export default adminSlice.reducer;

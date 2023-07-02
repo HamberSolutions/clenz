@@ -1,75 +1,36 @@
-import React from 'react'
-import { Table } from "react-bootstrap"
+import React, { useEffect } from 'react';
+import { Table } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { pendingorders, orderstatus } from '../../../features/admin/adminSlice';
+import Spinner from '../../Common/Spinner/Spinner';
 
 const Neworder = () => {
+    const dispatch = useDispatch();
+    const { isLoading, isError, message } = useSelector((state) => state.admin);
+
     const TableHeading = [
-        {
-            Id: "1",
-            name: "Serial #"
-        },
-        {
-            Id: "2",
-            name: "Customer Name"
-        },
-        {
-            Id: "3",
-            name: "Address"
-        },
-        {
-            Id: "4",
-            name: "Contact #"
-        },
-        {
-            Id: "5",
-            name: "Package Name"
-        },
-        {
-            Id: "6",
-            name: "Price"
-        },
-        {
-            Id: "7",
-            name: "Status"
-        },
-        {
-            Id: "8",
-            name: "Processed"
-        },
-    ]
-    const TableData = [
-        {
-            Id: "1",
-            name: "1"
-        },
-        {
-            Id: "2",
-            name: "Hafiz Abu Baker"
-        },
-        {
-            Id: "3",
-            name: "Johar Town Lahore"
-        },
-        {
-            Id: "4",
-            name: "03321718144"
-        },
-        {
-            Id: "5",
-            name: "Relaxation Massage - 60 minutes"
-        },
-        {
-            Id: "6",
-            name: "AED 249"
-        },
-        {
-            Id: "7",
-            name: "Pending"
-        },
-        {
-            Id: "8",
-            name: <button style={{borderRadius:"8px", padding:"0px 8px", background:"#101928", color:"aliceblue"}}>Done</button>
-        },
-    ]
+        { Id: '1', name: 'Serial #' },
+        { Id: '2', name: 'Customer Name' },
+        { Id: '3', name: 'Address' },
+        { Id: '4', name: 'Contact #' },
+        { Id: '5', name: 'Package Name' },
+        { Id: '6', name: 'Price' },
+        { Id: '7', name: 'Status' },
+        { Id: '8', name: 'Processed' },
+    ];
+
+    useEffect(() => {
+        // Fetch pending orders
+        dispatch(pendingorders(orderData));
+
+        // Fetch order status
+        dispatch(orderstatus(statusData));
+    }, []);
+
+    if (isLoading) {
+        return <Spinner />;
+    }
+
     return (
         <>
             <div className="table_section">
@@ -86,14 +47,19 @@ const Neworder = () => {
                         </thead>
 
                         <tbody>
+                            {/* Map over the pending orders */}
+                            {pendingorders.map((order) => (
+                                <tr key={order.Id}>
+                                    <td className="obs_table_content">{order.Id}</td>
+                                    <td className="obs_table_content">{order.name}</td>
+                                    <td className="obs_table_content">{order.address}</td>
+                                    <td className="obs_table_content">{order.phone}</td>
+                                    <td className="obs_table_content">{order.name}</td>
+                                    <td className="obs_table_content">{order.name}</td>
+                                    <td className="obs_table_content">{order.name}</td>
 
-
-                            <tr>
-
-                                {TableData.map((data, index) => (
-                                    <td className='obs_table_content' key={index}>{data.name}</td>
-                                ))}
-                            </tr>
+                                </tr>
+                            ))}
                         </tbody>
                     </Table>
                 </div>

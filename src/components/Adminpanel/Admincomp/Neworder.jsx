@@ -6,7 +6,7 @@ import Spinner from '../../Common/Spinner/Spinner';
 
 const Neworder = () => {
   const dispatch = useDispatch();
-  const { isLoading, isError, message, pendingOrders } = useSelector((state) => state.admin); // Update state property
+  const { isLoading, isError, message, pendingOrders } = useSelector((state) => state.admin.pendingOrders); // Update state property
 
   const TableHeading = [
     { Id: '1', name: 'Serial #' },
@@ -30,17 +30,7 @@ const Neworder = () => {
   if (isLoading) {
     return <Spinner />;
   }
-
-
-  if (!Array.isArray(pendingOrders) || pendingOrders.length === 0) {
-    return (
-      <div>
-        <div>No pending orders available.</div>
-        {message && <div>{message}</div>}
-      </div>
-    );
-  }
-
+  console.log(pendingOrders);
   return (
     <>
       <div className="table_section">
@@ -48,26 +38,29 @@ const Neworder = () => {
           <Table responsive>
             <thead className="tb_header_bg">
               <tr>
-                {TableHeading.map((data, index) => (
-                  <th className="obs_table_header" key={index}>
+                {TableHeading.map((data) => (
+                  <th className="obs_table_header" key={data.Id}>
                     {data.name}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {pendingOrders.map((order, index) => (
-                <tr key={index}>
-                  <td className="obs_table_content">{index + 1}</td>
-                  <td className="obs_table_content">{order.username}</td>
-                  <td className="obs_table_content">{order.user[0].address}</td>
-                  <td className="obs_table_content">{order.user[0].phone}</td>
-                  <td className="obs_table_content">{order.service.join(', ')}</td>
-                  <td className="obs_table_content">{order.price}</td>
-                  <td className="obs_table_content">{order.status}</td>
-                  <td className="obs_table_content"><button>Done</button></td>
-                </tr>
-              ))}
+              {pendingOrders &&
+                pendingOrders.map((order, index) => (
+                  <tr key={order._id}>
+                    <td className="obs_table_content">{index + 1}</td>
+                    <td className="obs_table_content">{order.user.username}</td>
+                    <td className="obs_table_content">{order.user.address}</td>
+                    <td className="obs_table_content">{order.user.phone}</td>
+                    <td className="obs_table_content">{order.service.join(', ')}</td>
+                    <td className="obs_table_content">{order.price}</td>
+                    <td className="obs_table_content">{order.status}</td>
+                    <td className="obs_table_content">
+                      <button>Done</button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </Table>
         </div>

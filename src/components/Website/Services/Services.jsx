@@ -56,7 +56,7 @@ const Services = () => {
 
   const handleBookNow = async (e) => {
     e.preventDefault();
-
+console.log("user id", localStorage.getItem("userId"))
     const orderData = {
       userId: localStorage.getItem("userId"),
       service: selectedItems,

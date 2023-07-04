@@ -59,6 +59,10 @@ const Signin = () => {
       console.log("username",username);
       localStorage.setItem('username', username);
       // setUsername(username);
+      const userId = response?.data?._id;
+      console.log("userId",userId);
+      localStorage.setItem('userId', userId);
+      
       const password = response?.data?.password;
       console.log("password",password);
       localStorage.setItem('password', password);

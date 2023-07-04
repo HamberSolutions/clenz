@@ -10,8 +10,8 @@ const Neworder = () => {
   const { isLoading, isError, message, pendingOrders } = useSelector((state) => state.admin.pendingOrders); // Update state property
 
   const TableHeading = [
-    { Id: '1', name: 'Serial #' },
-    { Id: '2', name: 'Customer Name' },
+    { Id: '1', name: '#' },
+    { Id: '2', name: 'Name' },
     { Id: '3', name: 'Address' },
     { Id: '4', name: 'Contact #' },
     { Id: '5', name: 'Package Name' },

@@ -142,13 +142,13 @@ export const adminSlice = createSlice({
         console.log({ action })
         state.isLoading = false;
         state.isSuccess = true;
-        state.user = action.payload;
+        state.completedOrders = action.payload;
       })
       .addCase(completedorders.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-        state.user = null
+        state.completedOrders = null
       })
       .addCase(orderstatus.pending, (state) => {
         state.isLoading = true;

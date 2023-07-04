@@ -21,7 +21,7 @@ const Navbar = () => {
     {
       icon: FaClipboardList,
       text: "All Orders",
-      route: "/orders-list",
+      route: "/completed-orders",
     },
    
   ];

@@ -26,7 +26,7 @@ const Footer = () => {
                   <li className='footer_li'><Link className='footer_menu' to="/about-us">About Us</Link></li>
                   <li className='footer_li'><Link className='footer_menu' to="/contact-us">Contact Us</Link></li>
                   <li className='footer_li'><Link className='footer_menu' to="/services">Services</Link></li>
-                  <li className='footer_li'><Link className='footer_menu' to="/faq">FAQ</Link></li>
+                  {/* <li className='footer_li'><Link className='footer_menu' to="/faq">FAQ</Link></li> */}
                 </ul>
               </div>
 

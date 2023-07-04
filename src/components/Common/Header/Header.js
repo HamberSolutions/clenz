@@ -25,7 +25,7 @@ const Header = ({ showF }) => {
           <div><NavLink className="nav_links" to="/about-us">About-Us</NavLink></div>
           <div><NavLink className="nav_links" to="/contact-us">Contact-Us</NavLink></div>
           <div><NavLink className="nav_links" to="/services">Services</NavLink></div>
-          <div><NavLink className="nav_links" to="/faq">FAQs</NavLink></div>
+          {/* <div><NavLink className="nav_links" to="/faq">FAQs</NavLink></div> */}
         </div>
         <div className="buttons_div d-flex">
           {showF ?

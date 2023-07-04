@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { FiUsers } from 'react-icons/fi';
 import { MdOutlineBusinessCenter } from 'react-icons/md';
@@ -8,10 +8,9 @@ import Spinner from '../../Common/Spinner/Spinner';
 import Cards from './Cards';
 
 const Dashboard = () => {
+  const [data, setData] = useState([]);
   const dispatch = useDispatch();
-  const getCount = useSelector((state) => state.admin.getCount);
-  const { isLoading, isError, message, getCount: countData } = getCount || {};
-
+  const { isLoading, isError, message, getCount } = useSelector((state) => state.admin); 
   const dummyCards = [
     {
       icon: FiUsers,
@@ -31,13 +30,9 @@ const Dashboard = () => {
   ];
 
   useEffect(() => {
-    dispatch(getcount())
-      .then((response) => {
-        console.log('response', response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const counts = dispatch(getcount());
+    counts.then(response =>  setData(response?.payload) ).catch(e => {console.log(e)})
+  
   }, [dispatch]);
 
   if (isLoading) {
@@ -47,7 +42,7 @@ const Dashboard = () => {
   if (isError) {
     return <div>Error: {message}</div>;
   }
-
+  console.log(getCount);
   return (
     <div>
       <h1 className="dashboard-header-text">Dashboard</h1>
@@ -55,12 +50,12 @@ const Dashboard = () => {
         <div className="card-container">
           {dummyCards.map((card, i) => {
             let stats;
-            if (countData && card.description === 'Completed Orders') {
-              stats = countData.completed;
-            } else if (countData && card.description === 'Pending Orders') {
-              stats = countData.pending;
-            } else if (countData && card.description === 'Total Orders') {
-              stats = countData.total;
+            if (data && card.description === 'Completed Orders') {
+              stats = data.completed;
+            } else if (data && card.description === 'Pending Orders') {
+              stats = data.pending;
+            } else if (data && card.description === 'Total Orders') {
+              stats = data.total;
             }
 
             return (

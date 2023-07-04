@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { PendingOrders, orderstatus } from '../../../features/admin/adminSlice';
 import Spinner from '../../Common/Spinner/Spinner';
 
 const Neworder = () => {
+  const [data, setData] = useState([]);
   const dispatch = useDispatch();
   const { isLoading, isError, message, pendingOrders } = useSelector((state) => state.admin.pendingOrders); // Update state property
 
@@ -19,13 +20,22 @@ const Neworder = () => {
     { Id: '8', name: 'Processed' },
   ];
 
+  
+
   useEffect(() => {
     // Fetch pending orders
-    dispatch(PendingOrders());
-
+ const neworders =  dispatch(PendingOrders());
+ neworders.then(response =>  setData(response?.payload?.slots) ).catch(e => {console.log(e)})
     // Fetch order status
     // dispatch(orderstatus());
   }, [dispatch]);
+console.log("data", data)
+
+const handlestatus = (_id) => {
+  console.log("order id",_id);
+  dispatch(orderstatus(_id));
+  };
+
 
   if (isLoading) {
     return <Spinner />;
@@ -46,8 +56,8 @@ const Neworder = () => {
               </tr>
             </thead>
             <tbody>
-              {pendingOrders &&
-                pendingOrders.map((order, index) => (
+              {data &&
+                data.map((order, index) => (
                   <tr key={order._id}>
                     <td className="obs_table_content">{index + 1}</td>
                     <td className="obs_table_content">{order.user.username}</td>
@@ -57,7 +67,7 @@ const Neworder = () => {
                     <td className="obs_table_content">{order.price}</td>
                     <td className="obs_table_content">{order.status}</td>
                     <td className="obs_table_content">
-                      <button>Done</button>
+                      <button onClick={() => handlestatus(order._id)}>Done</button>
                     </td>
                   </tr>
                 ))}

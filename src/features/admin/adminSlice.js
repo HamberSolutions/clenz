@@ -29,11 +29,11 @@ export const PendingOrders = createAsyncThunk(
 
 export const completedorders = createAsyncThunk(
   'admin/completedorders',
-  async (completedordersData, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       // Call API to install user
-      const response = await adminService.completedorders(completedordersData);
-      return response.data;
+      const response = await adminService.completedorders();
+      return response;
     } catch (error) {
       console.log({ error });
       const message =
@@ -75,7 +75,7 @@ export const getcount = createAsyncThunk(
     try {
       // Call API to install user
       const response = await adminService.getcount(countData);
-      return response.data;
+      return response;
     } catch (error) {
       console.log({ error });
       const message =
@@ -97,7 +97,7 @@ export const adminSlice = createSlice({
     pendingOrders: [],
     completedOrders: [],
     orderStatus: [],
-    getCount: [],
+    getCount: null,
     slots:[],
     isLoading: false,
     isError: null,
@@ -157,13 +157,13 @@ export const adminSlice = createSlice({
         console.log({ action })
         state.isLoading = false;
         state.isSuccess = true;
-        state.user = action.payload;
+        state.orderStatus = action.payload;
       })
       .addCase(orderstatus.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-        state.user = null
+        state.orderStatus = null
       })
       .addCase(getcount.pending, (state) => {
         state.isLoading = true;
@@ -172,14 +172,13 @@ export const adminSlice = createSlice({
         console.log({ action })
         state.isLoading = false;
         state.isSuccess = true;
-        state.user = action.payload;
+        state.getCount = action.payload;
       })
       .addCase(getcount.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-        state.user = null
-      })
+      });
   },
 });
 

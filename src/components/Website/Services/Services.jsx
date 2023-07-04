@@ -56,7 +56,7 @@ const Services = () => {
 
   const handleBookNow = async (e) => {
     e.preventDefault();
-
+console.log("user id", localStorage.getItem("userId"))
     const orderData = {
       userId: localStorage.getItem("userId"),
       service: selectedItems,
@@ -308,6 +308,7 @@ const Services = () => {
                   </Col>
                 </Row>
                 <div className="line_div"></div>
+
 
                 <Row>
                   <Col lg={1} md={1} sm={1}>

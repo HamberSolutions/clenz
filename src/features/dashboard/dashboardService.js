@@ -10,6 +10,7 @@ const API_URL_2 = `${USERS_BASE_URL}/order/getslots/2023/6`;
 const orderbook = async (orderData) => {
   try {
     const response = await axios.post(API_URL_1, orderData);
+    toast.success("Order placed successfully");
     return response.data;
   } catch (error) {
     console.log("error", error);

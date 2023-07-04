@@ -15,19 +15,18 @@ import Signin from "./components/Auth/Signin/Signin";
 import Signup from "./components/Auth/Signup/Signup";
 
 /* Admin Routes*/
-// import{ Adminprofile } from "./pages/Adminportal/Adminportal";
+import Adminprofile from "./pages/Adminportal/Adminprofile";
+import Order from "./pages/Adminportal/Order";
+import OrderHistory from "./pages/Adminportal/OrderHistory";
  
-/* User Side Routes*/  
-// import Userprofile from "./Pages/Userportal/Userprofile";
 
 /*Routes Navigations*/ 
 import Layout from "./Routes/Layout";
 import RequireAuth from "./Routes/RequireAuth";
 import Unauthorized from "./Routes/Unauthorized";
 import Missing from "./Routes/Missing";
-import Order from "./pages/Adminportal/Order";
-import Adminprofile from "./pages/Adminportal/Adminprofile";
-import OrderHistory from "./pages/Adminportal/OrderHistory";
+
+
 
 const ROLES = {
   'Admin': 5150,
@@ -63,10 +62,6 @@ function App() {
         <Route path="/admin-profile" element={<Adminprofile/>} />
         <Route path="/new-orders" element={<Order/>} />
         <Route path="/completed-orders" element={<OrderHistory/>} />
-        </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
-        {/* <Route path="/user-profile" element={<Userprofile />} /> */}
         </Route>
 
         {/* catch all */}

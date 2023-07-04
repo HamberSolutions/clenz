@@ -10,7 +10,7 @@ const RequireAuth = ({ allowedRoles }) => {
         // Add a loading state or component while authentication status is being determined
         return <div>Loading...</div>;
     }
-    console.log(token)
+    // console.log(token)
 
     if (!token) {
         // User is not authenticated, redirect to the login page

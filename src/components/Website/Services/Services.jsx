@@ -100,7 +100,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Relaxation Massage - 60 minutes", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Relaxation Massage - 60 minutes", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Relaxation Massage - 60 minutes") && (
                         <div
@@ -138,7 +138,7 @@ const Services = () => {
 
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Relaxation Massage - 90 minutes", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Relaxation Massage - 90 minutes", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Relaxation Massage - 90 minutes") && (
                         <div
@@ -176,7 +176,7 @@ const Services = () => {
                 
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Deep Tissue Massage- 60 minutes", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Deep Tissue Massage- 60 minutes", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Deep Tissue Massage- 60 minutes") && (
                         <div
@@ -208,7 +208,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Deep Tissue Massage- 90 minutes", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Deep Tissue Massage- 90 minutes", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Deep Tissue Massage- 90 minutes") && (
                         <div
@@ -242,7 +242,7 @@ const Services = () => {
 
 
                   <Col lg={1} md={1} sm={1}>
-                   <button onClick={() => handleClick("Couple Massage- 60 minutes each session", 449)}>
+                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Couple Massage- 60 minutes each session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("Couple Massage- 60 minutes each session") && (
                         <div
@@ -276,7 +276,7 @@ const Services = () => {
 
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                    <button onClick={() => handleClick("MADEROTHERAPHY ANTI CELLULITE(wooden treatment)- 60 minutes", 299)}>
+                    <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("MADEROTHERAPHY ANTI CELLULITE(wooden treatment)- 60 minutes", 299)}>
                     <div className="select_btn">
                       {selectedItems.includes("MADEROTHERAPHY ANTI CELLULITE(wooden treatment)- 60 minutes") && (
                         <div
@@ -312,7 +312,7 @@ const Services = () => {
                 
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Clenz Signature Massage-120 minutes", 549)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature Massage-120 minutes", 549)}>
                     <div className="select_btn">
                       {selectedItems.includes("Clenz Signature Massage- 120 minutes") && (
                         <div
@@ -353,7 +353,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                     <button onClick={() => handleClick("Luxurious Services- 2hr 30 minutes", 449)}>
+                     <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Luxurious Services- 2hr 30 minutes", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("Luxurious Services- 2hr 30 minutes") && (
                         <div
@@ -414,7 +414,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Refreshing Packages- 120 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Refreshing Packages- 120 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Refreshing Packages- 120 minutes session") && (
                         <div
@@ -474,7 +474,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Group of Faith Special- 3hr 45 min, 2 services", 849)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Group of Faith Special- 3hr 45 min, 2 services", 849)}>
                     <div className="select_btn">
                       {selectedItems.includes("Group of Faith Special- 3hr 45 min, 2 services") && (
                         <div
@@ -517,7 +517,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("The Star of Clenz Spa- 120 minutes session", 449)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("The Star of Clenz Spa- 120 minutes session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("The Star of Clenz Spa- 120 minutes session") && (
                         <div
@@ -557,7 +557,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Solemen Prayer Massage- 105 minutes session", 299)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Solemen Prayer Massage- 105 minutes session", 299)}>
                     <div className="select_btn">
                       {selectedItems.includes("Solemen Prayer Massage- 105 minutes session") && (
                         <div
@@ -600,7 +600,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Under The Lanterns Special- 105 minutes session ", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Under The Lanterns Special- 105 minutes session ", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Under The Lanterns Special- 105 minutes session ") && (
                         <div
@@ -641,7 +641,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Crescent Mood Massage- 105 minutes session", 449)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Crescent Mood Massage- 105 minutes session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("Crescent Mood Massage- 105 minutes session") && (
                         <div
@@ -689,7 +689,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Deep Tissue Massage- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Deep Tissue Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Deep Tissue Massage- 90 minutes session") && (
                         <div
@@ -721,7 +721,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Relaxation Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Relaxation Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Relaxation Massage- 60 minutes session") && (
                         <div
@@ -753,7 +753,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Lymphatic Drainage Massage- 90 minutes massage", 399)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Lymphatic Drainage Massage- 90 minutes massage", 399)}>
                     <div className="select_btn">
                       {selectedItems.includes("Lymphatic Drainage Massage- 90 minutes massage") && (
                         <div
@@ -785,7 +785,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Maderotherapy Slimming(wood traetment)- 90 minutes session", 399)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Maderotherapy Slimming(wood traetment)- 90 minutes session", 399)}>
                     <div className="select_btn">
                       {selectedItems.includes("Maderotherapy Slimming(wood traetment)- 90 minutes session") && (
                         <div
@@ -819,7 +819,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Lymphatic Drainage Massage- 60 minutes session", 279)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Lymphatic Drainage Massage- 60 minutes session", 279)}>
                     <div className="select_btn">
                       {selectedItems.includes("Lymphatic Drainage Massage- 60 minutes session") && (
                         <div
@@ -851,7 +851,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Hotstone & Relax- 45 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hotstone & Relax- 45 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Hotstone & Relax- 45 minutes session") && (
                         <div
@@ -881,7 +881,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Cupping & Relax- 45 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Cupping & Relax- 45 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Cupping & Relax- 45 minutes session") && (
                         <div
@@ -913,7 +913,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("lymphatic Drainage Massage- 45 minutes session", 199)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("lymphatic Drainage Massage- 45 minutes session", 199)}>
                     <div className="select_btn">
                       {selectedItems.includes("lymphatic Drainage Massage- 45 minutes session") && (
                         <div
@@ -945,7 +945,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Mediotherapy Anti Cellulite- 60 minutes ", 299)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Mediotherapy Anti Cellulite- 60 minutes ", 299)}>
                     <div className="select_btn">
                       {selectedItems.includes("Mediotherapy Anti Cellulite- 60 minutes ") && (
                         <div
@@ -979,7 +979,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Pre & Post Natal Massage- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Pre & Post Natal Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Pre & Post Natal Massage- 90 minutes session") && (
                         <div
@@ -1011,7 +1011,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Pre & Post Natal Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Pre & Post Natal Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Pre & Post Natal Massage- 60 minutes session") && (
                         <div
@@ -1043,7 +1043,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Slimming Massage- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Slimming Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Slimming Massage- 90 minutes session") && (
                         <div
@@ -1075,7 +1075,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Slimming Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Slimming Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Slimming Massage- 60 minutes session") && (
                         <div
@@ -1107,7 +1107,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Reflexology Massage- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Reflexology Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Reflexology Massage- 90 minutes session") && (
                         <div
@@ -1139,7 +1139,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Reflexology Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Reflexology Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Reflexology Massage- 60 minutes session") && (
                         <div
@@ -1171,7 +1171,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Sports Massage- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Sports Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Sports Massage- 90 minutes session") && (
                         <div
@@ -1203,7 +1203,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Sports Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Sports Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Sports Massage- 60 minutes session") && (
                         <div
@@ -1235,7 +1235,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Hot Oil Massage Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hot Oil Massage Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Hot Oil Massage Massage- 60 minutes session") && (
                         <div
@@ -1267,7 +1267,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Traditional Thai Massage- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Traditional Thai Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Traditional Thai Massage- 90 minutes session") && (
                         <div
@@ -1299,7 +1299,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Traditional Thai Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Traditional Thai Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Traditional Thai Massage- 60 minutes session") && (
                         <div
@@ -1331,7 +1331,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Aroma Therapy  Massage- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Aroma Therapy  Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Aroma Therapy  Massage- 90 minutes session") && (
                         <div
@@ -1363,7 +1363,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Aroma Therapy Massage- 60 minutes session", 249)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Aroma Therapy Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
                       {selectedItems.includes("Aroma Therapy Massage- 60 minutes session") && (
                         <div
@@ -1395,7 +1395,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("4 Hands Massage- 60 minutes session", 449)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("4 Hands Massage- 60 minutes session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("4 Hands Massage- 60 minutes session") && (
                         <div
@@ -1435,7 +1435,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Couple Massage- 120 minutes session", 449)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Couple Massage- 120 minutes session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("Couple Massage- 120 minutes session") && (
                         <div
@@ -1467,7 +1467,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Couple Massage- 180 minutes session", 549)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Couple Massage- 180 minutes session", 549)}>
                     <div className="select_btn">
                       {selectedItems.includes("Couple Massage- 180 minutes session") && (
                         <div
@@ -1506,7 +1506,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Cupping & Relax- 60 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Cupping & Relax- 60 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Cupping & Relax- 60 minutes session") && (
                         <div
@@ -1538,7 +1538,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Hotstone  & Relax- 60 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hotstone  & Relax- 60 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Hotstone  & Relax- 60 minutes session") && (
                         <div
@@ -1570,7 +1570,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Full Body Scrub & Relax- 90 minutes session", 349)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Full Body Scrub & Relax- 90 minutes session", 349)}>
                     <div className="select_btn">
                       {selectedItems.includes("Full Body Scrub & Relax- 90 minutes session") && (
                         <div
@@ -1609,7 +1609,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Cupping & Relax- 90 minutes session", 449)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Cupping & Relax- 90 minutes session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("Cupping & Relax- 90 minutes session") && (
                         <div
@@ -1648,7 +1648,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Hotstone & Relax- 90 minutes session", 449)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hotstone & Relax- 90 minutes session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("Hotstone & Relax- 90 minutes session") && (
                         <div
@@ -1698,7 +1698,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Ear Candling- 20 minutes session", 49)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Ear Candling- 20 minutes session", 49)}>
                     <div className="select_btn">
                       {selectedItems.includes("Ear Candling- 20 minutes session") && (
                         <div
@@ -1737,7 +1737,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Body Scrub- 30 minutes session", 99)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Body Scrub- 30 minutes session", 99)}>
                     <div className="select_btn">
                       {selectedItems.includes("Body Scrub- 30 minutes session") && (
                         <div
@@ -1769,7 +1769,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Head Massage- 30 minutes session", 99)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Head Massage- 30 minutes session", 99)}>
                     <div className="select_btn">
                       {selectedItems.includes("Head Massage- 30 minutes session") && (
                         <div
@@ -1812,7 +1812,7 @@ const Services = () => {
               <div className="back_div">
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Clenz Signature- 90 minutes session", 449)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature- 90 minutes session", 449)}>
                     <div className="select_btn">
                       {selectedItems.includes("Clenz Signature- 90 minutes session") && (
                         <div
@@ -1845,7 +1845,7 @@ const Services = () => {
                 <div className="line_div"></div>
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button onClick={() => handleClick("Clenz Signature Massage- 120 minutes session", 549)}>
+                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature Massage- 120 minutes session", 549)}>
                     <div className="select_btn">
                       {selectedItems.includes("Clenz Signature Massage- 120 minutes session") && (
                         <div 
@@ -1858,7 +1858,6 @@ const Services = () => {
                           position: "absolute",
                           top: "0px",
                           left: "0px",
-                          
                         }}
                         >
                           <TiTick color="black" size={"30px"} />

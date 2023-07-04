@@ -1,5 +1,6 @@
 import axios from "axios";
 import { USERS_BASE_URL } from "../../components/Constants/Config/config.dev";
+import { toast } from "react-toastify";
 
 
 const API_URL_1 = `${USERS_BASE_URL}/order/book-order`;
@@ -11,10 +12,18 @@ const orderbook = async (orderData) => {
     const response = await axios.post(API_URL_1, orderData);
     return response.data;
   } catch (error) {
-    console.log("error",error)
+    console.log("error", error);
+    if (error.response && error.response.status === 401) {
+      // Unauthorized error (401)
+      toast.error("Please sign in first");
+    } else {
+      toast.error("Failed to place order");
+    }
     return error;
   }
 };
+
+
 
 const getslots = async (slotsData) => {
   try {

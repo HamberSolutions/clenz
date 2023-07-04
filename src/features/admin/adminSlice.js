@@ -1,100 +1,187 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import dashboardService from "./dashboardService";
+import adminService from "./adminService";
 
 
 
-export const orderbook = createAsyncThunk(
-  'auth/orderbook',
-  async (orderData, {rejectWithValue}) => {
+export const PendingOrders = createAsyncThunk(
+  'admin/PendingOrders',
+  async (_, { rejectWithValue }) => {
     try {
       // Call API to subscribe user
-      const response = await dashboardService.orderbook(orderData);
-      console.log({response})
-      return response.data;
+      const response = await adminService.PendingOrders();
+      console.log({ response })
+      return response;
     } catch (error) {
-      console.log({error});
+      console.log({ error });
       const message =
-              (error.response &&
-                error.response.data &&
-                error.response.data.message) ||
-              error.message ||
-              error.toString();
-              console.log({message});
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      console.log({ message });
       return rejectWithValue(message);
-      
+
     }
-    } 
+  }
 );
 
-export const getslots = createAsyncThunk(
-  'auth/getslots',
-  async (slotsData, { rejectWithValue }) => {
+export const completedorders = createAsyncThunk(
+  'admin/completedorders',
+  async (_, { rejectWithValue }) => {
     try {
       // Call API to install user
-      const response = await dashboardService.getslots(slotsData);
+      const response = await adminService.completedorders();
+      return response;
+    } catch (error) {
+      console.log({ error });
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      console.log({ message });
+      return rejectWithValue(message);
+    }
+  }
+);
+
+export const orderstatus = createAsyncThunk(
+  'admin/orderstatus',
+  async (statusData, { rejectWithValue }) => {
+    try {
+      // Call API to install user
+      const response = await adminService.orderstatus(statusData);
       return response.data;
     } catch (error) {
-      console.log({error});
+      console.log({ error });
       const message =
-              (error.response &&
-                error.response.data &&
-                error.response.data.message) ||
-              error.message ||
-              error.toString();
-              console.log({message});
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      console.log({ message });
+      return rejectWithValue(message);
+    }
+  }
+);
+
+export const getcount = createAsyncThunk(
+  'admin/getcount',
+  async (countData, { rejectWithValue }) => {
+    try {
+      // Call API to install user
+      const response = await adminService.getcount(countData);
+      return response;
+    } catch (error) {
+      console.log({ error });
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      console.log({ message });
       return rejectWithValue(message);
     }
   }
 );
 
 
-export const dashboardSlice = createSlice({
-  name: "dashboard",
+export const adminSlice = createSlice({
+  name: "admin",
   initialState: {
-    getSlots:[],
+    pendingOrders: [],
+    completedOrders: [],
+    orderStatus: [],
+    getCount: null,
+    slots:[],
     isLoading: false,
     isError: null,
-	message: "",
+    message: "",
   },
-  reducers:{
-    setGetSlots: (state, action) => {
-      state.getSlots = action.payload
-	}
-  }, 
+  reducers: {
+    setPendingOrders: (state, action) => {
+      state.pendingOrders = action.payload;
+    },
+    setCompletedOrders: (state, action) => {
+      state.completedOrders = action.payload;
+    },
+    setOrderStatus: (state, action) => {
+      state.orderStatus = action.payload;
+    },
+    setGetCount: (state, action) => {
+      state.getCount = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(orderbook.pending, (state) => {
+      .addCase(PendingOrders.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(orderbook.fulfilled, (state, action) => {
-        console.log({action})
+      .addCase(PendingOrders.fulfilled, (state, action) => {
+        console.log({ action })
         state.isLoading = false;
         state.isSuccess = true;
-        state.user = action.meta.arg;
+        state.message = 'Pending orders fetched successfully';
+        state.pendingOrders = action.payload;
       })
-      .addCase(orderbook.rejected, (state, action) => {
+      .addCase(PendingOrders.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
-        state.message = action.meta.arg;
-        state.user = null
+        state.message = action.error.message;
+        state.pendingOrders = null
       })
-      .addCase(getslots.pending, (state) => {
+      .addCase(completedorders.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getslots.fulfilled, (state, action) => {
-        console.log({action})
+      .addCase(completedorders.fulfilled, (state, action) => {
+        console.log({ action })
         state.isLoading = false;
         state.isSuccess = true;
-        state.user = action.payload;
+        state.completedOrders = action.payload;
       })
-      .addCase(getslots.rejected, (state, action) => {
+      .addCase(completedorders.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
-        state.user = null
+        state.completedOrders = null
       })
+      .addCase(orderstatus.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(orderstatus.fulfilled, (state, action) => {
+        console.log({ action })
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.orderStatus = action.payload;
+      })
+      .addCase(orderstatus.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        state.orderStatus = null
+      })
+      .addCase(getcount.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getcount.fulfilled, (state, action) => {
+        console.log({ action })
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.getCount = action.payload;
+      })
+      .addCase(getcount.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      });
   },
 });
 
-export default dashboardSlice.reducer;
+export const { setPendingOrders, setCompletedOrders, setOrderStatus, setGetCount } = adminSlice.actions;
+
+export default adminSlice.reducer;

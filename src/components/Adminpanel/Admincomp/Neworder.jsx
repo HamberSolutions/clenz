@@ -67,7 +67,7 @@ const handlestatus = (_id) => {
                     <td className="obs_table_content">{order.price}</td>
                     <td className="obs_table_content">{order.status}</td>
                     <td className="obs_table_content">
-                      <button onClick={() => handlestatus(order._id)}>Done</button>
+                      <button style={{padding:"0px 8px", background:"#101928", color:"aliceblue", borderRadius:"8px"}} onClick={() => handlestatus(order._id)}>Done</button>
                     </td>
                   </tr>
                 ))}

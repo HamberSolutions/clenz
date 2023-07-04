@@ -309,12 +309,11 @@ const Services = () => {
                 </Row>
                 <div className="line_div"></div>
 
-                
                 <Row>
                   <Col lg={1} md={1} sm={1}>
-                  <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature Massage-120 minutes", 549)}>
+                    <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature Massage-120 minutes", 549)}>
                     <div className="select_btn">
-                      {selectedItems.includes("Clenz Signature Massage- 120 minutes") && (
+                      {selectedItems.includes("Clenz Signature Massage-120 minutes") && (
                         <div
                           style={{
                             width: "30px",
@@ -334,13 +333,14 @@ const Services = () => {
                   </button>
                   </Col>
                   <Col lg={9} md={9} sm={9}>
-                    <h4 className="headings">Clenz Signature Massage</h4>
+                  <h4 className="headings">Clenz Signature Massage</h4>
                     <p className="time_headings"> 120 minutes session</p>
                   </Col>
                   <Col>
-                    <h6 className="price">AED 549</h6>
+                  <h6 className="price">AED 549</h6>
                   </Col>
                 </Row>
+             
                 <div className="line_div"></div>
               </div>
 

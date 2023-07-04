@@ -27,7 +27,6 @@ import Unauthorized from "./Routes/Unauthorized";
 import Missing from "./Routes/Missing";
 import Order from "./pages/Adminportal/Order";
 import Adminprofile from "./pages/Adminportal/Adminprofile";
-import Servicestwo from "./components/Website/Servicestwo/Servicestwo";
 import OrderHistory from "./pages/Adminportal/OrderHistory";
 
 const ROLES = {
@@ -49,7 +48,6 @@ function App() {
         <Route path="/about-us" element={<Aboutpage />} />
         <Route path="/contact-us" element={<Contactpage/>} />    
         <Route path="/book-now" element={<Booknow/>} />
-        <Route path="/services-two" element={<Servicestwo/>} />
         
 
        

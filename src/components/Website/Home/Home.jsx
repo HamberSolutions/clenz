@@ -130,7 +130,7 @@ const Home = () => {
           </Row>
           <Row>
             <Col lg={4} md={4} sm={12}>
-              <Card>
+              <Card className="card_data">
                 <Card.Img variant="top" src={Photo3} />
                 <Card.Body>
                   <Card.Title>Relaxation Massage</Card.Title>
@@ -146,7 +146,7 @@ const Home = () => {
               </Card>
             </Col>
             <Col lg={4} md={4} sm={12}>
-			<Card>
+			<Card className="card_data">
                 <Card.Img variant="top" src={Photo7} />
                 <Card.Body>
                   <Card.Title>Couple Massage</Card.Title>
@@ -162,7 +162,7 @@ const Home = () => {
               </Card>
 			</Col>
             <Col lg={4} md={4} sm={12}>
-			<Card>
+			<Card  className="card_data">
                 <Card.Img variant="top" src={Photo8} />
                 <Card.Body>
                   <Card.Title>Clenz Signature</Card.Title>

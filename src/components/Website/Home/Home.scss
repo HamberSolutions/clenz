@@ -92,10 +92,13 @@
 }
 .home_fifth_section{
   width: 100%;
-  height: 850px;
+  height: auto;
   background-color: #101928;
   border-bottom: 2px solid #090d15;
+  padding-bottom: 100px;
+  
 
+ 
   .packages_heading{
     color: aliceblue;
     padding: 100px 0px;
@@ -121,5 +124,11 @@
     font-weight: 600;
     font-size: 16px;
 
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .card_data{
+    margin-top: 20px;
   }
 }

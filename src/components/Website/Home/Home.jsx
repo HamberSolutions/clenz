@@ -16,12 +16,18 @@ import icon3 from "../../../assets/images/icon3.png";
 import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import image from "../../../assets/images/whatsapp.png"
 // import Faq from "../../FAQ/Faq";
 
 const Home = () => {
   return (
     <>
       <Header />
+      <div className="whatsapp_div">
+        <Link to="/">
+          <img className="whatsapp_image" src={image} />
+        </Link>
+      </div>
       <section className="home_first-sec">
         <Container fluid>
           <Row>

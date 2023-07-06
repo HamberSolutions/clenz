@@ -10,6 +10,10 @@ import { Link } from "react-router-dom";
 import google_logo from "../../../assets/images/google.png";
 import facebook_logo from "../../../assets/images/facebook.png";
 import logo from "../../../assets/images/Logo1.png";
+import { FacebookLoginButton } from "react-social-login-buttons";
+import {LoginSocialFacebook } from "react-social-login"
+import { SocialButton } from "react-social-login";
+
 
 
 const Signup = () => {
@@ -165,7 +169,24 @@ const Signup = () => {
                   </div>
                   <div className="google_des">continue with google</div>
                 </div>
+
+                {/* <SocialButton>
+                    appid="3106972836263485"
+                    onResolve={(response) => {
+                      console.log(response);
+
+                    }}
+                    onReject={(error)=>{
+                      console.log(error);
+                    }}
+                  <FacebookLoginButton />
+                </SocialButton> */}
+
+
+
+
                 <div className="facebook_button">
+
                   <div className="facebook_logo">
                     <img src={facebook_logo} alt="facebook_logo" />
                   </div>

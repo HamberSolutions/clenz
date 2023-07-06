@@ -185,13 +185,17 @@ const Signup = () => {
                         </div>
                       </div>
                       <FacebookLogin
+                      
                         appId="3106972836263485"
                         autoLoad={false}
                         fields="name,email,picture"
                         callback={responseFacebook}
                       />
                       <div className="facebook_button">
+                    
                         <div className="facebook_logo">
+                       
+
                           <img src={facebook_logo} alt="facebook_logo" />
                         </div>
                         <div className="facebook_des">

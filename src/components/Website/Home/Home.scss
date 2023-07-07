@@ -17,6 +17,13 @@
     width: 100% !important;
     height: 600px;
   }
+  .slick-next{
+    right: 0px !important;
+  }
+  .slick-prev{
+    left: 0px !important;
+    z-index: 9999;
+  }
 }
 
 .home_second_section{

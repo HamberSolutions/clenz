@@ -18,6 +18,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import image from "../../../assets/images/whatsapp.png"
 import Slider from "react-slick";
+import { padding } from "@mui/system";
 // import Faq from "../../FAQ/Faq";
 
 const Home = () => {
@@ -78,7 +79,7 @@ const Home = () => {
       <section className="home_first-sec">
         <Container fluid>
           <Row>
-            <Col lg={12} md={12} sm={12}>
+            <Col lg={12} md={12} sm={12} style={{padding:"0px"}}>
             <Slider {...settings}>
           <div>
           <img className="home_main_img" src={Photo5} />

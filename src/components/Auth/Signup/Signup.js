@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import google_logo from "../../../assets/images/google.png";
 import facebook_logo from "../../../assets/images/facebook.png";
 import logo from "../../../assets/images/Logo1.png";
-// import FacebookLogin from "react-facebook-login";
 import { GoogleLogin } from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 const Signup = () => {
@@ -185,8 +184,6 @@ const Signup = () => {
                 </Row>
                 <Row>
                   <Col>
-
-                   
                     <div className="social_buttons">
                     <GoogleLogin
                       clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.c"

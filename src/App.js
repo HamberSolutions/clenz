@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
 
 /* Public Routes*/
 import Home from "./pages/Homepage/Homepage";

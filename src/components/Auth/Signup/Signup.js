@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import google_logo from "../../../assets/images/google.png";
 import facebook_logo from "../../../assets/images/facebook.png";
 import logo from "../../../assets/images/Logo1.png";
-import { FacebookLoginButton } from "react-social-login-buttons";
 import FacebookLogin from "react-facebook-login";
+import { GoogleLogin } from 'react-google-login';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -61,6 +61,16 @@ const Signup = () => {
   const responseFacebook = (response) => {
     console.log("Facebook login response:", response);
   };
+
+  const responseGoogle = (response) => {
+    console.log(response);
+    // Process the response data as per your requirement
+  };
+  
+  const responseGoogleFailure = (response) => {
+    console.error(response);
+  };
+
 
   return (
     <>
@@ -175,6 +185,14 @@ const Signup = () => {
                 </Row>
                 <Row>
                   <Col>
+
+                  <GoogleLogin
+        clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.c"
+        buttonText="Login with Google"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogleFailure}
+        cookiePolicy={'single_host_origin'}
+      />
                     <div className="social_buttons">
                       <div className="google_button">
                         <div className="google_logo">

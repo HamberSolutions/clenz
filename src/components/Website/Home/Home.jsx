@@ -4,11 +4,11 @@ import "./Home.scss";
 import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
 import Subfooter from "../../Common/Subfooter/Subfooter";
-import Photo3 from "../../../assets/images/photo-3.jpg";
+import Photo3 from "../../../assets/images/photo-3.png";
 import Photo5 from "../../../assets/images/photo-5.png";
 import Photo4 from "../../../assets/images/photo-4.jpg";
 import Photo6 from "../../../assets/images/photo-7.jpg";
-import Photo7 from "../../../assets/images/photo7.jpg";
+import Photo7 from "../../../assets/images/photo7.png";
 import Photo8 from "../../../assets/images/photo8.jpg";
 import icon1 from "../../../assets/images/icon1.png";
 import icon2 from "../../../assets/images/icon2.png";
@@ -17,9 +17,56 @@ import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import image from "../../../assets/images/whatsapp.png"
+import Slider from "react-slick";
 // import Faq from "../../FAQ/Faq";
 
 const Home = () => {
+  var settings = {
+    
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          autoplay: true,
+          speed: 2000,
+          autoplaySpeed: 2000
+         
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          autoplay: true,
+          speed: 2000,
+          autoplaySpeed: 2000
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          speed: 2000,
+          autoplaySpeed: 2000,
+        }
+      }
+    ]
+  };
   return (
     <>
       <Header />
@@ -31,8 +78,20 @@ const Home = () => {
       <section className="home_first-sec">
         <Container fluid>
           <Row>
-            <Col style={{padding:"0px"}}>
-              <img className="home_main_img" src={Photo5}></img>
+            <Col lg={12} md={12} sm={12}>
+            <Slider {...settings}>
+          <div>
+          <img className="home_main_img" src={Photo5} />
+          </div>
+          <div>
+          <img className="home_main_img" src={Photo7} />
+          </div>
+          <div>
+          <img className="home_main_img" src={Photo8} />
+          </div>
+         
+        </Slider>
+              
             </Col>
           </Row>
         </Container>

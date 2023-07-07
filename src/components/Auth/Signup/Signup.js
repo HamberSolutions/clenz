@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 import google_logo from "../../../assets/images/google.png";
 import facebook_logo from "../../../assets/images/facebook.png";
 import logo from "../../../assets/images/Logo1.png";
-import FacebookLogin from "react-facebook-login";
+// import FacebookLogin from "react-facebook-login";
 import { GoogleLogin } from 'react-google-login';
-
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 const Signup = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -66,7 +66,7 @@ const Signup = () => {
     console.log(response);
     // Process the response data as per your requirement
   };
-  
+
   const responseGoogleFailure = (response) => {
     console.error(response);
   };
@@ -186,40 +186,40 @@ const Signup = () => {
                 <Row>
                   <Col>
 
-                  <GoogleLogin
-        clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.c"
-        buttonText="Login with Google"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogleFailure}
-        cookiePolicy={'single_host_origin'}
-      />
+                   
                     <div className="social_buttons">
-                      <div className="google_button">
-                        <div className="google_logo">
+                    <GoogleLogin
+                      clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.c"
+                      buttonText="Login with Google"
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogleFailure}
+                      cookiePolicy={'single_host_origin'}
+                      render={renderProps => (
+                        <button className="google_button" onClick={renderProps.onClick} ><div className="google_logo">
                           <img src={google_logo} alt="google_logo" />
                         </div>
-                        <div className="google_des">
-                          continue with google
-                        </div>
-                      </div>
+                          <div className="google_des">
+                            continue with google
+                          </div>
+                          </button>
+                      )}
+                    />
                       <FacebookLogin
-                      
                         appId="3106972836263485"
                         autoLoad={false}
                         fields="name,email,picture"
                         callback={responseFacebook}
+                        render={renderProps => (
+                          <button className="facebook_button" onClick={renderProps.onClick}>
+                            <div className="facebook_logo">
+                              <img src={facebook_logo} alt="facebook_logo" />
+                            </div>
+                            <div className="facebook_des">
+                              continue with Facebook
+                            </div>
+                          </button>
+                        )}
                       />
-                      <div className="facebook_button">
-                    
-                        <div className="facebook_logo">
-                       
-
-                          <img src={facebook_logo} alt="facebook_logo" />
-                        </div>
-                        <div className="facebook_des">
-                          continue with facebook
-                        </div>
-                      </div>
                     </div>
                   </Col>
                 </Row>

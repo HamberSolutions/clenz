@@ -186,11 +186,9 @@ const Signup = () => {
                   <Col>
                     <div className="social_buttons">
                     <GoogleLogin
-                      clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.c"
-                      buttonText="Login with Google"
-                      onSuccess={responseGoogle}
-                      onFailure={responseGoogleFailure}
-                      cookiePolicy={'single_host_origin'}
+                      clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.com"
+                      // buttonText="Login with Google"
+                    
                       render={renderProps => (
                         <button className="google_button" onClick={renderProps.onClick} ><div className="google_logo">
                           <img src={google_logo} alt="google_logo" />
@@ -200,6 +198,9 @@ const Signup = () => {
                           </div>
                           </button>
                       )}
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogleFailure}
+                      cookiePolicy={'single_host_origin'}
                     />
                       <FacebookLogin
                         appId="3106972836263485"

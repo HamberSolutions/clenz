@@ -16,6 +16,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { orderbook } from "../../../features/dashboard/dashboardSlice";
 
+import  { useRef } from 'react';
+// import './SmoothScroll.css';
+
 const dateFormat = "YYYY-MM-DD";
 
 
@@ -70,9 +73,33 @@ console.log("user id", localStorage.getItem("userId"))
   };
   console.log(currentPrice)
 
+
+  // scroller 
+  
+    const scrollRef = useRef(null);
+  
+    const handleScroll = () => {
+      scrollRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    };
+
   return (
     <>
       <Header />
+
+
+      <div className="scroll_div">
+        
+              <div>46 Services Available</div>
+            
+                <button className="scroll_button" onClick={handleScroll}>Book Now</button>
+            
+           
+       
+      </div>
+
       <section className="services_first-sec">
         <Container fluid>
           <Row>
@@ -99,6 +126,7 @@ console.log("user id", localStorage.getItem("userId"))
               </Row>
               <div className="back_div">
                 <Row>
+                  <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Relaxation Massage - 60 minutes", 249)}>
                     <div className="select_btn">
@@ -121,22 +149,24 @@ console.log("user id", localStorage.getItem("userId"))
                     </div>
                   </button>
                   </Col>
-                  <Col lg={9} md={9} sm={9}>
+                  <Col lg={9} md={9} sm={9} >
                   <div className="item-details">
                     <h4 className="headings">Relaxation Massage</h4>
                     <p className="time_headings">60 minutes session</p>
                     
                   </div>
                   </Col>
-                  <Col lg={2} md={2} sm={2}>
+                  <Col lg={2} md={2} sm={2}  >
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 
 {/* done */}
 
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Relaxation Massage - 90 minutes", 349)}>
                     <div className="select_btn">
@@ -169,12 +199,14 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col lg={2} md={2} sm={2}>
                   <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 {/* Done */}
                 
                 
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Deep Tissue Massage- 60 minutes", 249)}>
                     <div className="select_btn">
@@ -204,9 +236,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Deep Tissue Massage- 90 minutes", 349)}>
                     <div className="select_btn">
@@ -236,11 +270,12 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
 
-
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                    <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Couple Massage- 60 minutes each session", 449)}>
                     <div className="select_btn">
@@ -270,11 +305,13 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 449</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
 
 
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                     <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("MADEROTHERAPHY ANTI CELLULITE(wooden treatment)- 60 minutes", 299)}>
                     <div className="select_btn">
@@ -306,11 +343,13 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 299</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
 
 
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                     <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature Massage-120 minutes", 549)}>
                     <div className="select_btn">
@@ -340,6 +379,7 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                   <h6 className="price">AED 549</h6>
                   </Col>
+                  </div>
                 </Row>
              
                 <div className="line_div"></div>
@@ -353,6 +393,7 @@ console.log("user id", localStorage.getItem("userId"))
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                      <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Luxurious Services- 2hr 30 minutes", 449)}>
                     <div className="select_btn">
@@ -411,9 +452,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 449</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Refreshing Packages- 120 minutes session", 349)}>
                     <div className="select_btn">
@@ -464,16 +507,19 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
               <Row>
+              
                 <Col>
                   <h2 className="All_headings">Leisure Pacakges</h2>
                 </Col>
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Group of Faith Special- 3hr 45 min, 2 services", 849)}>
                     <div className="select_btn">
@@ -514,9 +560,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 849</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("The Star of Clenz Spa- 120 minutes session", 449)}>
                     <div className="select_btn">
@@ -554,9 +602,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 449</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Solemen Prayer Massage- 105 minutes session", 299)}>
                     <div className="select_btn">
@@ -597,9 +647,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 299</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Under The Lanterns Special- 105 minutes session ", 349)}>
                     <div className="select_btn">
@@ -638,9 +690,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Crescent Mood Massage- 105 minutes session", 449)}>
                     <div className="select_btn">
@@ -679,16 +733,19 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 499</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
               <Row>
+              
                 <Col>
                   <h2 className="All_headings">Single Massage </h2>
                 </Col>
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Deep Tissue Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -718,9 +775,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Relaxation Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -750,9 +809,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Lymphatic Drainage Massage- 90 minutes massage", 399)}>
                     <div className="select_btn">
@@ -782,9 +843,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 399</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Maderotherapy Slimming(wood traetment)- 90 minutes session", 399)}>
                     <div className="select_btn">
@@ -816,9 +879,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 399</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Lymphatic Drainage Massage- 60 minutes session", 279)}>
                     <div className="select_btn">
@@ -848,9 +913,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 279</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hotstone & Relax- 45 minutes session", 249)}>
                     <div className="select_btn">
@@ -878,9 +945,11 @@ console.log("user id", localStorage.getItem("userId"))
                     <p className="time_headings"> 45 minutes session</p>
                   </Col>
                   <Col className="price">AED 249</Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Cupping & Relax- 45 minutes session", 249)}>
                     <div className="select_btn">
@@ -910,9 +979,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("lymphatic Drainage Massage- 45 minutes session", 199)}>
                     <div className="select_btn">
@@ -942,9 +1013,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 199</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Mediotherapy Anti Cellulite- 60 minutes ", 299)}>
                     <div className="select_btn">
@@ -976,9 +1049,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 299</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Pre & Post Natal Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -1008,9 +1083,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Pre & Post Natal Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -1040,9 +1117,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Slimming Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -1072,9 +1151,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Slimming Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -1104,9 +1185,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Reflexology Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -1136,9 +1219,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Reflexology Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -1168,9 +1253,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Sports Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -1200,9 +1287,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Sports Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -1232,9 +1321,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hot Oil Massage Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -1264,9 +1355,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Traditional Thai Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -1296,9 +1389,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Traditional Thai Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -1328,9 +1423,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Aroma Therapy  Massage- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -1360,9 +1457,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Aroma Therapy Massage- 60 minutes session", 249)}>
                     <div className="select_btn">
@@ -1392,9 +1491,12 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 249</h6>
                   </Col>
+                  </div>
                 </Row>
+
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("4 Hands Massage- 60 minutes session", 449)}>
                     <div className="select_btn">
@@ -1425,6 +1527,7 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 449</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
@@ -1435,6 +1538,7 @@ console.log("user id", localStorage.getItem("userId"))
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Couple Massage- 120 minutes session", 449)}>
                     <div className="select_btn">
@@ -1464,9 +1568,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 449</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Couple Massage- 180 minutes session", 549)}>
                     <div className="select_btn">
@@ -1496,6 +1602,7 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 549</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
@@ -1506,6 +1613,7 @@ console.log("user id", localStorage.getItem("userId"))
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Cupping & Relax- 60 minutes session", 349)}>
                     <div className="select_btn">
@@ -1535,9 +1643,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hotstone  & Relax- 60 minutes session", 349)}>
                     <div className="select_btn">
@@ -1567,9 +1677,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Full Body Scrub & Relax- 90 minutes session", 349)}>
                     <div className="select_btn">
@@ -1606,9 +1718,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 349</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Cupping & Relax- 90 minutes session", 449)}>
                     <div className="select_btn">
@@ -1645,9 +1759,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 449</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Hotstone & Relax- 90 minutes session", 449)}>
                     <div className="select_btn">
@@ -1687,6 +1803,7 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 499</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
@@ -1698,6 +1815,7 @@ console.log("user id", localStorage.getItem("userId"))
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Ear Candling- 20 minutes session", 49)}>
                     <div className="select_btn">
@@ -1727,6 +1845,7 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 49</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
@@ -1737,6 +1856,7 @@ console.log("user id", localStorage.getItem("userId"))
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Body Scrub- 30 minutes session", 99)}>
                     <div className="select_btn">
@@ -1766,9 +1886,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 99</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Head Massage- 30 minutes session", 99)}>
                     <div className="select_btn">
@@ -1798,6 +1920,7 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 99</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
@@ -1812,6 +1935,7 @@ console.log("user id", localStorage.getItem("userId"))
               </Row>
               <div className="back_div">
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature- 90 minutes session", 449)}>
                     <div className="select_btn">
@@ -1842,9 +1966,11 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 449</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
                 <Row>
+                <div className="mobile_columns">
                   <Col lg={1} md={1} sm={1}>
                   <button style={{borderRadius:"30px", border:"1px solid aliceblue"}} onClick={() => handleClick("Clenz Signature Massage- 120 minutes session", 549)}>
                     <div className="select_btn">
@@ -1879,12 +2005,13 @@ console.log("user id", localStorage.getItem("userId"))
                   <Col>
                     <h6 className="price">AED 549</h6>
                   </Col>
+                  </div>
                 </Row>
                 <div className="line_div"></div>
               </div>
             </Col>
             <Col lg={5} md={5} sm={12} className="right_col">
-              <div id="servicescroll" className="ticket_back_div">
+              <div id="servicescroll" className="ticket_back_div  scroll-target"  ref={scrollRef}>
                 <Row>
                   <Col>
                     <h6 className="clenz_heading">

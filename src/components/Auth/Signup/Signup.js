@@ -69,6 +69,24 @@ const Signup = () => {
   const responseGoogleFailure = (response) => {
     console.error(response);
   };
+  // const responseGoogle = (response) => {
+  //   console.log(response);
+  //   // Handle the response from Google Sign-In
+  //   // Check if it's a sign-up or sign-in flow
+  //   if (response.profileObj) {
+  //     // Sign-Up: New user
+  //     const { email, name, imageUrl } = response.profileObj;
+  //     // Perform sign-up logic here
+  //     // e.g., send user details to your server for registration
+
+  //   } else {
+  //     // Sign-In: Existing user
+  //     const { email } = response;
+  //     // Perform sign-in logic here
+  //     // e.g., send user email to your server for authentication
+
+  //   }
+  // };
 
 
   return (
@@ -186,7 +204,7 @@ const Signup = () => {
                   <Col>
                     <div className="social_buttons">
                     <GoogleLogin
-                      clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.com"
+                      clientId="406823839473-fd86b6eb1uprqniumgrqkja26347ark8.apps.googleusercontent.com"
                       // buttonText="Login with Google"
                     
                       render={renderProps => (

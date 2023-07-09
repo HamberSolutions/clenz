@@ -1,3 +1,27 @@
+
+.smooth-scroll-container {
+  height: 500px; /* Adjust as needed */
+  overflow-y: scroll;
+  scroll-behavior: smooth; /* Enables smooth scrolling for the container */
+
+
+.scroll-target {
+  height: 1000px; /* Adjust as needed */
+}
+}
+.scroll_div{
+  position: fixed;
+  bottom: 50px;
+  
+  width: 100%;
+
+  .scroll_button{
+    display: none;
+  }
+
+
+}
+
 .services_first-sec {
   width: 100%;
   height: auto;
@@ -197,5 +221,55 @@ color: aliceblue;
 }
 
 }
+
+
+}
+.mobile_columns{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .headings{
+    font-size: 20px;
+  }
+ 
+  .scroll_div{
+    position: fixed;
+    bottom: 0px;
+    z-index: 9999;
+    background-color: aliceblue;
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid #101928;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   
+
+
+    .scroll_button{
+      display: block;
+      background-color: #101928;
+      border: none;
+      color: aliceblue;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      visibility: visible;
+      
+         
+    }
+  
+  }
+  .mobile_columns{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+   .ticket_back_div{
+    width: 100% !important;
+   }
 
 }

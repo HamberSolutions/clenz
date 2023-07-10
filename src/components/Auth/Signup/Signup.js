@@ -11,6 +11,8 @@ import facebook_logo from "../../../assets/images/facebook.png";
 import logo from "../../../assets/images/Logo1.png";
 import { GoogleLogin } from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import { GrLinkPrevious } from 'react-icons/gr';
+
 const Signup = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -99,6 +101,13 @@ const Signup = () => {
                 <img width={300} src={logo} alt="logo"></img>
               </Col>
               <Col lg={6} md={6} sm={12} className="right_col">
+              <Row>
+                <Col>
+                  <div className="back_button">
+                    <GrLinkPrevious className="back_icon" />
+                  </div>
+                </Col>
+              </Row>
                 <Row>
                   <Col>
                     <div>
@@ -202,11 +211,18 @@ const Signup = () => {
                 </Row>
                 <Row>
                   <Col>
+                  <div className="description">
+                    <div className="login_text">Already have an account? </div>
+                    <div className="login_link"><Link className="login_link" to="/login"><div>Signin</div></Link></div>
+                  </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
                     <div className="social_buttons">
                     <GoogleLogin
                       clientId="406823839473-fd86b6eb1uprqniumgrqkja26347ark8.apps.googleusercontent.com"
                       // buttonText="Login with Google"
-                    
                       render={renderProps => (
                         <button className="google_button" onClick={renderProps.onClick} ><div className="google_logo">
                           <img src={google_logo} alt="google_logo" />

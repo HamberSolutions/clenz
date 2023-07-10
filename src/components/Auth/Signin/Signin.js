@@ -12,7 +12,7 @@ import facebook_logo from "../../../assets/images/facebook.png";
 import logo from "../../../assets/images/Logo1.png";
 import { GoogleLogin } from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-
+import { GrLinkPrevious } from 'react-icons/gr';
 
 const Signin = () => {
 
@@ -112,6 +112,13 @@ const Signin = () => {
             <img width={300} src={logo} alt="logo"></img>
             </Col>
             <Col lg={6} md={6} sm={12} className="right_col">
+            <Row>
+                <Col>
+                  <div className="back_button">
+                    <GrLinkPrevious className="back_icon" />
+                  </div>
+                </Col>
+              </Row>
               <Row>
                 <Col>
                   <div>
@@ -158,13 +165,22 @@ const Signin = () => {
               </Row>
               <Row>
                 <Col>
+                <div className="description">
+                    <div className="signup_text">Don't have an account? </div>
+                    <div className="signup_link">
+                      <Link className="signup_link" to="/register">
+                        <div>SignUp</div>
+                      </Link>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
                 <div className="social_buttons">
                     <GoogleLogin
-                      clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.c"
-                      buttonText="Login with Google"
-                      onSuccess={responseGoogle}
-                      onFailure={responseGoogleFailure}
-                      cookiePolicy={'single_host_origin'}
+                      clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.com"
+                      // buttonText="Login with Google"
                       render={renderProps => (
                         <button className="google_button" onClick={renderProps.onClick} ><div className="google_logo">
                           <img src={google_logo} alt="google_logo" />
@@ -174,6 +190,9 @@ const Signin = () => {
                           </div>
                           </button>
                       )}
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogleFailure}
+                      cookiePolicy={'single_host_origin'}
                     />
                       <FacebookLogin
                         appId="3106972836263485"

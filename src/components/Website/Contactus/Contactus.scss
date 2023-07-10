@@ -55,3 +55,11 @@
     padding: 0px 32px 0px 32px;
   }
 }
+@media screen and (min-width: 300px) and (max-width: 600px){
+  .contact_main_img{
+    height: 300px !important;
+  }
+  .contact_box{
+    margin-left: 4% !important;
+  }
+}

@@ -101,7 +101,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col>
-              <h1>Welcome to Clenz Saloon & Spa</h1>
+              <h1 className="welcome_heading">Welcome to Clenz Saloon & Spa</h1>
               <p className="spa-message">
                 We are a complete massage therapy & hair cutting based in Abu
                 Dhabi. Relax and rejuvenate with a 60-minutes & more massage

@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-3">
               <img className="logo" src={Logo} alt="logo" />
-                <p className='pt-3'>We provide customized treatments, facials, and massages based on your skin type. You can trust us to be your spa in Abu Dhabi.</p>
+                <p className='pt-3 footer_text'>We provide customized treatments, facials, and massages based on your skin type. You can trust us to be your spa in Abu Dhabi.</p>
               </div>
 
               <hr className="w-100 clearfix d-md-none" />

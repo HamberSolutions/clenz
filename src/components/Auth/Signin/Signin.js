@@ -102,7 +102,7 @@ const Signin = () => {
     console.error(response);
   };
   
-  // const handleGoogleResponse = (response) => {
+  // const handleGoogleResponse = (response) => { 
   //   console.log(response);
   //   // Handle the response from Google Sign-In
   //   // Check if it's a sign-up or sign-in flow

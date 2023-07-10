@@ -98,16 +98,19 @@ const Signup = () => {
           <Container fluid className="main_wrapper_signup">
             <Row>
               <Col lg={6} md={6} sm={12} className="left_col">
+                <Row>
+                  <Col>
+                    <div className="back_div">
+                      <Link to="/" ><div className="back_button">
+                        <GrLinkPrevious className="back_icon" />
+                      </div></Link>
+                      <div className="back_div_des">Back to home</div>
+                    </div>
+                  </Col>
+                </Row>
                 <img width={300} src={logo} alt="logo"></img>
               </Col>
               <Col lg={6} md={6} sm={12} className="right_col">
-              <Row>
-                <Col>
-                  <div className="back_button">
-                    <GrLinkPrevious className="back_icon" />
-                  </div>
-                </Col>
-              </Row>
                 <Row>
                   <Col>
                     <div>
@@ -211,31 +214,32 @@ const Signup = () => {
                 </Row>
                 <Row>
                   <Col>
-                  <div className="description">
-                    <div className="login_text">Already have an account? </div>
-                    <div className="login_link"><Link className="login_link" to="/login"><div>Signin</div></Link></div>
-                  </div>
+                    <div className="description">
+                      <div className="login_text">Already have an account? </div>
+                      <div className="login_link"><Link className="login_link" to="/login"><div>Signin</div></Link></div>
+                    </div>
                   </Col>
                 </Row>
                 <Row>
                   <Col>
+                  <div style={{color:"aliceblue"}}>Signup with</div>
                     <div className="social_buttons">
-                    <GoogleLogin
-                      clientId="406823839473-fd86b6eb1uprqniumgrqkja26347ark8.apps.googleusercontent.com"
-                      // buttonText="Login with Google"
-                      render={renderProps => (
-                        <button className="google_button" onClick={renderProps.onClick} ><div className="google_logo">
-                          <img src={google_logo} alt="google_logo" />
-                        </div>
-                          <div className="google_des">
-                            continue with google
+                      <GoogleLogin
+                        clientId="406823839473-fd86b6eb1uprqniumgrqkja26347ark8.apps.googleusercontent.com"
+                        // buttonText="Login with Google"
+                        render={renderProps => (
+                          <button className="google_button" onClick={renderProps.onClick} ><div className="google_logo">
+                            <img src={google_logo} alt="google_logo" />
                           </div>
+                            {/* <div className="google_des">
+                              continue with google
+                            </div> */}
                           </button>
-                      )}
-                      onSuccess={responseGoogle}
-                      onFailure={responseGoogleFailure}
-                      cookiePolicy={'single_host_origin'}
-                    />
+                        )}
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogleFailure}
+                        cookiePolicy={'single_host_origin'}
+                      />
                       <FacebookLogin
                         appId="3106972836263485"
                         autoLoad={false}
@@ -246,9 +250,9 @@ const Signup = () => {
                             <div className="facebook_logo">
                               <img src={facebook_logo} alt="facebook_logo" />
                             </div>
-                            <div className="facebook_des">
+                            {/* <div className="facebook_des">
                               continue with Facebook
-                            </div>
+                            </div> */}
                           </button>
                         )}
                       />

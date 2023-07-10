@@ -12,7 +12,7 @@ import facebook_logo from "../../../assets/images/facebook.png";
 import logo from "../../../assets/images/Logo1.png";
 import { GoogleLogin } from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-
+import { GrLinkPrevious } from 'react-icons/gr';
 
 const Signin = () => {
 
@@ -128,6 +128,16 @@ const Signin = () => {
         <Container fluid className="main_wrapper_signin">
           <Row>
             <Col lg={6} md={6} sm={12} className="left_col">
+            <Row>
+                  <Col>
+                    <div className="back_div">
+                    <Link to="/" ><div className="back_button">
+                        <GrLinkPrevious className="back_icon" />
+                      </div></Link>
+                      <div className="back_div_des">Back to home</div>
+                    </div>
+                  </Col>
+                </Row>
             <img width={300} src={logo} alt="logo"></img>
             </Col>
             <Col lg={6} md={6} sm={12} className="right_col">
@@ -177,6 +187,19 @@ const Signin = () => {
               </Row>
               <Row>
                 <Col>
+                <div className="description">
+                    <div className="signup_text">Don't have an account? </div>
+                    <div className="signup_link">
+                      <Link className="signup_link" to="/register">
+                        <div>SignUp</div>
+                      </Link>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                <div style={{color:"aliceblue"}}>Signin with</div>
                 <div className="social_buttons">
                     <GoogleLogin
                       clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.com"
@@ -188,9 +211,9 @@ const Signin = () => {
                         <button className="google_button" onClick={renderProps.onClick} ><div className="google_logo">
                           <img src={google_logo} alt="google_logo" />
                         </div>
-                          <div className="google_des">
+                          {/* <div className="google_des">
                             continue with google
-                          </div>
+                          </div> */}
                           </button>
                       )}
                     />
@@ -204,9 +227,9 @@ const Signin = () => {
                             <div className="facebook_logo">
                               <img src={facebook_logo} alt="facebook_logo" />
                             </div>
-                            <div className="facebook_des">
+                            {/* <div className="facebook_des">
                               continue with Facebook
-                            </div>
+                            </div> */}
                           </button>
                         )}
                       />

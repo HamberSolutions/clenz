@@ -61,14 +61,14 @@ const Aboutus = () => {
       <Header />
       <div className="whatsapp_div">
         <a href="https://wa.me/971508774398/">
-          <img className="whatsapp_image" src={whatsappimage} />
+          <img className="whatsapp_image" src={whatsappimage} alt="im" />
         </a>
       </div>
       <section className="about_first-sec">
         <Container fluid>
           <Row>
             <Col style={{ padding: "0px" }}>
-              <img className="about_main_img" src={About1}></img>
+              <img className="about_main_img" src={About1} alt="im" />
             </Col>
           </Row>
           <Row>
@@ -96,13 +96,13 @@ const Aboutus = () => {
             <Col lg={3} md={3} sm={12}>
               <Slider {...settings}>
                 <div>
-                  <img className="" src={img1} />
+                  <img className="" src={img1} alt="im" />
                 </div>
                 <div>
-                  <img className="" src={img2} />
+                  <img className="" src={img2} alt="im" />
                 </div>
                 <div>
-                  <img className="" src={img3} />
+                  <img className="" src={img3} alt="im" />
                 </div>
               </Slider>
             </Col>

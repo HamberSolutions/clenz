@@ -7,11 +7,17 @@ import Footer from '../../Common/Footer/Footer';
 import Header from '../../Common/Header/Header';
 import { SlLocationPin }  from "react-icons/sl";
 import { BsFillTelephoneFill }  from "react-icons/bs"
+import whatsappimage from "../../../assets/images/whatsapp.png";
 
 const Contactus = () => {
   return (
     < div className='contact_backround'>
     <Header />
+    <div className="whatsapp_div">
+        <a href="https://wa.me/971508774398/">
+          <img className="whatsapp_image" src={whatsappimage} />
+        </a>
+      </div>
     <section className="contact_first-sec">
     <Container fluid>
       <Row>

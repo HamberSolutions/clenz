@@ -283,8 +283,17 @@ color: aliceblue;
     height: 300px !important;
   }
   .services_heading{
-    top: 50% !important;
-    left: 20% !important;
+    top: 35% !important;
+    left: 8% !important;
+  }
+  .whatsapp_div{
+    position: fixed;
+    bottom: 100px !important;
+    right: 60px;
+    z-index: 9999;
+  }
+  .ser{
+    display: block !important;
   }
 
 }

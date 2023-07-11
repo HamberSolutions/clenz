@@ -15,6 +15,7 @@ import { TiTick } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { orderbook } from "../../../features/dashboard/dashboardSlice";
+import whatsappimage from "../../../assets/images/whatsapp.png";
 
 import  { useRef } from 'react';
 // import './SmoothScroll.css';
@@ -89,7 +90,11 @@ console.log("user id", localStorage.getItem("userId"))
     <div className="services_back">
       <Header />
 
-
+      <div className="whatsapp_div">
+        <a href="https://wa.me/971508774398/">
+          <img className="whatsapp_image" src={whatsappimage} />
+        </a>
+      </div>
       <div className="scroll_div">
         
               <div className="ser">46 Services Available</div>

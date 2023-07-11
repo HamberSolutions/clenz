@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import img1 from "../../../assets/images/about1.jpg";
 import img2 from "../../../assets/images/about2.jpg";
 import img3 from "../../../assets/images/about3.jpg";
+import whatsappimage from "../../../assets/images/whatsapp.png";
 
 const Aboutus = () => {
   var settings = {
@@ -58,6 +59,11 @@ const Aboutus = () => {
   return (
     <div className="about_backround">
       <Header />
+      <div className="whatsapp_div">
+        <a href="https://wa.me/971508774398/">
+          <img className="whatsapp_image" src={whatsappimage} />
+        </a>
+      </div>
       <section className="about_first-sec">
         <Container fluid>
           <Row>

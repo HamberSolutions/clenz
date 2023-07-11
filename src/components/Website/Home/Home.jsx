@@ -16,11 +16,10 @@ import icon3 from "../../../assets/images/icon3.png";
 import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
-import image from "../../../assets/images/whatsapp.png"
+import whatsappimage from "../../../assets/images/whatsapp.png";
 import Slider from "react-slick";
 import {BsArrowRight} from "react-icons/bs"
-import { padding } from "@mui/system";
-// import Faq from "../../FAQ/Faq";
+
 
 const Home = () => {
   var settings = {
@@ -74,7 +73,7 @@ const Home = () => {
       <Header />
       <div className="whatsapp_div">
         <a href="https://wa.me/971508774398/">
-          <img className="whatsapp_image" src={image} />
+          <img className="whatsapp_image" src={whatsappimage}  />
         </a>
       </div>
       <section className="home_first-sec">

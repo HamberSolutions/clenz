@@ -223,3 +223,28 @@
     }
   }
 }
+.logo_image{
+  width: 300px;
+}
+@media screen and (min-width: 300px) and (max-width: 600px){
+  .logo_image{
+    width: 90px !important;
+    position: absolute;
+    top: 80px !important;
+  }
+  .right_col{
+    position: absolute;
+    top: 160px !important;
+    gap: 10px !important;
+    border: 0px !important;
+    background: linear-gradient(
+      to bottom,
+      #2d3c5b,
+      #37496b,
+      #41577b,
+      #1a233d,
+      #242f4c,
+     
+    );
+  }
+}

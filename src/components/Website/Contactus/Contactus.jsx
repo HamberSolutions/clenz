@@ -5,10 +5,12 @@ import Contact1 from "../../../assets/images/contact-1.jpg"
 import Subfooter from '../../Common/Subfooter/Subfooter';
 import Footer from '../../Common/Footer/Footer';
 import Header from '../../Common/Header/Header';
+import { GrLocation }  from "react-icons/gr"
+import { BsFillTelephoneFill }  from "react-icons/bs"
 
 const Contactus = () => {
   return (
-    <>
+    < div className='contact_backround'>
     <Header />
     <section className="contact_first-sec">
     <Container fluid>
@@ -17,47 +19,38 @@ const Contactus = () => {
           <img className="contact_main_img" src={Contact1}></img>
         </Col>
       </Row>
+      <Row>
+        <Col>
+          <div className='contact_top_div'>
+            <p className='center_text'>SPA & SALOON CENTER ABU DHABI</p>
+            <h1 className='contact_heading'> Contact Us</h1>
+          </div>
+        </Col>
+      </Row>
     </Container>
   </section>
   <section className="contact_second_section">
         <Container>
           <Row>
-            <Col className="left_col" lg={6} md={6} sm={12}>
-              <h3 className="therapy_contact_heading">
-                Contact For Booking
-              </h3>
+            <Col lg={6} md={6} sm={12}>
+              <p className='wait_text'>WHAT ARE YOU WAITING FOR...</p>
+              <h2 className='make_heading'>Make an appointment....</h2>
+              <h5 className='locate'><GrLocation className="icon_loc" /> OUR LOCATION</h5>
+              <p className='address'>Electra Park Salam Street Abu Dhabi</p>
+              <h5 className='contact'><BsFillTelephoneFill className="phn" /> Contact</h5>
+              <p className='number'>+971 50 877 4398</p>
+              <div className='cline_div'></div>
+              
             </Col>
             <Col lg={6} m={6} sm={12}>
-              <h1 className="contact_heading">
-              Contact Us<br/>
-              </h1>
-              <div className='contact_box'>
-                
-                <p className="contact_text">
-                Email us: clenzbeautymassage@gmail.com
-              </p>
-              </div>
               
-              <div className='contact_box'>
-                
-                <p className="contact_text1">
-                Call us: + 971 50 877 4398
-              </p>
-              </div>
-
-              <div className='contact_box'>
-               
-                <p className="contact_text2">
-                Location: Electra Park Salam Street AUH, ABU DHABI
-              </p>
-              </div>
             </Col>
           </Row>
         </Container>
       </section>
   <Footer />
   <Subfooter />
-  </>
+  </div>
   )
 }
 

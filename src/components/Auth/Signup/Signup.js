@@ -108,7 +108,7 @@ const Signup = () => {
                     </div>
                   </Col>
                 </Row>
-                <img width={300} src={logo} alt="logo"></img>
+                <img  src={logo} alt="logo" className="logo_image"></img>
               </Col>
               <Col lg={6} md={6} sm={12} className="right_col">
                 <Row>

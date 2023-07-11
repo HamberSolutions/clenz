@@ -86,13 +86,13 @@ console.log("user id", localStorage.getItem("userId"))
     };
 
   return (
-    <>
+    <div className="services_back">
       <Header />
 
 
       <div className="scroll_div">
         
-              <div>46 Services Available</div>
+              <div className="ser">46 Services Available</div>
             
                 <button className="scroll_button" onClick={handleScroll}>Book Now</button>
             
@@ -113,7 +113,7 @@ console.log("user id", localStorage.getItem("userId"))
         <Container>
           <Row>
             <Col>
-              <h1 className="services_heading">Services We Offer</h1>
+              <h1 className="services_heading">Best Services in Abu Dhabi</h1>
             </Col>
           </Row>
 
@@ -2073,7 +2073,7 @@ console.log("user id", localStorage.getItem("userId"))
       </section>
       <Footer />
       <Subfooter />
-    </>
+    </div>
   );
 };
 

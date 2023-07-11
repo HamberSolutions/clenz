@@ -18,6 +18,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import image from "../../../assets/images/whatsapp.png"
 import Slider from "react-slick";
+import {BsArrowRight} from "react-icons/bs"
 import { padding } from "@mui/system";
 // import Faq from "../../FAQ/Faq";
 
@@ -69,7 +70,7 @@ const Home = () => {
     ]
   };
   return (
-    <>
+    <div className="home_background">
       <Header />
       <div className="whatsapp_div">
         <Link to="/">
@@ -95,6 +96,16 @@ const Home = () => {
               
             </Col>
           </Row>
+          <Row>
+            <Col>
+              <div className="slider_text_div">
+                  <h1 className="slider_heading">
+                    Clenz Spa & Saloon
+                  </h1>
+                  <p className="slider_para">Welcome to Clenz Spa & Saloon, We're Providing prociding all type of Massages. Our Staff are fully Professional & Trained</p>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </section>
       <section className="home_second_section">
@@ -116,7 +127,7 @@ const Home = () => {
             <Col lg={4} md={4} sm={12}>
               <img className="home_icons" src={icon1} />
               <h3 className="book_heading">Book Massage</h3>
-              <p>
+              <p className="third_para">
                 Book your massage online and view orthopedic massage therapy
                 pricing.
               </p>
@@ -129,7 +140,7 @@ const Home = () => {
             <Col lg={4} md={4} sm={12}>
               <img className="home_icons" src={icon2} />
               <h3 className="book_heading">Beauty Essentials</h3>
-              <p>
+              <p className="third_para">
                 We provide customized treatments, facials, and massages based on
                 your skin type. You can trust us to be your spa in Abu Dhabi.
               </p>
@@ -140,7 +151,7 @@ const Home = () => {
             <Col lg={4} md={4} sm={12}>
               <img className="home_icons" src={icon3} />
               <h3 className="book_heading">Wellness Retreats</h3>
-              <p>
+              <p className="third_para">
                 Relax and unwind your body & mind with a soothing massage. Take
                 a break & have a well-deserved 'You Time' with us!
               </p>
@@ -162,20 +173,14 @@ const Home = () => {
       <section className="home_fourth_section">
         <Container>
           <Row>
-            <Col className="left_col" lg={6} md={6} sm={12}>
-              <h3 className="therapy_heading">
-                Massage Therapies <br /> & <br /> Body Treatment
-              </h3>
-            </Col>
-            <Col lg={6} m={6} sm={12}>
-              <h1 className="pormt_heading">
-                Spa <br /> Promotions
-              </h1>
-              <p className="discount_text">
+          
+            <Col>
+            <h6 className="special">SPECIAL OFFER</h6>
+            <h2 className="off">10% Off for New Customers</h2>
+            <div className="appoint_div">
+              <Link className="appoint_button" to="/services">Book an appointment <BsArrowRight /> </Link>
+            </div>
             
-                Enjoy a rejuvenating 60 or 90 minute spa therapy at a <br />
-                10% discount!
-              </p>
             </Col>
           </Row>
         </Container>
@@ -250,7 +255,7 @@ const Home = () => {
       {/* <Faq /> */}
       <Footer />
       <Subfooter />
-    </>
+    </div>
   );
 };
 

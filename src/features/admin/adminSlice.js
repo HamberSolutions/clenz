@@ -54,6 +54,7 @@ export const orderstatus = createAsyncThunk(
     try {
       // Call API to install user
       const response = await adminService.orderstatus(statusData);
+      window.location.reload();
       return response.data;
     } catch (error) {
       console.log({ error });

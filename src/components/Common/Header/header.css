@@ -206,7 +206,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (max-width:1023px) {
   .dis2 {
     display: none;
   }
@@ -315,5 +315,20 @@
   }
   .form {
     margin-top: 1rem;
+  }
+  .mob_nav{
+    z-index: 9999 !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px){
+  .mob_nav{
+    z-index: 9999 !important;
+  }
+  .dis-mob2{
+    z-index: 9999 !important;
+  }
+  .bg_color{
+    z-index: 9999 !important;
   }
 }

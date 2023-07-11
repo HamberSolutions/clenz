@@ -1,4 +1,6 @@
-
+.services_back{
+	background-color: #17243a;
+}
 .smooth-scroll-container {
   height: 500px; /* Adjust as needed */
   overflow-y: scroll;
@@ -18,7 +20,9 @@
   .scroll_button{
     display: none;
   }
-
+.ser{
+  display: none;
+}
 
 }
 
@@ -38,14 +42,18 @@ width: 100%;
 height: auto;
 
 .services_heading{
+  color: aliceblue;
+  font-style: italic;
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 35%;
 
 }
 .All_headings{
 padding: 40px 0px;
 text-decoration: underline;
+color: aliceblue;
+font-style: italic;
 
 }
 

@@ -1,3 +1,7 @@
+.contact_backround{
+	background-color: #17243a;
+	
+}
 .contact_first-sec {
   width: 100%;
   height: auto;
@@ -6,6 +10,23 @@
     width: 100%;
     height: 540px;
   }
+  .contact_top_div{
+		position: absolute;
+		top: 35%;
+		left: 40%;
+	}
+  .center_text{
+		color: aliceblue;
+		font-size: 20px;
+		font-weight: 600;
+		font-style: italic;
+	}
+	.contact_heading{
+		color: aliceblue;
+		font-weight: 600;
+		font-style: italic;
+		font-size: 50px;
+	}
 }
 
 .contact_second_section {
@@ -13,53 +34,116 @@
   height: auto;
   padding: 100px 0px;
 
-  .left_col {
-    background-image: url(../../../assets/images/contact-2.jpg);
-    background-size: cover;
-    height: 360px;
-    border-radius: 20px;
+.wait_text{
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: aliceblue;
+}
+.make_heading{
+  color: aliceblue;
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 40px;
+  font-size: 50px ;
+}
+.locate{
+  text-align: left;
+  color: aliceblue;
+  margin-top: 7%;
+  font-style: italic;
+}
+.icon_loc{
+  color: aliceblue !important;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.address{
+  color: aliceblue;
+  font-style: italic;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 20px;
+  text-align: left;
+}
+.contact{
+  text-align: left;
+  color: aliceblue;
+  margin-top: 7%;
+  font-style: italic;
+}
+.phn{
+  margin-right: 10px;
+}
+.number{
+  color: aliceblue;
+  font-style: italic;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 20px;
+  text-align: left;
+}
+.cline_div{
+  border-bottom: 1px solid aliceblue;
+  width: 100%;
+  margin: auto;
+  margin-top: 7%;
+}
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px){
+  .contact_main_img{
+    height: 470px !important;
   }
-
-  .therapy_contact_heading {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-  }
-
-  .contact_heading {
-    padding-top: 10%;
-  }
-
-  .contact_box{
-	width: 100%;
-	display: flex;
-	margin-left: 15%;
-  }
-
-  .contact_text {
-    font-size: 16px;
-    margin-top: 20px;
-    font-weight: 600;
-    padding: 0px 32px 0px 32px;
-  }
-  .contact_text1 {
-    font-size: 16px;
-    font-weight: 600;
-    padding: 0px 32px 0px 32px;
-  }
-  .contact_text2 {
-    font-size: 16px;
-    font-weight: 600;
-    padding: 0px 32px 0px 32px;
+  .make_heading{
+    font-size: 41px !important;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contact_main_img{
+    height: 370px !important;
+  }
+  .make_heading{
+    font-size: 30px !important;
+  }
+  .contact_top_div{
+    top: 33% !important;
+    left: 33% !important;
+  }
+  .wait_text{
+    font-size: 16px !important;
+  }
+
+}
+
 @media screen and (min-width: 300px) and (max-width: 600px){
   .contact_main_img{
     height: 300px !important;
   }
-  .contact_box{
-    margin-left: 4% !important;
+  .contact_top_div{
+    left: 22% !important;
+    top: 28% !important;
   }
+.center_text{
+  font-size: 16px !important;
+}
+.contact_heading{
+  font-size: 36px !important;
+}
+.make_heading{
+  font-size: 32px !important;
+}
+.wait_text{
+  font-size: 14px !important;
+}
+.locate{
+  font-size: 17px !important;
+}
+.address{
+  font-size: 15px !important;
+}
+.contact{
+  font-size: 17px !important;
+}
 }

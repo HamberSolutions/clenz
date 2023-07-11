@@ -1,3 +1,7 @@
+.about_backround{
+	background-color: #17243a;
+	
+}
 .about_first-sec{
 	width: 100%;
 	height: auto;
@@ -6,6 +10,23 @@
 	  width: 100%;
 	  height: 540px;
 	}
+	.about_top_div{
+		position: absolute;
+		top: 35%;
+		left: 40%;
+	}
+	.best_text{
+		color: aliceblue;
+		font-size: 20px;
+		font-weight: 600;
+		font-style: italic;
+	}
+	.about_heading{
+		color: aliceblue;
+		font-weight: 600;
+		font-style: italic;
+		font-size: 50px;
+	}
   }
 
   .about_second_section{
@@ -13,33 +34,90 @@
 	height: auto;
 	padding: 100px 0px;
   
-	.left_col{
-	  background-image: url(../../../assets/images/about-2.png);
-	  background-size: cover;
-	  height:300px;
-	  border-radius: 20px;
+	.about_clenz_text{
+		font-weight: 600;
+		text-align: left;
+		color: aliceblue;
+		margin-left: 20px;
+		font-size: 20px;
+		font-style: italic;
 	}
-  
-	.therapy_heading{
-	  padding: 90px 0px;
-	  color: aliceblue;
-	}
-  
-	.about_heading{
-	  padding-top: 2%;
-	
-	}
-  
 	.about_text{
-	  font-size: 16px;
-	  margin-top: 10px;
-	  font-weight: 600;
-	  padding: 0px 32px 0px 32px;
+		font-weight: 600;
+		text-align: left;
+		font-style: italic;
+		color: aliceblue;
+		margin-left: 20px;
+		margin-top: 40px;
+	}
+	.about_line_div{
+		border-bottom: 1px solid aliceblue;
+		width: 80%;
+		margin-top: 50px;
+	}
+	.slick-next{
+		display: none !important;
+	}
+	.slick-prev{
+		display: none !important;
+	}
+	.about_second_line{
+		border-bottom: 1px solid aliceblue;
+		width: 20%;
+		margin-left: 40px;
+	}
+	.about_spa{
+		color: aliceblue;
+		text-align: left;
+		margin-left: 40px;
+		margin-top: 40px;
+		font-size: 20px;
+		font-weight: 500;
+		font-style: italic;
+	}
+	.long_line{
+		border-bottom: 1px solid aliceblue;
+		width: 90%;
+		margin: auto;
+		margin-top: 8%;
+	}
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+	.about_top_div{
+		left: 32% !important;
+	}
+
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+	.about_main_img{
+		height: 400px !important;
+	}
+	.about_top_div{
+		left: 25% !important;
+	}
+	.about_spa{
+		font-size: 17px !important;
 	}
   }
 
   @media screen and (min-width: 300px) and (max-width: 600px) {
 	.about_main_img{
 		height: 300px !important;
+	}
+	.about_top_div{
+		top: 30% !important;
+		left: 10% !important;
+	}
+	.best_text{
+		font-size: 16px !important;
+	}
+	.about_heading{
+		font-size: 35px !important;
+	}
+	.about_spa{
+		font-size: 16px !important;
+	}
+	.about_second_line{
+		margin-top: 30px;
 	}
   }

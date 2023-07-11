@@ -138,7 +138,7 @@ const Signin = () => {
                     </div>
                   </Col>
                 </Row>
-            <img width={300} src={logo} alt="logo"></img>
+            <img  src={logo} alt="logo" className="sign_logo_image"></img>
             </Col>
             <Col lg={6} md={6} sm={12} className="right_col">
               <Row>

@@ -45,7 +45,14 @@
 
 	}
 }
-
+@media screen and (min-width: 767px) {
+	.footer_li{
+		text-align: center !important;
+	}
+	.social_li{
+		text-align: center !important;
+	}
+}
 @media screen and (min-width: 300px) and (max-width: 600px) {
 	.footer_li{
 		text-align: center !important;

@@ -215,3 +215,14 @@
     }
   }
 }
+.sign_logo_image{
+  width: 300px;
+}
+@media screen and (min-width: 300px) and (max-width: 600px){
+  .sign_logo_image{
+    width: 90px !important;
+    position: absolute;
+    top: 80px !important;
+  }
+
+}

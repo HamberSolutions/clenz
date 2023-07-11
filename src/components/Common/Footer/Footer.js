@@ -12,14 +12,14 @@ const Footer = () => {
         <div className="page-footer text-center text-md-left pt-4">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-md-6">
               <img className="logo" src={Logo} alt="logo" />
                 <p className='pt-3 footer_text'>We provide customized treatments, facials, and massages based on your skin type. You can trust us to be your spa in Abu Dhabi.</p>
               </div>
 
               <hr className="w-100 clearfix d-md-none" />
 
-              <div className="col-md-2 mx-auto">
+              <div className="col-md-6 mx-auto">
                 <h5 className="text-uppercase font-weight-bold mb-4">Pages</h5>
                 <ul className="list-unstyled">
                   <li className='footer_li'><Link className='footer_menu' to="/">Home</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
 
               <hr className="w-100 clearfix d-md-none" />
 
-              <div className="col-md-2 mx-auto">
+              <div className="col-md-6 mx-auto">
                 <h5 className="text-uppercase font-weight-bold mb-4">Social Media</h5>
                 <ul className="list-unstyled">
                   <li className='social_li'><Link to="/" className='social_name'> <BsFacebook className='social_icons' />  Facebook</Link></li>
@@ -44,7 +44,7 @@ const Footer = () => {
 
               <hr className="w-100 clearfix d-md-none" />
 
-              <div className="col-md-2 mx-auto">
+              <div className="col-md-6 mx-auto">
                 
                <input className='footer_input' type='text' placeholder='Enter Email Address'/>
               </div>

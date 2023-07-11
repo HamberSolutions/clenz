@@ -5,7 +5,7 @@ import Contact1 from "../../../assets/images/contact-1.jpg"
 import Subfooter from '../../Common/Subfooter/Subfooter';
 import Footer from '../../Common/Footer/Footer';
 import Header from '../../Common/Header/Header';
-import { GrLocation }  from "react-icons/gr"
+import { SlLocationPin }  from "react-icons/sl";
 import { BsFillTelephoneFill }  from "react-icons/bs"
 
 const Contactus = () => {
@@ -35,7 +35,7 @@ const Contactus = () => {
             <Col lg={6} md={6} sm={12}>
               <p className='wait_text'>WHAT ARE YOU WAITING FOR...</p>
               <h2 className='make_heading'>Make an appointment....</h2>
-              <h5 className='locate'><GrLocation className="icon_loc" /> OUR LOCATION</h5>
+              <h5 className='locate'><SlLocationPin className="icon_loc" /> OUR LOCATION</h5>
               <p className='address'>Electra Park Salam Street Abu Dhabi</p>
               <h5 className='contact'><BsFillTelephoneFill className="phn" /> Contact</h5>
               <p className='number'>+971 50 877 4398</p>

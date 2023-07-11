@@ -73,9 +73,9 @@ const Home = () => {
     <div className="home_background">
       <Header />
       <div className="whatsapp_div">
-        <Link to="/">
+        <a href="https://wa.me/971508774398/">
           <img className="whatsapp_image" src={image} />
-        </Link>
+        </a>
       </div>
       <section className="home_first-sec">
         <Container fluid>

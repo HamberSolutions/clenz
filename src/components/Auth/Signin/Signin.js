@@ -102,6 +102,7 @@ const Signin = () => {
     console.error(response);
   };
   
+  
   // const handleGoogleResponse = (response) => { 
   //   console.log(response);
   //   // Handle the response from Google Sign-In
@@ -202,7 +203,7 @@ const Signin = () => {
                 <div style={{color:"aliceblue"}}>Signin with</div>
                 <div className="social_buttons">
                     <GoogleLogin
-                      clientId="406823839473-kd89q4143os1nnebh737tfl5nir43bgf.apps.googleusercontent.com"
+                      clientId="406823839473-fd86b6eb1uprqniumgrqkja26347ark8.apps.googleusercontent.com"
                       buttonText="Login with Google"
                       onSuccess={responseGoogle}
                       onFailure={responseGoogleFailure}

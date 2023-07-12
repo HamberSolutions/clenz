@@ -31,11 +31,13 @@
   font-size: 20px;
 }
 .nav-text {
-  width: 70px;
+  
   color: rgb(207, 207, 207);
   font-family: "Poppins";
   font-size: 14px;
   cursor: pointer;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .sub-nav-text{

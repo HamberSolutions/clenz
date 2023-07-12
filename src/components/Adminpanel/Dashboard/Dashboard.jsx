@@ -14,17 +14,17 @@ const Dashboard = () => {
   const dummyCards = [
     {
       icon: FiUsers,
-      description: 'Completed Orders',
+      description: 'Completed Appointments',
       backgroundColor: '#8BB7A2',
     },
     {
       icon: MdOutlineBusinessCenter,
-      description: 'Pending Orders',
+      description: 'Pending Appointments',
       backgroundColor: '#4D4E8D',
     },
     {
       icon: FaStore,
-      description: 'Total Orders',
+      description: 'Total Appointments',
       backgroundColor: '#636C79',
     },
   ];
@@ -50,11 +50,11 @@ const Dashboard = () => {
         <div className="card-container">
           {dummyCards.map((card, i) => {
             let stats;
-            if (data && card.description === 'Completed Orders') {
+            if (data && card.description === 'Completed Appointments') {
               stats = data.completed;
-            } else if (data && card.description === 'Pending Orders') {
+            } else if (data && card.description === 'Pending Appointments') {
               stats = data.pending;
-            } else if (data && card.description === 'Total Orders') {
+            } else if (data && card.description === 'Total Appointments') {
               stats = data.total;
             }
 

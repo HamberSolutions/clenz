@@ -14,13 +14,13 @@ const Navbar = () => {
       route: "/admin-profile",
     },
     {
-      icon: FaClipboardCheck,
-      text: "New Orders",
+      icon:  FaClipboardList,
+      text: "New Appointments",
       route: "/new-orders",
     },
     {
-      icon: FaClipboardList,
-      text: "All Orders",
+      icon: FaClipboardCheck,
+      text: "Completed Appointments",
       route: "/completed-orders",
     },
    

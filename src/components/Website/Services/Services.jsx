@@ -58,6 +58,11 @@ const Services = () => {
   const handleBookNow = async (e) => {
     e.preventDefault();
     console.log("user id", localStorage.getItem("userId"));
+    if (!localStorage.getItem("userId")) {
+      // User is not signed up, redirect to signup page
+      window.location.href = "/register"; // Replace with the actual URL of the signup page
+      return;
+    }
     const orderData = {
       userId: localStorage.getItem("userId"),
       service: selectedItems,
@@ -2662,7 +2667,7 @@ const Services = () => {
                         className="right_book_btn"
                         onClick={handleBookNow}
                       >
-                        Book Now
+                        Confirm Order
                       </button>
                     </div>
                   </Col>

@@ -15,7 +15,7 @@ const Dashboard = () => {
     {
       icon: FiUsers,
       description: 'Completed Appointments',
-      backgroundColor: '#8BB7A2',
+      backgroundColor: '#00FF7F',
     },
     {
       icon: MdOutlineBusinessCenter,

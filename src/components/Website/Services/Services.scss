@@ -119,11 +119,13 @@ color: aliceblue;
 
 .clenz_heading{
   color: aliceblue;
+  text-align: center;
 }
 
 .locations{
   color: aliceblue;
   font-size: 12px;
+  text-align: center;
 }
 .package_div{
   padding: 40px 40px;
@@ -132,6 +134,7 @@ color: aliceblue;
 .total{
   color: aliceblue;
   padding: 20px 0px;
+  text-align: center;
 }
 .price_line_div{
   border-bottom: 1px solid aliceblue ;
@@ -164,9 +167,13 @@ color: aliceblue;
 .right_book_btn{
   background-color: aliceblue;
   color: #101928;
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: none;
+  font-weight: 500;
   
+}
+.cnfrm_btn_div{
+  text-align: center;
 }
 
 .right_col{

@@ -31,7 +31,7 @@ const MobileNavbar = (props) => {
 
   const list = (anchor) => (
     <Box
-      style={{ background: "red" }}
+      style={{ background: "#101928" }}
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}

@@ -39,7 +39,7 @@ const Footer = () => {
                 <h5 className="text-uppercase font-weight-bold mb-4">Social Media</h5>
                 <ul className="list-unstyled">
                   <li className='social_li'><a   href={facebookPageUrl} target="_blank" rel="noopener noreferrer" className='social_name'> <BsFacebook className='social_icons' />  Facebook</a></li>
-                  <li className='social_li'><a href={instagramPageUrl} target="_blank" rel="noopener noreferrer"className='social_name'> <BsInstagram className='social_icons' /> Instagram</a></li>
+                  <li className='social_li'><a href={instagramPageUrl} target="_blank" rel="noopener noreferrer" className='social_name'> <BsInstagram className='social_icons' /> Instagram</a></li>
                   {/* <li className='social_li'><Link to="/" className='social_name'> <BsWhatsapp className='social_icons' />  Whatsapp</Link></li> */}
                   
                 </ul>

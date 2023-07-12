@@ -65,3 +65,21 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+  .card-container{
+    display: grid !important;
+  }
+  .card-wrapper{
+    width: 50% !important;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .card-container{
+    display: grid !important;
+  }
+  .card-wrapper{
+    width: 100% !important;
+  }
+}

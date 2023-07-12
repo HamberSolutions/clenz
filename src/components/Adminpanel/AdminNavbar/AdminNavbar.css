@@ -113,7 +113,7 @@
   left: 0;
   width: 25%;
   height: 50vh;
-  background-color: #f0090d; 
+  background-color: #101928; 
   padding: 10px 0px 0px 40px;
   z-index: 10; /* Set a higher z-index to ensure the submenu appears above other elements */
   overflow-y: auto;
@@ -154,7 +154,7 @@
     left: 0;
     width: 22.5% !important;
     height: 50vh;
-    background-color: #f0090d; 
+    background-color: #101928; 
     padding: 10px 0px 0px 40px;
     z-index: 10; /* Set a higher z-index to ensure the submenu appears above other elements */
     overflow-y: auto;

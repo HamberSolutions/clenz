@@ -2662,7 +2662,7 @@ const Services = () => {
                 </Row>
                 <Row>
                   <Col>
-                    <div>
+                    <div className="cnfrm_btn_div">
                       <button
                         className="right_book_btn"
                         onClick={handleBookNow}
